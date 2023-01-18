@@ -1,0 +1,101 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmItemClassResource.MyResource;
+      let DmItemClassResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="ITEM_CLASS_ID"
+              class="control-label"
+              [text]="DmItemClassResource.ITEM_CLASS_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input idField"
+              formControlName="ITEM_CLASS_ID"
+              kendoTextBox
+              #ITEM_CLASS_ID
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="ITEM_CLASS_NAME"
+              class="control-label"
+              required
+              [text]="DmItemClassResource.ITEM_CLASS_NAME"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="ITEM_CLASS_NAME"
+              kendoTextBox
+              #ITEM_CLASS_NAME
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="INV_ACCOUNT_ID"
+              class="control-label"
+              required
+              [text]="DmItemClassResource.INV_ACCOUNT_ID"
+            >
+            </kendo-label>
+            <label #INV_ACCOUNT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="INV_ACCOUNT_ID"
+                valueField="ACCOUNT_ID"
+                [selectionChange]="accountId_selectionChange.bind(this)"
+              >
+                <dm-account-selector textLookupSelector></dm-account-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="ACCOUNT_NAME"
+              kendoTextBox
+              #ACCOUNT_NAME
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="DmItemClassResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

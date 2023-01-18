@@ -1,0 +1,118 @@
+<ng-container *ngIf="resourceManager.CommonResource.MyResource as resource">
+  <fts-window
+    *ngIf="$vm.isShow"
+    [(show)]="$vm.isShow"
+    [title]="title"
+    [width]="981"
+    [height]="520"
+  >
+    <div class="upload-document-container h-100 d-flex flex-column">
+      <mask-load *ngIf="$vm.isLoading"></mask-load>
+      <kendo-toolbar class="tool-bar" [overflow]="true">
+        <!-- Add -->
+        <!-- <kendo-toolbar-button
+          className="btn"
+          text="Thêm"
+          iconClass="icon k-icon k-i-add"
+          (click)="toolbarActionHandler('ADD')"
+        >
+        </kendo-toolbar-button> -->
+        <!-- Config -->
+        <kendo-toolbar-button
+          className="btn"
+          text="Config"
+          iconClass="icon k-icon k-i-custom"
+          (click)="toolbarActionHandler('VIEW')"
+        >
+        </kendo-toolbar-button>
+        <!-- Logs -->
+        <kendo-toolbar-button
+          className="btn"
+          text="Logs"
+          iconClass="icon k-icon k-i-list-unordered"
+          (click)="toolbarActionHandler('UPLOAD')"
+        >
+        </kendo-toolbar-button>
+        <!-- Create Excel -->
+        <kendo-toolbar-button
+          className="btn"
+          text="Create Excel"
+          iconClass="icon k-icon k-i-excel"
+          (click)="toolbarActionHandler('EXPORT_EXCEL')"
+        >
+        </kendo-toolbar-button>
+        <!-- Help -->
+        <kendo-toolbar-button
+          className="btn"
+          text="Trợ giúp"
+          iconClass="icon k-icon k-i-help"
+          (click)="toolbarActionHandler('DELETE')"
+        >
+        </kendo-toolbar-button>
+        <!-- Close -->
+        <kendo-toolbar-button
+          className="btn btn-close"
+          text="Đóng"
+          iconClass="icon k-icon k-i-close"
+          (click)="toolbarActionHandler('CLOSE')"
+        >
+        </kendo-toolbar-button>
+      </kendo-toolbar>
+      <div class="row">
+        <div class="form-control col-4">
+          <label>Template</label>
+          <kendo-dropdownlist
+            [data]="dmTemplate"
+            textField="TEMPLATE_NAME"
+            valueField="PR_KEY"
+            [(ngModel)]="selectedTemplate"
+            (valueChange)="ddlTemplate_valueChange($event)"
+            (selectionChange)="ddlTemplate_selectionChange($event)"
+          >
+          </kendo-dropdownlist>
+        </div>
+        <div class="form-control col-6">
+          <input
+            type="file"
+            (change)="uploadFile($event)"
+            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel,text/comma-separated-values, text/csv, application/csv"
+            #file
+            style="display: none"
+          />
+          <button class="btn" id="btnChooseFile" (click)="file.click()">
+            <i class="icon k-icon k-i-folder-open"></i>
+            Chọn File...
+          </button>
+          <button class="btn" id="btnUpload" (click)="btnUpload_Click()">
+            <i class="icon k-icon k-i-upload"></i>
+            Upload
+          </button>
+        </div>
+      </div>
+      <div class="content-wapper flex-1 custom-scroll" style="height: 500px">
+        <fts-grid
+          [dataBinding]="$vm.datas"
+          [showToolBar]="false"
+          [loading]="false"
+          [filterable]="true"
+        >
+          <!-- #region cột -->
+          <ng-container *ngFor="let item of $vm.columns">
+            <fts-grid-column [colConfig]="item"> </fts-grid-column>
+          </ng-container>
+          <!-- #endregion -->
+        </fts-grid>
+      </div>
+      <div class="import-excel-footer d-flex">
+        <div class="flex-1">{{ resource.Select }}: 0</div>
+        <div>{{ resource.Total }}: 0</div>
+      </div>
+    </div>
+  </fts-window>
+  <import-excel-template
+    #importExcelTemplate
+    [tableName]="tableName"
+    [tranId]="tranId"
+    (templateChange)="onTemplateChange($event)"
+  ></import-excel-template>
+</ng-container>

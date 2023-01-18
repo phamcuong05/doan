@@ -1,0 +1,28 @@
+form{
+    padding: 20px;
+    width: 570px;
+    max-width: 100%;
+}
+
+.form-control{
+    display: inline-block;
+    padding: 2px 2px 2px 16px;
+}
+
+.form-control i{
+    padding-right: 10px;
+}
+
+.form-control button{
+    height: 30px;
+    margin-top: 10px;
+}
+
+.form-control .control-label {
+    width: 150px;
+    font-weight: 700;
+}
+
+.text-lookup-name {
+    padding: 2px 16px 2px 0px;
+}

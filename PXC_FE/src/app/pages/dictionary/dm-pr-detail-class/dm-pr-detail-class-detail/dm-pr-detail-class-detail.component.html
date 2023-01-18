@@ -1,0 +1,83 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmPrDetailClassResource.MyResource;
+      let DmPrDetailClassResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="PR_DETAIL_CLASS_ID"
+              class="control-label"
+              [text]="DmPrDetailClassResource.PR_DETAIL_CLASS_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input idField"
+              formControlName="PR_DETAIL_CLASS_ID"
+              kendoTextBox
+              #PR_DETAIL_CLASS_ID
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="PR_DETAIL_CLASS_NAME"
+              class="control-label"
+              required
+              [text]="DmPrDetailClassResource.PR_DETAIL_CLASS_NAME"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PR_DETAIL_CLASS_NAME"
+              kendoTextBox
+              #PR_DETAIL_CLASS_NAME
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-control col-12">
+
+            <kendo-label [for]="PR_DETAIL_TYPE_ID" class="control-label" required [text]="DmPrDetailClassResource.PR_DETAIL_TYPE_ID">
+            </kendo-label>
+
+            <kendo-dropdownlist formControlName="PR_DETAIL_TYPE_ID" [data]="state$.PrDetailTypeDatas"
+                            [defaultItem]="{ PR_DETAIL_TYPE_NAME: 'Chọn loại đối tượng...', PR_DETAIL_TYPE_ID: '' }"
+                            [textField]="'PR_DETAIL_TYPE_NAME'" [valueField]="'PR_DETAIL_TYPE_ID'"
+                            [valuePrimitive]="true" #PR_DETAIL_TYPE_ID>
+                        </kendo-dropdownlist>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="DmPrDetailClassResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

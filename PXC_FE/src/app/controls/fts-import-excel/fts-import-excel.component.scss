@@ -1,0 +1,29 @@
+.import-excel-footer.d-flex {
+    padding: 4px 8px;
+    border-top: thin solid var(--color-border);
+}
+
+.row {
+    margin: 0px;
+    padding: 5px 0px;
+    background-color: var(--color-grid-header-background);
+}
+
+.content-wapper
+{
+    border-top: thin solid var(--color-border);
+}
+
+.form-control {
+    padding: 2px;
+}
+
+.row label {
+    font-weight: 600;
+    margin: 0px 10px;
+}
+
+.btn {
+    margin-left: 10px;
+    min-width: 100px;
+}

@@ -1,0 +1,34 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="
+        myInject.resourceManager.DmVatPurchaseResource.MyResource;
+        let vatPurchaseResource
+      ">
+      <fts-dict-base-detail [formGroup]="formGroup">
+        <div formControls>
+          <div class="row">
+
+            <div class="col-6 form-control">
+              <kendo-label [for]="VAT_PURCHASE_ID" class="control-label" [text]="vatPurchaseResource.VAT_PURCHASE_ID" required>
+              </kendo-label>
+              <input type="text" class="control-input idField" formControlName="VAT_PURCHASE_ID" kendoTextBox
+                #VAT_PURCHASE_ID />
+            </div>
+  
+            <div class="col-6 form-control">
+              <kendo-label [for]="ACTIVE" class="control-label" [text]="vatPurchaseResource.ACTIVE" required>
+              </kendo-label>
+              <input type="checkbox" formControlName="ACTIVE" kendoCheckBox #ACTIVE />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 form-control">
+              <kendo-label [for]="VAT_PURCHASE_NAME" class="control-label" required [text]="vatPurchaseResource.VAT_PURCHASE_NAME">
+              </kendo-label>
+              <input type="text" class="control-input" formControlName="VAT_PURCHASE_NAME" kendoTextBox #VAT_PURCHASE_NAME />
+            </div>
+          </div>          
+          </div>
+      </fts-dict-base-detail>
+    </ng-container>
+  </ng-container>

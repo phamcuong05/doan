@@ -1,0 +1,10 @@
+:host ::ng-deep .k-window-content {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+:host ::ng-deep .window-content {
+    height: auto;
+    flex: 1;
+    display: inline-flex;
+}

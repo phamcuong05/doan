@@ -1,0 +1,380 @@
+<div
+  class="fts-grid h-100"
+  *ngIf="resourceManager.CommonResource.MyResource; let resource"
+  tabindex="0"
+  (keyup)="keyup($event)"
+  (click)="ftsGrid_onClick($event)"
+>
+  <kendo-grid
+    [data]="gridData"
+    [sortable]="sortable"
+    [filterable]="filterable"
+    class="h-100"
+    [pageSize]="state.take || 50"
+    [skip]="state.skip || 0"
+    [pageable]="pageable"
+    [resizable]="resizable"
+    [selectable]="{ checkboxOnly: false, mode: 'single', drag: false }"
+    [loading]="loading"
+    [navigable]="true"
+    [reorderable]="true"
+    [(sort)]="sort"
+    (dblclick)="onDoubleClick($event)"
+    (selectionChange)="onSelectionChange($event)"
+    [rowSelected]="isRowSelected"
+    [id]="gridId"
+    (dataStateChange)="dataStateChange($event)"
+    (cellClose)="cellCloseHandler($event)"
+    [group]="groups"
+  >
+    <!--#region grid message -->
+    <kendo-grid-messages
+      [pagerItemsPerPage]="''"
+      [pagerItems]="resource?.Record"
+      [pagerOf]="resource?.Of"
+      [pagerPage]="''"
+      [filterIsTrue]="resource?.FilterIsTrue"
+      [filterIsFalse]="resource?.FilterIsFalse"
+      [filterBooleanAll]="resource?.All"
+      [columns]="resource?.ViewColumns"
+      [columnsReset]="resource?.Cancel"
+      [noRecords]="resource?.NoRecordsAvailable"
+      [columnsApply]="resource?.Apply"
+      [filterEqOperator]="resource?.Equal"
+      [filterNotEqOperator]="resource?.NotEqual"
+      [filterContainsOperator]="resource?.Contains"
+      [filterNotContainsOperator]="resource?.NotContains"
+      [filterStartsWithOperator]="resource?.StartsWith"
+      [filterEndsWithOperator]="resource?.EndWith"
+      [filterIsNullOperator]="resource?.IsNull"
+      [filterIsNotNullOperator]="resource?.IsNotNull"
+      [filterGteOperator]="resource?.GreaterOrEqual"
+      [filterGtOperator]="resource?.Greater"
+      [filterLteOperator]="resource?.LessOrEqual"
+      [filterLtOperator]="resource?.LessOrEqual"
+      [filterIsEmptyOperator]="resource?.IsEmpty"
+      [filterIsNotEmptyOperator]="resource?.IsNotEmpty"
+      [filterAfterOperator]="resource?.After"
+      [filterAfterOrEqualOperator]="resource?.AfterOrEqual"
+      [filterBeforeOperator]="resource?.Before"
+      [filterBeforeOrEqualOperator]="resource?.BeforeOrEqual"
+      [filterDateToday]="resource?.ToDay"
+    >
+    </kendo-grid-messages>
+    <!--#endregion-->
+
+    <!-- #region ToolBar -->
+    <ng-template *ngIf="showToolBar" kendoGridToolbarTemplate>
+      <kendo-toolbar [overflow]="true" class="toolbar flex-1 none-border">
+        <!-- nút thêm dòng -->
+        <kendo-toolbar-button
+          *ngIf="showToolbarAddRow"
+          className="btn"
+          iconClass="icon k-icon k-i-table-row-insert-below"
+          [text]="resource.AddRow"
+          (click)="toolbarActionHandler($event, 'ADD_ROW')"
+          [disabled]="disabledToolBar"
+        >
+        </kendo-toolbar-button>
+        <!-- Xóa dòng -->
+        <kendo-toolbar-button
+          *ngIf="showToolbarRemoveRow"
+          className="btn btn-danger-light"
+          iconClass="icon k-icon k-i-table-row-delete"
+          [text]="resource.RemoveRow"
+          (click)="toolbarActionHandler($event, 'REMOVE_ROW')"
+          [disabled]="disabledToolBar"
+        >
+        </kendo-toolbar-button>
+
+        <!-- Các nút khác -->
+        <kendo-toolbar-button
+          *ngFor="let button of toolbarbuttons"
+          [text]="button.toolbarOptions.text"
+          [iconClass]="button.toolbarOptions.iconClass"
+          [className]="button.className"
+          (click)="button.click.emit($event)"
+          [disabled]="disabledToolBar || button.disabled"
+        >
+        </kendo-toolbar-button>
+
+        <!-- Sao -->
+        <kendo-toolbar-button
+          *ngIf="showToolbarDuplicateRow"
+          className="btn"
+          iconClass="icon k-icon k-i-copy"
+          (click)="toolbarActionHandler($event, 'DUPLICATE')"
+          [text]="resource?.Copy"
+          [disabled]="disabledToolBar || !itemSelected"
+        >
+        </kendo-toolbar-button>
+
+        <!-- Import -->
+        <kendo-toolbar-button
+          *ngIf="showToolbarImport"
+          className="btn"
+          iconClass="icon k-icon k-i-upload"
+          [text]="resource?.Import"
+          (click)="toolbarActionHandler($event, 'IMPORT_EXCEL')"
+          [disabled]="disabledToolBar"
+        >
+        </kendo-toolbar-button>
+
+        <!-- Excel -->
+        <kendo-toolbar-button
+          className="btn {{ showToolbarExcel ? '' : 'hidden' }}"
+          iconClass="icon k-icon k-i-excel"
+          [text]="resource?.Excel"
+          kendoGridExcelCommand
+          [disabled]="disabledToolBar"
+          #btnExcel
+        >
+        </kendo-toolbar-button>
+      </kendo-toolbar>
+      <kendo-grid-column-chooser
+        *ngIf="showButtonConfigColumn"
+      ></kendo-grid-column-chooser>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region Column -->
+    <!--Build Cột-->
+    <!--cột index-->
+    <kendo-grid-column
+      *ngIf="showIndexColumn"
+      [resizable]="true"
+      [width]="50"
+      class="text-center"
+    >
+      <ng-template kendoGridCellTemplate let-rowIndex="rowIndex">
+        {{ rowIndex + 1 }}
+      </ng-template>
+    </kendo-grid-column>
+
+    <!--Cột select dòng-->
+    <kendo-grid-checkbox-column
+      *ngIf="showSelectColumn"
+      [width]="50"
+      [resizable]="false"
+      [showSelectAll]="true"
+      class="text-center"
+    >
+    </kendo-grid-checkbox-column>
+
+    <!--Vẽ các cột được truyền vào-->
+    <ng-container *ngFor="let item of ftsColumns">
+      <kendo-grid-column
+        [field]="item.fieldId"
+        [title]="item.title || resourceCol?.[item.fieldId] || item.fieldId"
+        [width]="item.width"
+        [minResizableWidth]="item.minResizableWidth"
+        [class]="item.class + ' test-width'"
+        [format]="item.format"
+        [sortable]="item.sortable"
+        [filterable]="item.filterable"
+        [hidden]="item.hidden"
+      >
+        <!-- cell template -->
+        <ng-template
+          *ngIf="item.cellTemplateDirective"
+          kendoGridCellTemplate
+          let-rowIndex="rowIndex"
+          let-dataItem
+        >
+          <ng-container
+            [ngTemplateOutlet]="item.cellTemplateDirective.templateRef"
+            [ngTemplateOutletContext]="{
+              rowIndex: rowIndex,
+              dataItem: dataItem
+            }"
+          >
+          </ng-container>
+        </ng-template>
+
+        <!-- filte template -->
+        <ng-template
+          *ngIf="item.filterCellTemplateDirective"
+          kendoGridFilterCellTemplate
+          let-filter="filter"
+          let-column="column"
+        >
+          <ng-container
+            [ngTemplateOutlet]="item.filterCellTemplateDirective.templateRef"
+            [ngTemplateOutletContext]="{ filter: filter, column: column }"
+          >
+          </ng-container>
+        </ng-template>
+
+        <!-- editor template -->
+        <ng-template
+          *ngIf="item.editTemplateDirective"
+          kendoGridEditTemplate
+          let-dataItem="dataItem"
+          let-column="column"
+          let-formGroup="formGroup"
+        >
+          <ng-container
+            [ngTemplateOutlet]="item.editTemplateDirective.templateRef"
+            [ngTemplateOutletContext]="{
+              dataItem: dataItem,
+              column: column,
+              formGroup: formGroup,
+              eventEditCellKeydown: eventEditCellKeydown
+            }"
+          >
+          </ng-container>
+        </ng-template>
+
+        <!-- Header template -->
+        <ng-template
+          *ngIf="item.groupHeaderTemplateDirective"
+          kendoGridGroupHeaderTemplate
+          let-value="value"
+        >
+          <ng-container
+            [ngTemplateOutlet]="item.groupHeaderTemplateDirective.templateRef"
+            [ngTemplateOutletContext]="{
+              value: value
+            }"
+          >
+          </ng-container>
+        </ng-template>
+
+        <!-- footer template -->
+        <ng-template
+          *ngIf="item.footerTemplateDirective"
+          kendoGridFooterTemplate
+          let-column="column"
+        >
+          <ng-container
+            [ngTemplateOutlet]="item.footerTemplateDirective.templateRef"
+            [ngTemplateOutletContext]="{
+              myAggregate: aggregate,
+              column: column,
+              summaryData: summaryData,
+              isServerPaging: isServerPaging
+            }"
+          >
+          </ng-container>
+        </ng-template>
+      </kendo-grid-column>
+    </ng-container>
+    <!-- #endregion -->
+
+    <!-- #region Paper-->
+    <ng-template
+      kendoPagerTemplate
+      let-totalPages="totalPages"
+      let-currentPage="currentPage"
+    >
+      <kendo-pager-prev-buttons *ngIf="$any(pageable)?.previousNext">
+      </kendo-pager-prev-buttons>
+      <kendo-pager-numeric-buttons
+        *ngIf="$any(pageable)?.type == 'numeric'"
+        [buttonCount]="$any(pageable)?.buttonCount"
+      ></kendo-pager-numeric-buttons>
+      <kendo-pager-input
+        *ngIf="$any(pageable)?.type == 'input'"
+      ></kendo-pager-input>
+      <kendo-pager-next-buttons
+        *ngIf="$any(pageable)?.previousNext"
+      ></kendo-pager-next-buttons>
+
+      <kendo-pager-page-sizes
+        style="margin-right: 0"
+        *ngIf="$any(pageable)?.pageSizes && showPagerPageSizes"
+        [pageSizes]="$any(pageable)?.pageSizes"
+      >
+      </kendo-pager-page-sizes>
+      <button
+        *ngIf="showToolbarRefresh"
+        class="k-button btn-paper-refresh"
+        style="border: none; padding: 8px 10px"
+        title="{{ resource?.Refresh }}"
+        (click)="toolbarActionHandler($event, 'REFRESH')"
+      >
+        <i class="icon k-icon k-i-refresh"></i>
+      </button>
+
+      <kendo-pager-info></kendo-pager-info>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!--Export excel-->
+    <kendo-grid-excel></kendo-grid-excel>
+  </kendo-grid>
+  <div
+    #contextMenu
+    class="fts-grid-conext-menu"
+    [style.visibility]="contextMenuState.isShow ? 'visible' : 'collapse'"
+    [style.top]="contextMenuState.clientY + 'px'"
+    [style.left]="contextMenuState.clientX + 'px'"
+  >
+    <!-- nút thêm dòng -->
+    <button
+      *ngIf="showToolbarAddRow"
+      class="btn"
+      (click)="toolbarActionHandler($event, 'ADD_ROW')"
+      [disabled]="disabledToolBar"
+    >
+      <i class="icon k-icon k-i-table-row-insert-below"></i>
+      <span>{{ resource.AddRow }}</span>
+    </button>
+    <!-- Xóa dòng -->
+    <button
+      *ngIf="showToolbarRemoveRow"
+      class="btn btn-danger-light"
+      (click)="toolbarActionHandler($event, 'REMOVE_ROW')"
+      [disabled]="disabledToolBar"
+    >
+      <i class="icon k-icon k-i-table-row-delete"></i>
+      <span>{{ resource.RemoveRow }}</span>
+    </button>
+
+    <!-- Các nút khác -->
+    <ng-container *ngFor="let button of toolbarbuttons">
+      <button
+        class="btn {{ button.className }}"
+        (click)="button.click.emit($event)"
+        [disabled]="disabledToolBar || button.disabled"
+      >
+        <i class="{{ button.toolbarOptions.iconClass }}"></i>
+        <span>{{ button.toolbarOptions.text }}</span>
+      </button>
+    </ng-container>
+
+    <!-- Sao -->
+    <button
+      *ngIf="showToolbarDuplicateRow"
+      type="button"
+      class="btn"
+      (click)="toolbarActionHandler($event, 'DUPLICATE')"
+      [disabled]="disabledToolBar || !itemSelected"
+    >
+      <i class="icon k-icon k-i-copy"></i>
+      <span>{{ resource.Copy }}</span>
+    </button>
+
+    <!-- Import -->
+    <button
+      *ngIf="showToolbarImport"
+      class="btn"
+      (click)="toolbarActionHandler($event, 'IMPORT_EXCEL')"
+      [disabled]="disabledToolBar"
+    >
+      <i class="icon k-icon k-i-upload"></i>
+      <span>{{ resource.Import }}</span>
+    </button>
+
+    <!-- Excel -->
+    <button
+      *ngIf="showToolbarExcel"
+      class="btn"
+      [disabled]="disabledToolBar"
+      (click)="btnExcelRef?.click?.emit($event)"
+    >
+      <i class="icon k-icon k-i-excel"></i>
+      <span>{{ resource?.Excel }}</span>
+    </button>
+  </div>
+</div>

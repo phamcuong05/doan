@@ -1,0 +1,146 @@
+<div
+  kendoTooltip
+  filter="{{
+    viewControlName ? '[controlname],[formcontrolname]' : '[data-title]'
+  }}"
+  [tooltipTemplate]="tooltipTemplate"
+  [offset]="viewControlName ? 0 : 6"
+>
+  <ng-template #tooltipTemplate let-anchor>
+    {{
+      viewControlName
+        ? anchor.nativeElement.getAttribute("formcontrolname") ||
+          anchor.nativeElement.getAttribute("controlname")
+        : anchor.nativeElement.getAttribute("data-title")
+    }}
+  </ng-template>
+  <ng-container *ngIf="resourceManager.CommonResource.MyResource; let resource">
+    <!-- #region Hiệu ứng load resource/chuyển trang -->
+    <!-- <ng-progress [spinner]="true" ></ng-progress> -->
+
+    <ng-container>
+      <div class="app-wapper d-flex abs-full">
+        <div
+          *ngIf="isAuthen && loadStarted"
+          class="main-left d-flex flex-column {{
+            miniMenu == true ? 'mini-menu' : ''
+          }}"
+        >
+          <!--logo-->
+          <div class="box-logo">
+            <a routerLink="/" class="app-logo">
+              <img src="./../assets/images/logo/ship.png" alt="logo" />
+              <span class="app-name">SHIP QUỐC TẾ</span>
+            </a>
+          </div>
+          <!--danh sách menu-->
+          <app-navigation
+            [miniMenu]="miniMenu"
+            class="flex-1 d-flex flex-column h-0 menu-list"
+          >
+          </app-navigation>
+        </div>
+        <div class="main-right d-flex flex-column flex-1">
+          <!--Tên page + ngôn ngữ + user-->
+          <div
+            *ngIf="isAuthen && loadStarted"
+            class="col-12 main-header d-flex"
+          >
+            <div
+              class="btn-show-more-menu"
+              (click)="miniMenu = !miniMenu"
+              title="Minimize menu"
+            >
+              <i class="fa fa-align-left font-size-extralarge"></i>
+            </div>
+            <div class="page-title">
+              {{resource?.[menuActived?.Id || ''] || menuActived?.Name}}
+            </div>
+            <div class="flex-1"></div>
+            <!-- <app-national-language
+              class="head-box-languge"
+            ></app-national-language> -->
+            <!-- <div class="btn-notification">
+              <button
+                class="btn btn-notification"
+                type="button"
+                title="Thông báo"
+              >
+                <i class="fa fa-bell font-size-large"></i>
+                <span class="number-notification">0</span>
+              </button>
+            </div> -->
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            <div class="user-inf">
+              <div class="user-dropdown">
+                <div class="user-content" (click)="toggleUserMenu($event)">
+                  <i
+                    class="fa fa-user-circle font-size-extralarge text-middle"
+                  ></i>
+                  <span class="text-middle mg-8">{{
+                    ftsMain.UserInfo.UserName
+                  }}</span>
+                  <i class="fa fa-chevron-down text-middle"></i>
+                </div>
+                <div *ngIf="showUserMenu" class="user-menu">
+                  <!-- <a class="btn btn-item" routerLink="/change-organizarion">
+                    <i class="fas fa-info-circle font-size-large"></i>
+                    <span>{{ resource.ChangeOrganizarion }}</span>
+                  </a> -->
+                  <!-- <a class="btn btn-item" routerLink="/account-info">
+                    <i class="fas fa-info-circle font-size-large"></i>
+                    <span>{{ resource.AccountInfor }}</span>
+                  </a> -->
+                  <a class="btn btn-item" routerLink="/change-password">
+                    <i class="fas fa-key font-size-large"></i>
+                    <span>{{ resource.ChangePassword }}</span>
+                  </a>
+                  <a class="btn btn-item" (click)="logout($event)">
+                    <i class="fas fa-sign-out-alt font-size-large"></i>
+                    <span>{{ resource.SignOut }}</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            *ngIf="loadStarted"
+            class="main col-12 flex-1 hide-overflow"
+            id="AppMain"
+          >
+            <router-outlet></router-outlet>
+          </div>
+          <!--footer: tên đơn vị đang làm việc, năm làm việc-->
+          <div
+            *ngIf="isAuthen && loadStarted"
+            class="col-12 main-footer d-flex"
+          >
+            <div class="title-footer">
+              {{ ftsMain?.UserInfo?.OrganizationName }} |
+              {{ ftsMain?.UserInfo?.UserName }} |
+              {{ ftsMain?.UserInfo?.WorkingYear }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <div style="visibility: hidden">
+      <iframe
+        id="iframePrint"
+        style="position: fixed; width: 100%; height: 100%; z-index: 1"
+        type="application/pdf"
+      >
+      </iframe>
+    </div>
+    <div style="position: relative; z-index: 1000">
+      <div kendoWindowContainer class="window-container"></div>
+      <div class="window-container-wapper"></div>
+    </div>
+    <div style="position: relative; z-index: 100000001">
+      <div kendoDialogContainer></div>
+    </div>
+  </ng-container>
+</div>

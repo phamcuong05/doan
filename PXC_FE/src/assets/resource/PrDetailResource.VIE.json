@@ -1,0 +1,22 @@
+{
+    "DM_PR_DETAIL":"Khách hàng",
+    "PR_DETAIL_ID":"Mã khách hàng",
+    "PR_DETAIL_NAME":"Tên khách hàng",
+    "EMAIL":"Email",
+    "PHONE":"Số điện thoại",
+    "ADDRESS":"Địa chỉ",
+    "BANK_ACCOUNT_NAME":"Tên tài khoản",
+    "BANK_ACCOUNT_NO":"Số tài khoản",
+    "BANK_NAME":"Tên ngân hàng",
+    "BANK_BRANCH":"Chi nhánh ngân hàng",
+    "TAX_FILE_NUMBER":"Mã số thuế",
+    "IDENTITY_NO":"Số CCCD",
+    "CREATE_DATE":"Ngày tạo",
+    "ACTIVE":"Sử dụng",
+    "PR_DETAIL_CLASS_ID":"Nhóm k.hàng",
+    "PR_DETAIL_CLASS1_ID":"Nhóm k.hàng 1",
+    "PR_ACCOUNT_ID":"Tài khoản",
+    "PROVINCE_ID":"Tỉnh/Thành phố",
+    "DISTRICT_ID":"Quận huyện",
+    "PASSWORD":"Mật khẩu"
+}

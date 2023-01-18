@@ -1,0 +1,20 @@
+{
+  "AGENT": "Đại lý",
+  "AGENT_ID": "Mã đại lý",
+  "AGENT_NAME": "Tên đại lý",
+  "ADDRESS": "Địa chỉ",
+  "PHONE": "Số điện thoại",
+  "EMAIL": "Email",
+  "TAX_FILE_NUMBER": "Mã số thuế",
+  "IDENTITY_NO": "Số CCCD",
+  "BANK_ACCOUNT": "Số tài khoản",
+  "BANK_CODE": "Mã ngân hàng",
+  "BANK_NAME": "Tên ngân hàng",
+  "BANK_BRANCH": "Chi nhánh",
+  "PROVINCE_ID": "Tỉnh/Thành phố",
+  "PROVINCE_NAME": "Tỉnh/Thành phố",
+  "DISTRICT_ID": "Quận huyện",
+  "DISTRICT_NAME": "Quận huyện",
+  "ACTIVE": "Sử dụng",
+  "USER_ID": "Người lập"
+}

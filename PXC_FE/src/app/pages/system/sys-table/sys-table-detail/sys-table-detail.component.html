@@ -1,0 +1,212 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.SecUserResource.MyResource;
+      let secUserResource
+    "
+  >
+    <fts-dict-base-detail
+      [formGroup]="formGroup"
+      [showBtnAdd]="false"
+      [showBtnDuplicate]="false"
+      [showBtnDelete]="false"
+    >
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="TABLE_NAME"
+              class="control-label"
+              [text]="'TABLE_NAME'"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="TABLE_NAME"
+              kendoTextBox
+              #TABLE_NAME
+            />
+          </div>
+
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="TABLE_TYPE"
+              class="control-label"
+              required
+              [text]="'TABLE_TYPE'"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="TABLE_TYPE"
+              kendoTextBox
+              #TABLE_TYPE
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ID_FIELD"
+              class="control-label"
+              required
+              [text]="'ID_FIELD'"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="ID_FIELD"
+              kendoTextBox
+              #ID_FIELD
+            />
+          </div>
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="NAME_FIELD"
+              class="control-label"
+              required
+              [text]="'NAME_FIELD'"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="NAME_FIELD"
+              kendoTextBox
+              #NAME_FIELD
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="CAN_GROUP"
+              class="control-label"
+              required
+              [text]="'CAN_GROUP'"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="CAN_GROUP"
+              kendoCheckBox
+              #CAN_GROUP
+            />
+          </div>
+
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ID_AUTO"
+              class="control-label"
+              required
+              [text]="'ID_AUTO'"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ID_AUTO"
+              kendoCheckBox
+              #ID_AUTO
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ID_MASK"
+              class="control-label"
+              required
+              [text]="'ID_MASK'"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="ID_MASK"
+              kendoTextBox
+              #ID_MASK
+            />
+          </div>
+
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="ID_LENGTH"
+              class="control-label"
+              [text]="'ID_LENGTH'"
+              required
+            >
+            </kendo-label>
+            <fts-numerictextbox
+              formControlName="ID_LENGTH"
+              [format]="'n0'"
+              #ID_LENGTH
+            >
+            </fts-numerictextbox>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="ID_PARTS"
+              class="control-label"
+              [text]="'ID_PARTS'"
+              required
+            >
+            </kendo-label>
+            <fts-numerictextbox
+              formControlName="ID_PARTS"
+              [format]="'n0'"
+              #ID_PARTS
+            >
+            </fts-numerictextbox>
+          </div>
+
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ID_SPLIT"
+              class="control-label"
+              required
+              [text]="'ID_SPLIT'"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="ID_SPLIT"
+              kendoTextBox
+              #ID_SPLIT
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="LOAD_BY_SEARCH"
+              class="control-label"
+              required
+              [text]="'LOAD_BY_SEARCH'"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="LOAD_BY_SEARCH"
+              kendoCheckBox
+              #LOAD_BY_SEARCH
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

@@ -1,0 +1,29 @@
+<div *ngIf="show" class="window-wapper">
+  <kendo-window
+    class="animation-hide-windown"
+    [minWidth]="minWidth"
+    [minHeight]="minHeight"
+    [(width)]="width"
+    [(height)]="height"
+    [resizable]="resizable"
+  >
+    <div [style]="styleWapper" class="d-flex flex-column h-100 flex-1">
+      <!-- #region header -->
+      <kendo-window-titlebar>
+        <div class="flex-1 window-title">{{ title }}</div>
+        <button
+          *ngIf="maximize"
+          kendoWindowMaximizeAction
+          title="Maximize"
+          #btnMaximize
+        ></button>
+        <button kendoWindowRestoreAction title="Minimize"></button>
+        <button kendoWindowCloseAction (click)="close()" title="Close"></button>
+      </kendo-window-titlebar>
+      <!-- #endregion -->
+      <div class="window-content h-100 hide-overflow">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </kendo-window>
+</div>

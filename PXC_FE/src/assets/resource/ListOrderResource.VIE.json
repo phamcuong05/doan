@@ -1,0 +1,16 @@
+{
+    "LIST_ORDER": "Thông tin đơn hàng",
+    "ORDER_ID": "Mã đơn",
+    "ORDER_DATE": "Ngày tạo đơn",
+    "PACKAGE_CODE": "Mã hàng",
+    "PACKAGE_NAME": "Tên hàng",
+    "SERVICE_CHARGE_ID": "Mã dịch vụ",
+    "SERVICE_CHARGE_NAME": "Tên dịch vụ",
+    "TOTAL": "Tổng(VND)",
+    "BUY_FEE": "Giá(VND)",
+    "SHIP_FEE": "Phí ship(VND)",
+    "CUSTOMER_NAME": "Tên khách hàng",
+    "PHONE": "Điện thoại",
+    "ADDRESS": "Địa chỉ",
+    "USER_ID": "Người dùng"
+}

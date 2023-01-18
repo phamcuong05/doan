@@ -1,0 +1,49 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="myInject.resourceManager.SecUserResource.MyResource; let secUserResource">
+        <fts-dict-base-detail [formGroup]="formGroup" [showBtnAdd]="false" [showBtnDuplicate]="false"
+            [showBtnDelete]="false">
+            <div formControls>
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="VAR_NAME" class="control-label" [text]="'VAR_NAME'" required>
+                        </kendo-label>
+                        <input type="text" class="control-input" formControlName="VAR_NAME" kendoTextBox #VAR_NAME />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="VAR_VALUE" class="control-label" required [text]="'VAR_VALUE'">
+                        </kendo-label>
+                        <input type="text" class="control-input" formControlName="VAR_VALUE" kendoTextBox #VAR_VALUE />
+                    </div>
+                </div>   
+                
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="DESCRIPTION" class="control-label" required [text]="'DESCRIPTION'">
+                        </kendo-label>
+                        <input type="text" class="control-input" formControlName="DESCRIPTION" kendoTextBox #DESCRIPTION />
+                    </div>
+                </div>            
+          
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="VAR_TYPE" class="control-label" required [text]="'VAR_TYPE'">
+                        </kendo-label>
+                        <input type="text" class="control-input" formControlName="VAR_TYPE" kendoTextBox #VAR_TYPE />
+                    </div>
+                </div>            
+          
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="VAR_GROUP" class="control-label" required [text]="'VAR_GROUP'">
+                        </kendo-label>
+                        <input type="text" class="control-input" formControlName="VAR_GROUP" kendoTextBox #VAR_GROUP />
+                    </div>
+                </div>     
+
+            </div>
+        </fts-dict-base-detail>
+    </ng-container>
+</ng-container>

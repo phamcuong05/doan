@@ -1,0 +1,17 @@
+<ng-template #editorTemplate let-formGroup="formGroup" let-dataItem="dataItem">
+  <fts-text-lookup
+    [formControl]="formGroup.get(ftsColumn.FieldId)"
+    [valueField]="ftsColumn.ValueField || ftsColumn.FieldId"
+    [textField]="ftsColumn.TextField"
+    [controlTextName]="ftsColumn.ControlTextName"
+    [readonly]="ftsColumn.ReadOnly"
+    [dataItem]="dataItem"
+    [selectionChange]="selectionChange"
+    [passSelectorDirective]="selectorDirective"
+    [passPopupTemplateRef]="popupTemplate"
+  >
+    <ng-template #popupTemplate>
+      <ng-content></ng-content>
+    </ng-template>
+  </fts-text-lookup>
+</ng-template>

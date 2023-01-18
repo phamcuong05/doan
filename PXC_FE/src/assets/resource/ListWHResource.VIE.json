@@ -1,0 +1,19 @@
+{
+    "LIST_DELIVERY": "Bảng thông tin xuất kho",
+    "LIST_WH": "Bảng thông tin nhập kho",
+    "WARE_HOUSE_ID": "Mã kho",
+    "WARE_HOUSE_NAME": "Tên kho",
+    "MAWB_ID": "MAWB",
+    "MAWB_NAME": "Tên chuyến bay",
+    "TO_DATE": "Ngày nhập kho",
+    "FROM_DATE": "Ngày xuất kho",
+    "TOTAL_ORDER": "Tổng đơn",
+    "WEIGHT": "Cân nặng",
+    "CUSTOMER_NAME": "Tên khách hàng",
+    "CONTAINER_ID": "Mã thùng hàng",
+    "CONTAINER_NAME": "Tên thùng hàng",
+    "ORGANIZATION_ID": "Mã đv vận chuyển",
+    "ORGANIZATION_NAME": "Tên đv vận chuyển",
+    "NOTE": "Ghi chú",
+    "USER_ID": "Người dùng"
+}

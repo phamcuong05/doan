@@ -1,0 +1,11 @@
+{
+    "Login": "Đăng nhập",
+    "WorkingYear": "Năm làm việc",
+    "UserId": "Tên đăng nhập",
+    "Password": "Mật khẩu",
+    "ForgetPassword": "Quên mật khẩu?",
+    "Start": "Đăng nhập",
+    "UserNameOrPasswordIncorrect": "Tên đăng nhập hoặc mật khẩu không chính xác",
+    "UserNameRequired": "Tên đăng nhập không được để trống",
+    "PasswordRequired": "Mật khẩu không được để trống"
+}

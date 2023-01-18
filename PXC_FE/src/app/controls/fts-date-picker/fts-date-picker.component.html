@@ -1,0 +1,16 @@
+<ng-container
+  *ngIf="resourceManager?.CommonResource?.MyResource as commonResource"
+>
+  <kendo-datepicker
+    [readonly]="readonly"
+    [classList]="classList"
+    [(ngModel)]="value"
+    [formatPlaceholder]="formatPlaceholder"
+    [format]="format"
+    [disabled]="disabled"
+    (blur)="onBlur($event)"
+  >
+    <kendo-calendar-messages [today]="commonResource.ToDay">
+    </kendo-calendar-messages>
+  </kendo-datepicker>
+</ng-container>

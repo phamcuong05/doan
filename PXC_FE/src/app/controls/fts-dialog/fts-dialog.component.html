@@ -1,0 +1,29 @@
+<div class="form-container">
+    <div class="d-flex align-items-center">
+        <div class="icon-dialog">
+            <i class="icon k-icon {{GetIconClass}}"></i>
+        </div>
+        <div class="flex-1 fts-dialog-content hide-overflow" [innerHTML]="config?.content">
+        </div>
+    </div>
+    <div class="task-bar d-flex">
+        <div class="flex-1"></div>
+        <div>
+            <button type="button" #btnSubmit *ngIf="type=='confirm'" class="btn btn-primary"
+                (click)="btnOk_Click($event)"><i class="icon k-icon k-i-check"></i>
+                {{resourceManager.CommonResource?.MyResource?.Ok}}
+            </button>
+            <button type="button" #btnCancel *ngIf="type=='confirm'" class="btn btn-close"
+                (click)="btnCancel_Click($event)"> <i class="icon k-icon k-i-cancel"></i>
+                {{resourceManager.CommonResource?.MyResource?.Cancel}} </button>
+            <button type="button" #btnSave *ngIf="type=='confirmSave'" class="btn  btn-primary"
+                (click)="btnOk_Click($event)"> <i class="icon k-icon k-i-save"></i>
+                {{resourceManager.CommonResource?.MyResource?.SaveAndClose}} </button>
+            <button type="button" #btnClose *ngIf="type=='alert' || type=='confirmSave'" class="btn btn-close"
+                (click)="btnClose_Click($event)"> <i class="icon k-icon k-i-close"></i>
+                {{resourceManager.CommonResource?.MyResource?.Close}} </button>
+
+        </div>
+        <div class="flex-1"></div>
+    </div>
+</div>

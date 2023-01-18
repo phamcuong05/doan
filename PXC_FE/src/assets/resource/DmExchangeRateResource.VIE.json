@@ -1,0 +1,6 @@
+{
+    "CURRENCY_ID":"Từ mã tiền tệ",
+    "TO_CURRENCY_ID":"Sang mã tiền tệ",
+    "EXCHANGE_RATE":"Tỷ giá",
+    "VALID_DATE": "Ngày"
+}

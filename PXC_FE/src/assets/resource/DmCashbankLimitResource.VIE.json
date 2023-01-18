@@ -1,0 +1,16 @@
+{
+    "DM_CASHBANK_LIMIT": "Hạn mức tiền mặt, tiền gửi ngân hàng",
+
+    "ORGANIZATION_ID": "Đơn vị",
+    "ORGANIZATION_NAME": "Đơn vị",
+    "ACCOUNT_ID": "Tài khoản",
+    "ACCOUNT_NAME": "Tên t.khoản",
+    "BANK_ID": "Ngân hàng",
+    "BANK_NAME": "Tên ngân hàng",
+    "VALID_DATE": "Ngày hiệu lực",
+    "LIMIT": "Hạn mức",
+    "NOTES": "Ghi chú",
+    "CREATE_DATE": "Ngày tạo",
+    "MODIFY_DATE": "Ngày sửa",
+    "USER_ID": "Người dùng"
+}

@@ -1,0 +1,132 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.SecUserResource.MyResource;
+      let secUserResource
+    "
+  >
+    <fts-dict-base-detail
+      [formGroup]="formGroup"
+      [showBtnAdd]="false"
+      [showBtnDuplicate]="false"
+      [showBtnDelete]="false"
+    >
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="MENU_ID"
+              class="control-label"
+              [text]="'MENU_ID'"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="MENU_ID"
+              kendoTextBox
+              #MENU_ID
+            />
+          </div>
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="'ACTIVE'"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="MENU_NAME"
+              class="control-label"
+              required
+              [text]="'TRAN NAME'"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="MENU_NAME"
+              kendoTextBox
+              #MENU_NAME
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="MODULE_ID"
+              class="control-label"
+              required
+              [text]="'MODULE_ID'"
+            >
+            </kendo-label>
+            <kendo-dropdownlist
+              formControlName="MODULE_ID"
+              [data]="state$.ModuleListDatas"
+              [defaultItem]="{
+                MODULE_NAME: 'Chọn...',
+                MODULE_ID: ''
+              }"
+              [textField]="'MODULE_NAME'"
+              [valueField]="'MODULE_ID'"
+              [valuePrimitive]="true"
+              #MODULE_ID
+            >
+            </kendo-dropdownlist>
+          </div>
+
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="MENU_GROUP_ID"
+              class="control-label"
+              required
+              [text]="'MENU_GROUP_ID'"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="MENU_GROUP_ID"
+              kendoTextBox
+              #MENU_GROUP_ID
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="MENU_ORDER"
+              class="control-label"
+              required
+              [text]="'MENU_ORDER'"
+            >
+            </kendo-label>
+            <fts-numerictextbox
+              formControlName="MENU_ORDER"
+              format="n0"
+              #MENU_ORDER
+            >
+            </fts-numerictextbox>
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

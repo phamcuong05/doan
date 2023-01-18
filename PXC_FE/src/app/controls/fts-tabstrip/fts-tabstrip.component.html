@@ -1,0 +1,17 @@
+<div class="fts-tab-strip h-100 d-flex flex-column">
+  <div class="fts-tab-title">
+    <button
+      type="button"
+      *ngFor="let tab of tabComponents"
+      [title]="tab.tabTitle"
+      (click)="activeTab(tab)"
+      tabindex="-1"
+      class="btn {{ tab.activeted ? 'tab-activeted' : '' }}"
+    >
+      {{ tab.tabTitle }}
+    </button>
+  </div>
+  <div class="flex-1 hide-overflow">
+    <ng-content></ng-content>
+  </div>
+</div>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B1896A1F-9C90-4695-9056-D628789ECCFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FTS.ShareBusiness</RootNamespace>
+    <AssemblyName>FTS.ShareBusiness</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ftsdev.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FTS.Tools">
+      <HintPath>..\DLL\FTS.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Global">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.Global.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder">
+      <HintPath>..\DLL\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acc\DebitCredit.cs" />
+    <Compile Include="Acc\Dm_Agent.cs" />
+    <Compile Include="Acc\Dm_Capital_Source.cs" />
+    <Compile Include="Acc\Dm_Cashbank_Limit.cs" />
+    <Compile Include="Acc\Dm_Claim.cs" />
+    <Compile Include="Acc\Dm_Contract.cs" />
+    <Compile Include="Acc\Dm_Contract_Class.cs" />
+    <Compile Include="Acc\Dm_Contract_Limit.cs" />
+    <Compile Include="Acc\Dm_Contract_Status.cs" />
+    <Compile Include="Acc\Dm_Estimate_Type.cs" />
+    <Compile Include="Acc\Dm_Exchange_Rate.cs" />
+    <Compile Include="Acc\Dm_Item_Class.cs" />
+    <Compile Include="Acc\Dm_Job.cs" />
+    <Compile Include="Acc\Dm_Policy.cs" />
+    <Compile Include="Acc\Dm_Period.cs" />
+    <Compile Include="Acc\Dm_Item_Op.cs" />
+    <Compile Include="Acc\Dm_Bank.cs" />
+    <Compile Include="Acc\Dm_Department.cs" />
+    <Compile Include="Acc\Dm_Employee.cs" />
+    <Compile Include="Acc\DM_Expense.cs" />
+    <Compile Include="Acc\DM_Expense_Class.cs" />
+    <Compile Include="Acc\Dm_Risk_Class.cs" />
+    <Compile Include="Acc\Dm_Security.cs" />
+    <Compile Include="Acc\Dm_Security_Class.cs" />
+    <Compile Include="Acc\Dm_Security_Type.cs" />
+    <Compile Include="Acc\Dm_Advance_Limit.cs" />
+    <Compile Include="Acc\Dm_Vat_Purchase.cs" />
+    <Compile Include="Acc\Dm_Vat_Tax.cs" />
+    <Compile Include="Acc\Dm_Warehouse.cs" />
+    <Compile Include="Acc\Dm_Unit.cs" />
+    <Compile Include="Acc\Dm_Item.cs" />
+    <Compile Include="Acc\Dm_Account.cs" />
+    <Compile Include="Acc\Dm_Province.cs" />
+    <Compile Include="Acc\Dm_District.cs" />
+    <Compile Include="Acc\Dm_Currency.cs" />
+    <Compile Include="Acc\IssueReceipt.cs" />
+    <Compile Include="Acc\ListContainer.cs" />
+    <Compile Include="Acc\ListDelivery.cs" />
+    <Compile Include="Acc\ListMawb.cs" />
+    <Compile Include="Acc\ListOrder.cs" />
+    <Compile Include="Acc\ListPackage.cs" />
+    <Compile Include="Acc\ListServiceCharge.cs" />
+    <Compile Include="Acc\ListWH.cs" />
+    <Compile Include="Acc\PaymentMethod.cs" />
+    <Compile Include="Acc\PeriodType.cs" />
+    <Compile Include="Acc\RateMethodType.cs" />
+    <Compile Include="Acc\RateType.cs" />
+    <Compile Include="Model\DebitCreditObject.cs" />
+    <Compile Include="Model\Dm_AccountObject.cs" />
+    <Compile Include="Model\Dm_AgentObject.cs" />
+    <Compile Include="Model\Dm_Capital_SourceObject.cs" />
+    <Compile Include="Model\Dm_Cashbank_LimitObject.cs" />
+    <Compile Include="Model\Dm_ClaimObject.cs" />
+    <Compile Include="Model\Dm_ContractObject.cs" />
+    <Compile Include="Model\Dm_Contract_LimitObject.cs" />
+    <Compile Include="Model\Dm_CurrencyObject.cs" />
+    <Compile Include="Model\Dm_JobObject.cs" />
+    <Compile Include="Model\Dm_PolicyObject.cs" />
+    <Compile Include="Model\Dm_PeriodObject.cs" />
+    <Compile Include="Model\Dm_Pr_Detail_ClassObject.cs" />
+    <Compile Include="Acc\Dm_Pr_Detail.cs" />
+    <Compile Include="Model\Dm_Pr_DetailObject.cs" />
+    <Compile Include="Acc\Dm_Pr_Detail_Class.cs" />
+    <Compile Include="Acc\PrDetailType.cs" />
+    <Compile Include="Common\Transaction_Approve_Log.cs" />
+    <Compile Include="Model\Dm_Contract_ClassObject.cs" />
+    <Compile Include="Model\Dm_Contract_StatusObject.cs" />
+    <Compile Include="Model\Dm_DepartmentObject.cs" />
+    <Compile Include="Model\Dm_EmployeeObject.cs" />
+    <Compile Include="Model\Dm_Exchange_RateObject.cs" />
+    <Compile Include="Model\DM_ExpenseObject.cs" />
+    <Compile Include="Model\DM_Expense_ClassObject.cs" />
+    <Compile Include="Model\Dm_Item_ClassObject.cs" />
+    <Compile Include="Model\Dm_Pr_Class_TypeObject.cs" />
+    <Compile Include="Model\Dm_Risk_ClassObject.cs" />
+    <Compile Include="Model\Dm_SecurityObject.cs" />
+    <Compile Include="Model\Dm_Security_ClassObject.cs" />
+    <Compile Include="Model\Dm_Security_TypeObject.cs" />
+    <Compile Include="Model\Dm_Advance_LimitObject.cs" />
+    <Compile Include="Model\Dm_Vat_PurchaseObject.cs" />
+    <Compile Include="Model\IssueReceiptObject.cs" />
+    <Compile Include="Model\Dm_Estimate_TypeObject.cs" />
+    <Compile Include="Model\Dm_Item_OpObject.cs" />
+    <Compile Include="Model\Dm_BankObject.cs" />
+    <Compile Include="Model\Dm_Vat_TaxObject.cs" />
+    <Compile Include="Model\Dm_WarehouseObject.cs" />
+    <Compile Include="Model\Dm_UnitObject.cs" />
+    <Compile Include="Model\Dm_ItemObject.cs" />
+    <Compile Include="Model\Dm_ProvinceObject.cs" />
+    <Compile Include="Model\Dm_DistrictObject.cs" />
+    <Compile Include="Model\ListContainerObject.cs" />
+    <Compile Include="Model\ListDeliveryObject.cs" />
+    <Compile Include="Model\ListMawbObject.cs" />
+    <Compile Include="Model\ListOrderObject.cs" />
+    <Compile Include="Model\ListPackageObject.cs" />
+    <Compile Include="Model\ListServiceChargeObject.cs" />
+    <Compile Include="Model\ListWHObject.cs" />
+    <Compile Include="Model\PaymentMethodObject.cs" />
+    <Compile Include="Model\PeriodTypeObject.cs" />
+    <Compile Include="Model\RateTypeObject.cs" />
+    <Compile Include="Model\RateMethodObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Base.csproj">
+      <Project>{9f480828-a957-4d4a-b939-2090926da095}</Project>
+      <Name>Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ftsdev.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

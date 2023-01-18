@@ -1,0 +1,53 @@
+<ng-container
+  *ngIf="resourceManager?.CommonResource?.MyResource as commonResource"
+>
+  <div
+    class="fts-text-lookup-wap control-input"
+    [class.disabled]="readonly || disabled"
+  >
+    <input
+      *ngIf="controlTextName"
+      class="k-input input-text-lookup"
+      type="text"
+      [(ngModel)]="valueText"
+      [style.background-color]="disabled ? 'var(--input-color-background)' : ''"
+      readonly="{{ !freeText || readonly || disabled ? 'readonly' : '' }}"
+      (change)="freeTextChange($event)"
+    />
+    <input
+      class="k-input input-text-lookup"
+      type="text"
+      [(ngModel)]="value"
+      readonly="{{ !freeText || readonly || disabled ? 'readonly' : '' }}"
+      [hidden]="controlTextName"
+      [attr.controlname]="controlName"
+      (change)="freeTextChange($event)"
+    />
+
+    <button
+      type="button"
+      tabindex="0"
+      class="btn btn-show-popup"
+      (click)="showPopupSelector()"
+      [disabled]="readonly || disabled"
+      #btnShowPopup
+    >
+      <i class="k-icon k-i-more-horizontal"></i>
+    </button>
+    <button
+      type="button"
+      *ngIf="showQuickAdd"
+      class="btn btn-quick-add"
+      (click)="quickAdd_Click($event)"
+      [disabled]="readonly || disabled"
+    >
+      <i class="k-icon k-i-add"></i>
+    </button>
+    <ng-template #dictBaseDetailTemplate>
+      <ng-content select="[dictBaseDetail]"></ng-content>
+    </ng-template>
+    <ng-template #popupTemplate>
+      <ng-content select="[textLookupSelector]"></ng-content>
+    </ng-template>
+  </div>
+</ng-container>

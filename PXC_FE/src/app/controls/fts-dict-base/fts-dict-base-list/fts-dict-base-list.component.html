@@ -1,0 +1,84 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let resource"
+>
+  <fts-grid
+    *ngIf="vm$ | async as vm"
+    [sortable]="vm.sortable"
+    [filterable]="vm.filterable"
+    [gridData]="vm.gridData"
+    [isServerPaging]="true"
+    [showToolbarExcel]="showToolbarExcel"
+    [showToolbarImport]="showToolbarImport"
+    [showToolbarRefresh]="showToolbarRefresh"
+    [showButtonConfigColumn]="showButtonConfigColumn"
+    [(filter)]="vm.filter"
+    [(sort)]="vm.sort"
+    [loading]="false"
+    (dblClickRow)="onDoubleClickRow()"
+    (selectionChange)="onSelectionChange($event)"
+    (toolbarActionEvent)="toolbarActionHandler($event)"
+    [resourceCol]="pageResource"
+    (dataState_Change)="dataStateChange($event)"
+    #grdListing
+  >
+    <!-- #region grid toolbar -->
+    <!-- Thêm -->
+    <kendo-toolbar-button
+      *ngIf="showToolbarAdd"
+      className="btn"
+      iconClass="icon k-icon k-i-file-add"
+      (click)="
+        toolbarActionHandler({ action: 'ADD', record: grdListing.itemSelected })
+      "
+      [text]="resource?.Add"
+    >
+    </kendo-toolbar-button>
+    <!-- Sửa -->
+    <kendo-toolbar-button
+      *ngIf="showToolbarEdit"
+      #toolBarGrid
+      className="btn"
+      iconClass="icon k-icon k-i-edit"
+      [text]="resource?.Edit"
+      (click)="
+        toolbarActionHandler({
+          action: 'EDIT',
+          record: grdListing.itemSelected
+        })
+      "
+    >
+    </kendo-toolbar-button>
+    <!-- Xóa -->
+    <kendo-toolbar-button
+      *ngIf="showToolbarDelete"
+      #toolBarGrid
+      className="btn btn-danger-light"
+      iconClass="icon k-icon k-i-delete"
+      [text]="resource?.Delete"
+      (click)="
+        toolbarActionHandler({
+          action: 'DELETE',
+          record: grdListing.itemSelected
+        })
+      "
+    >
+    </kendo-toolbar-button>
+    <!-- #endregion -->
+
+    <!-- #region cột -->
+    <ng-container *ngFor="let item of vm.columns">
+      <fts-grid-column [colConfig]="item" [(filter)]="vm.filter">
+      </fts-grid-column>
+    </ng-container>
+    <!-- #endregion -->
+  </fts-grid>
+  <div>
+    <ng-content select="[dictBaseDetail]"></ng-content>
+  </div>
+  <div>
+    <ng-content select="[toobarBottom]"></ng-content>
+  </div>
+  <div>
+    <fts-import-excel></fts-import-excel>
+  </div>
+</ng-container>

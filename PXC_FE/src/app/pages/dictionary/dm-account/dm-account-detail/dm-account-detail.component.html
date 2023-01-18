@@ -1,0 +1,187 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+  <ng-container *ngIf="
+      myInject.resourceManager.DmAccountResource.MyResource;
+      let DmAccountResource
+    ">
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label [for]="ACCOUNT_ID" class="control-label" [text]="DmAccountResource.ACCOUNT_ID" required>
+            </kendo-label>
+            <input type="text" class="control-input idField" formControlName="ACCOUNT_ID" kendoTextBox #ACCOUNT_ID />
+          </div>
+          <div class="form-control col-6">
+            <kendo-label [for]="ACTIVE" class="control-label" required [text]="DmAccountResource.ACTIVE">
+            </kendo-label>
+            <input type="checkbox" formControlName="ACTIVE" kendoCheckBox #ACTIVE />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label [for]="ACCOUNT_NAME" class="control-label" required [text]="DmAccountResource.ACCOUNT_NAME">
+            </kendo-label>
+            <input type="text" class="control-input" formControlName="ACCOUNT_NAME" kendoTextBox #ACCOUNT_NAME />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label [for]="PARENT_ACCOUNT_ID" class="control-label" required
+              [text]="DmAccountResource.PARENT_ACCOUNT_ID">
+            </kendo-label>
+            <label #PARENT_ACCOUNT_ID class="d-block col-12">
+              <fts-text-lookup formControlName="PARENT_ACCOUNT_ID" valueField="ACCOUNT_ID"
+                [selectionChange]="account_parent_id_selectionChange.bind(this)">
+                <dm-account-selector textLookupSelector #accountSelector></dm-account-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input type="text" class="control-input" formControlName="PARENT_ACCOUNT_NAME" kendoTextBox
+              #PARENT_ACCOUNT_NAME readonly tabindex="-1" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label [for]="BALANCE_TYPE" class="control-label" required [text]="DmAccountResource.BALANCE_TYPE">
+            </kendo-label>
+            <kendo-dropdownlist formControlName="BALANCE_TYPE" [data]="state$.BalanceTypeDatas" [defaultItem]="{
+                DEBIT_CREDIT_NAME: 'Chọn phương thức...',
+                DEBIT_CREDIT_ID: ''
+              }" [textField]="'DEBIT_CREDIT_NAME'" [valueField]="'DEBIT_CREDIT_ID'" [valuePrimitive]="true"
+              #BALANCE_TYPE>
+            </kendo-dropdownlist>
+          </div>
+        </div>
+
+        <!-- <div class="row">
+        <div class="form-control col-12">
+            <kendo-label [for]="RATE_METHOD" class="control-label" required
+                [text]="DmAccountResource.RATE_METHOD">
+            </kendo-label>
+            <kendo-dropdownlist formControlName="RATE_METHOD" [data]="state$.RateMethodDatas"
+                [defaultItem]="{ RATE_METHOD_NAME: 'Chọn phương thức...', RATE_METHOD_ID: '' }"
+                [textField]="'RATE_METHOD_NAME'" [valueField]="'RATE_METHOD_ID'"
+                [valuePrimitive]="true" #RATE_METHOD>
+            </kendo-dropdownlist>
+        </div>
+    </div> -->
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label [for]="CURRENCY_ID" class="control-label" required [text]="DmAccountResource.CURRENCY_ID">
+            </kendo-label>
+            <label #CURRENCY_ID class="d-block col-12">
+              <fts-text-lookup formControlName="CURRENCY_ID" valueField="CURRENCY_ID"
+                [selectionChange]="currency_id_selectionChange.bind(this)">
+                <dm-currency-selector textLookupSelector></dm-currency-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input type="text" class="control-input" formControlName="CURRENCY_NAME" kendoTextBox #CURRENCY_NAME
+              readonly tabindex="-1" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_PARENT" class="control-label" required [text]="DmAccountResource.IS_PARENT">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_PARENT" kendoCheckBox #IS_PARENT />
+          </div>
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_OOB" class="control-label" required [text]="DmAccountResource.IS_OOB">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_OOB" kendoCheckBox #IS_OOB />
+          </div>
+
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_PR_DETAIL" class="control-label" required [text]="DmAccountResource.IS_PR_DETAIL">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_PR_DETAIL" kendoCheckBox #IS_PR_DETAIL />
+          </div>
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_EXPENSE" class="control-label" required [text]="DmAccountResource.IS_EXPENSE">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_EXPENSE" kendoCheckBox #IS_EXPENSE />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_JOB" class="control-label" required [text]="DmAccountResource.IS_JOB">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_JOB" kendoCheckBox #IS_JOB />
+          </div>
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_BANK" class="control-label" required [text]="DmAccountResource.IS_BANK">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_BANK" kendoCheckBox #IS_BANK />
+          </div>
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_EMPLOYEE" class="control-label" required [text]="DmAccountResource.IS_EMPLOYEE">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_EMPLOYEE" kendoCheckBox #IS_EMPLOYEE />
+          </div>
+
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_DEPARTMENT" class="control-label" required [text]="DmAccountResource.IS_DEPARTMENT">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_DEPARTMENT" kendoCheckBox #IS_DEPARTMENT />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_AGENT" class="control-label" required [text]="DmAccountResource.IS_AGENT">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_AGENT" kendoCheckBox #IS_AGENT />
+          </div>
+
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_INSURANCE_SOURCE" class="control-label" required
+              [text]="DmAccountResource.IS_INSURANCE_SOURCE">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_INSURANCE_SOURCE" kendoCheckBox
+              #IS_INSURANCE_SOURCE />
+          </div>
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_CAPITAL_SOURCE" class="control-label" required
+              [text]="DmAccountResource.IS_CAPITAL_SOURCE">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_CAPITAL_SOURCE" kendoCheckBox
+              #IS_CAPITAL_SOURCE />
+          </div>
+
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_REINSURANCE_SOURCE" class="control-label" required
+              [text]="DmAccountResource.IS_REINSURANCE_SOURCE">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_REINSURANCE_SOURCE" kendoCheckBox
+              #IS_REINSURANCE_SOURCE />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_ITEM" class="control-label" required [text]="DmAccountResource.IS_ITEM">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_ITEM" kendoCheckBox #IS_ITEM />
+          </div>
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_VAT" class="control-label" required [text]="DmAccountResource.IS_VAT">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_VAT" kendoCheckBox #IS_VAT />
+          </div>
+          <div class="form-control col-3">
+            <kendo-label [for]="IS_CONTRACT" class="control-label" required [text]="DmAccountResource.IS_CONTRACT">
+            </kendo-label>
+            <input type="checkbox" class="check-detail" formControlName="IS_CONTRACT" kendoCheckBox #IS_CONTRACT />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

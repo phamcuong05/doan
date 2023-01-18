@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <title>SHIP QUỐC TẾ</title>
+    <base href="/" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico" /> -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./assets/images/logo/ship.png"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/SanFrancisco/SanFrancisco.css"
+    />
+    <link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css" />
+
+    <script src="./configs/appSettingKeys.js?v=1.0.0.0"></script>
+
+    <style>
+      .app-loading {
+        position: fixed;
+        z-index: 10000;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        opacity: 1;
+        justify-content: center;
+        align-items: center;
+        background: rgb(161, 161, 161);
+        background-image: url("/assets/images/logo/shipquocte.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .app-loading > img {
+        min-height: 100%;
+        position: absolute;
+        z-index: -1;
+      }
+
+      .app-loading::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.4;
+        z-index: 0;
+        background: rgb(161, 161, 161);
+      }
+
+      .box-loading {
+        background: none;
+        position: relative;
+        width: 50%;
+        height: 24px;
+        transform-origin: 40px 40px;
+      }
+
+      .box-loading > div {
+        width: 6px;
+        height: 6px;
+        background-color: var(--color-primary);
+        border-radius: 100%;
+        margin: 8px;
+        position: absolute;
+        animation: loadingAnimation 1.5s cubic-bezier(0.5, 0, 0, 1) infinite;
+      }
+
+      .box-loading > div:nth-child(1) {
+        animation-delay: -0.045s;
+      }
+
+      .box-loading > div:nth-child(2) {
+        animation-delay: -0.09s;
+      }
+
+      .box-loading > div:nth-child(3) {
+        animation-delay: -0.135s;
+      }
+
+      .box-loading > div:nth-child(4) {
+        animation-delay: -0.18s;
+      }
+
+      .box-loading > div:nth-child(5) {
+        animation-delay: -0.225s;
+      }
+
+      @keyframes loadingAnimation {
+        0% {
+          left: 0;
+        }
+
+        100% {
+          left: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- #region Hiệu ứng loading lần đầu load trang  -->
+    <div id="appLoading" class="app-loading">
+      <div class="box-loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- #endregion -->
+    <app-root></app-root>
+  </body>
+</html>

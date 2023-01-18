@@ -1,0 +1,139 @@
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\FTS.Base.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\FTS.Base.pdb
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\FTS.Tools.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Global.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\DevExpress.XtraReports.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\DevExpress.Utils.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\DevExpress.Data.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\DevExpress.XtraTreeList.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\DevExpress.XtraEditors.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\DevExpress.XtraNavBar.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\VistaDB.NET20.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\DevExpress.RichEdit.v10.2.Core.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\DevExpress.XtraCharts.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\DevExpress.Charts.v10.2.Core.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\DevExpress.XtraPivotGrid.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\DevExpress.PivotGrid.v10.2.Core.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\DevExpress.XtraRichEdit.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\Microsoft.Practices.ObjectBuilder.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.XmlSerializers.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\obj\Debug\Base.csproj.CoreCompileInputs.cache
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\obj\Debug\Base.csproj.CopyComplete
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\obj\Debug\FTS.Base.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\obj\Debug\FTS.Base.pdb
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\System.Web.Http.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\Newtonsoft.Json.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\System.Web.Http.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\Newtonsoft.Json.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\obj\Debug\FTS.Base.Report.TransactionOutput.resources
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\obj\Debug\Base.csproj.GenerateResource.cache
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\obj\Debug\Base.csproj.AssemblyReference.cache
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\Base\bin\Debug\EPPlus.dll
+D:\FTS\FTS_PJICOV3\BE\Base\obj\Debug\FTS.Base.Report.TransactionOutput.resources
+D:\FTS\FTS_PJICOV3\BE\Base\obj\Debug\Base.csproj.GenerateResource.cache
+D:\FTS\FTS_PJICOV3\BE\Base\obj\Debug\Base.csproj.CoreCompileInputs.cache
+D:\FTS\FTS_PJICOV3\BE\Base\obj\Debug\FTS.Base.dll
+D:\FTS\FTS_PJICOV3\BE\Base\obj\Debug\FTS.Base.pdb
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\FTS.Base.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\FTS.Base.pdb
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\DevExpress.Data.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\DevExpress.Utils.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\DevExpress.XtraReports.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\EPPlus.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\FTS.Tools.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Global.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\Newtonsoft.Json.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\System.Web.Http.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\DevExpress.RichEdit.v10.2.Core.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\DevExpress.XtraCharts.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\DevExpress.Charts.v10.2.Core.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\DevExpress.XtraPivotGrid.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\DevExpress.PivotGrid.v10.2.Core.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\DevExpress.XtraRichEdit.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\DevExpress.XtraEditors.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\DevExpress.XtraTreeList.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\DevExpress.XtraNavBar.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\VistaDB.NET20.dll
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\Microsoft.Practices.ObjectBuilder.xml
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\Newtonsoft.Json.xml
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\System.Web.Http.xml
+D:\FTS\FTS_PJICOV3\BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.XmlSerializers.dll
+D:\FTS\FTS_PJICOV3\BE\Base\obj\Debug\Base.csproj.CopyComplete
+D:\FTS\FTS_PJICOV3\BE\Base\obj\Debug\Base.csproj.AssemblyReference.cache
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\FTS.Base.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\FTS.Base.pdb
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\DevExpress.Data.v10.2.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\DevExpress.Utils.v10.2.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\DevExpress.XtraReports.v10.2.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\EPPlus.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\FTS.Tools.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Global.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\Newtonsoft.Json.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\System.Web.Http.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\DevExpress.RichEdit.v10.2.Core.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\DevExpress.XtraCharts.v10.2.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\DevExpress.Charts.v10.2.Core.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\DevExpress.XtraPivotGrid.v10.2.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\DevExpress.PivotGrid.v10.2.Core.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\DevExpress.XtraRichEdit.v10.2.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\DevExpress.XtraEditors.v10.2.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\DevExpress.XtraTreeList.v10.2.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\DevExpress.XtraNavBar.v10.2.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\VistaDB.NET20.dll
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\Microsoft.Practices.ObjectBuilder.xml
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\Newtonsoft.Json.xml
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\System.Web.Http.xml
+D:\Đồ án\PCS_WH\BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.XmlSerializers.dll
+D:\Đồ án\PCS_WH\BE\Base\obj\Debug\FTS.Base.Report.TransactionOutput.resources
+D:\Đồ án\PCS_WH\BE\Base\obj\Debug\Base.csproj.GenerateResource.cache
+D:\Đồ án\PCS_WH\BE\Base\obj\Debug\Base.csproj.CoreCompileInputs.cache
+D:\Đồ án\PCS_WH\BE\Base\obj\Debug\Base.csproj.CopyComplete
+D:\Đồ án\PCS_WH\BE\Base\obj\Debug\FTS.Base.dll
+D:\Đồ án\PCS_WH\BE\Base\obj\Debug\FTS.Base.pdb
+D:\Đồ án\PCS_WH\BE\Base\obj\Debug\Base.csproj.AssemblyReference.cache
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\FTS.Base.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\FTS.Base.pdb
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\DevExpress.Data.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\DevExpress.Utils.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\DevExpress.XtraReports.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\EPPlus.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\FTS.Tools.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Global.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\Newtonsoft.Json.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\System.Web.Http.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\DevExpress.RichEdit.v10.2.Core.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\DevExpress.XtraCharts.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\DevExpress.Charts.v10.2.Core.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\DevExpress.XtraPivotGrid.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\DevExpress.PivotGrid.v10.2.Core.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\DevExpress.XtraRichEdit.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\DevExpress.XtraEditors.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\DevExpress.XtraTreeList.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\DevExpress.XtraNavBar.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\VistaDB.NET20.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\Microsoft.Practices.ObjectBuilder.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\Newtonsoft.Json.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\System.Web.Http.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.XmlSerializers.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\obj\Debug\FTS.Base.Report.TransactionOutput.resources
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\obj\Debug\Base.csproj.GenerateResource.cache
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\obj\Debug\Base.csproj.CoreCompileInputs.cache
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\obj\Debug\Base.csproj.CopyComplete
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\obj\Debug\FTS.Base.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\Base\obj\Debug\FTS.Base.pdb

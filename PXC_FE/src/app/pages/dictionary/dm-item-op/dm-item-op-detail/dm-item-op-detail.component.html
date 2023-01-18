@@ -1,0 +1,122 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmItemOpResource.MyResource;
+      let DmItemOpResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ITEM_OP_ID"
+              class="control-label"
+              [text]="DmItemOpResource.ITEM_OP_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input idField"
+              formControlName="ITEM_OP_ID"
+              kendoTextBox
+              #ITEM_OP_ID
+            />
+          </div>
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="DmItemOpResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="ITEM_OP_NAME"
+              class="control-label"
+              required
+              [text]="DmItemOpResource.ITEM_OP_NAME"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="ITEM_OP_NAME"
+              kendoTextBox
+              #ITEM_OP_NAME
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="ISSUE_RECEIPT"
+              class="control-label"
+              required
+              [text]="DmItemOpResource.ISSUE_RECEIPT"
+            >
+            </kendo-label>
+            <kendo-dropdownlist
+              formControlName="ISSUE_RECEIPT"
+              [data]="state$.IssueReceiptTypeDatas"
+              [defaultItem]="{
+                ISSUE_RECEIPT_NAME: 'Chọn phương thức...',
+                ISSUE_RECEIPT_ID: ''
+              }"
+              [textField]="'ISSUE_RECEIPT_NAME'"
+              [valueField]="'ISSUE_RECEIPT_ID'"
+              [valuePrimitive]="true"
+              #ISSUE_RECEIPT
+            >
+            </kendo-dropdownlist>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="TRANSFER_ITEM_OP_ID"
+              class="control-label"
+              required
+              [text]="DmItemOpResource.TRANSFER_ITEM_OP_ID"
+            >
+            </kendo-label>
+            <label #TRANSFER_ITEM_OP_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="TRANSFER_ITEM_OP_ID"
+                valueField="ITEM_OP_ID"
+                [selectionChange]="tranferItemOpId_selectionChange.bind(this)"
+              >
+                <dm-item-op-selector textLookupSelector></dm-item-op-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="TRANSFER_ITEM_OP_NAME"
+              kendoTextBox
+              #TRANSFER_ITEM_OP_NAME
+              readonly
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

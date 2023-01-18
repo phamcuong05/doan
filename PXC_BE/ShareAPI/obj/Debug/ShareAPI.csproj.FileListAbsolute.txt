@@ -1,0 +1,468 @@
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.ShareAPI.dll.config
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.ShareAPI.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.ShareAPI.pdb
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Antlr3.Runtime.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.Data.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.XtraPrinting.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.XtraReports.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\EntityFramework.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.AccBusiness.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.AccReport.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.Base.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.ShareBusiness.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.Tools.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Data.Edm.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Data.OData.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Owin.Cors.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Owin.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Owin.Security.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Owin.Security.OAuth.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Global.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Practices.ObjectBuilder.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Newtonsoft.Json.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Owin.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Net.Http.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Net.Http.Formatting.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Net.Http.WebRequest.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Spatial.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Cors.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Helpers.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Http.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Http.OData.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Http.Tracing.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Http.WebHost.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Mvc.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Optimization.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Providers.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Razor.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.WebPages.Deployment.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.WebPages.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.WebPages.Razor.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\WebGrease.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.XtraBars.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.Utils.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.XtraTreeList.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.XtraEditors.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.XtraRichEdit.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.RichEdit.v10.2.Core.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.XtraCharts.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.Charts.v10.2.Core.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.XtraPivotGrid.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.PivotGrid.v10.2.Core.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\DevExpress.XtraNavBar.v10.2.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\VistaDB.NET20.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\ICSharpCode.SharpZipLib.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.AccBusiness.pdb
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.AccReport.pdb
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.Base.pdb
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.ShareBusiness.pdb
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Data.Edm.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Data.OData.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Owin.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Owin.Cors.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Owin.Security.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Owin.Security.OAuth.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Practices.ObjectBuilder.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Net.Http.Formatting.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Spatial.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Helpers.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Http.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Http.WebHost.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Mvc.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Razor.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.WebPages.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.WebPages.Deployment.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.WebPages.Razor.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\EntityFramework.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Http.Tracing.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\System.Web.Http.OData.xml
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\de\Microsoft.Data.Edm.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\es\Microsoft.Data.Edm.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\it\Microsoft.Data.Edm.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\de\Microsoft.Data.OData.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\es\Microsoft.Data.OData.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\fr\Microsoft.Data.OData.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\it\Microsoft.Data.OData.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\ja\Microsoft.Data.OData.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\ko\Microsoft.Data.OData.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\ru\Microsoft.Data.OData.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\de\System.Spatial.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\es\System.Spatial.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\fr\System.Spatial.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\it\System.Spatial.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\ja\System.Spatial.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\ko\System.Spatial.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\ru\System.Spatial.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\zh-Hans\System.Spatial.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\zh-Hant\System.Spatial.resources.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Data.XmlSerializers.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\obj\Debug\ShareAPI.csproj.AssemblyReference.cache
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\obj\Debug\ShareAPI.csproj.CoreCompileInputs.cache
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\obj\Debug\ShareAPI.csproj.CopyComplete
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\obj\Debug\FTS.ShareAPI.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\obj\Debug\FTS.ShareAPI.pdb
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.ClaimBusiness.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\FTS.ClaimBusiness.pdb
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\itextsharp.dll
+D:\FTS_SOLUTION\FTSPJICO2021\BE\ShareAPI\bin\EPPlus.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\obj\Debug\ShareAPI.csproj.AssemblyReference.cache
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\obj\Debug\ShareAPI.csproj.CoreCompileInputs.cache
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\obj\Debug\FTS.ShareAPI.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\obj\Debug\FTS.ShareAPI.pdb
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.ShareAPI.dll.config
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.ShareAPI.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.ShareAPI.pdb
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Antlr3.Runtime.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.Data.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.XtraPrinting.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.XtraReports.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\EntityFramework.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\EPPlus.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.AccBusiness.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.AccReport.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.Base.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.ClaimBusiness.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.ShareBusiness.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.Tools.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Data.Edm.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Data.OData.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Owin.Cors.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Owin.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Owin.Security.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Owin.Security.OAuth.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Global.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Practices.ObjectBuilder.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Newtonsoft.Json.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Owin.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Net.Http.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Net.Http.Formatting.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Net.Http.WebRequest.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Spatial.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Cors.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Helpers.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Http.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Http.OData.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Http.Tracing.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Http.WebHost.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Mvc.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Optimization.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Providers.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Razor.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.WebPages.Deployment.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.WebPages.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.WebPages.Razor.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\WebGrease.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.XtraBars.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.Utils.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.XtraTreeList.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.XtraEditors.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.XtraRichEdit.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.RichEdit.v10.2.Core.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.XtraCharts.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.Charts.v10.2.Core.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.XtraPivotGrid.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.PivotGrid.v10.2.Core.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\DevExpress.XtraNavBar.v10.2.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\VistaDB.NET20.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.AccBusiness.pdb
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.AccReport.pdb
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.Base.pdb
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.ClaimBusiness.pdb
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\FTS.ShareBusiness.pdb
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Data.Edm.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Data.OData.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Owin.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Owin.Cors.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Owin.Security.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Owin.Security.OAuth.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Practices.ObjectBuilder.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Net.Http.Formatting.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Spatial.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Helpers.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Http.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Http.WebHost.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Mvc.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Razor.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.WebPages.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.WebPages.Deployment.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.WebPages.Razor.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\EntityFramework.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Http.Tracing.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\System.Web.Http.OData.xml
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\de\Microsoft.Data.Edm.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\es\Microsoft.Data.Edm.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\it\Microsoft.Data.Edm.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\de\Microsoft.Data.OData.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\es\Microsoft.Data.OData.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\fr\Microsoft.Data.OData.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\it\Microsoft.Data.OData.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\ja\Microsoft.Data.OData.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\ko\Microsoft.Data.OData.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\ru\Microsoft.Data.OData.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\de\System.Spatial.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\es\System.Spatial.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\fr\System.Spatial.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\it\System.Spatial.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\ja\System.Spatial.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\ko\System.Spatial.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\ru\System.Spatial.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\zh-Hans\System.Spatial.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\zh-Hant\System.Spatial.resources.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Data.XmlSerializers.dll
+D:\FTS\FTS_PJICOV3\BE\ShareAPI\obj\Debug\ShareAPI.csproj.CopyComplete
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.ShareAPI.dll.config
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.ShareAPI.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.ShareAPI.pdb
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Antlr3.Runtime.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.Data.v10.2.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.XtraPrinting.v10.2.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.XtraReports.v10.2.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\EntityFramework.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\EPPlus.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.AccBusiness.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.AccReport.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.Base.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.ClaimBusiness.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.ShareBusiness.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.Tools.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Data.Edm.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Data.OData.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Owin.Cors.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Owin.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Owin.Security.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Global.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Practices.ObjectBuilder.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Newtonsoft.Json.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Owin.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Net.Http.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Net.Http.Formatting.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Net.Http.WebRequest.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Spatial.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Cors.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Helpers.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Http.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Http.OData.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Http.Tracing.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Http.WebHost.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Mvc.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Optimization.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Providers.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Razor.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.WebPages.Deployment.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.WebPages.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.WebPages.Razor.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\WebGrease.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.XtraBars.v10.2.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.Utils.v10.2.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.XtraTreeList.v10.2.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.XtraEditors.v10.2.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.XtraRichEdit.v10.2.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.RichEdit.v10.2.Core.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.XtraCharts.v10.2.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.Charts.v10.2.Core.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.XtraPivotGrid.v10.2.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.PivotGrid.v10.2.Core.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\DevExpress.XtraNavBar.v10.2.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\VistaDB.NET20.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.AccBusiness.pdb
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.AccReport.pdb
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.Base.pdb
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.ClaimBusiness.pdb
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\FTS.ShareBusiness.pdb
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Data.Edm.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Data.OData.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Owin.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Owin.Cors.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Owin.Security.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Practices.ObjectBuilder.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Net.Http.Formatting.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Spatial.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Helpers.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Http.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Http.WebHost.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Mvc.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Razor.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.WebPages.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.WebPages.Deployment.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.WebPages.Razor.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\EntityFramework.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Http.Tracing.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\System.Web.Http.OData.xml
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\de\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\es\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\it\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\de\System.Spatial.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\es\System.Spatial.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\fr\System.Spatial.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\it\System.Spatial.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\ja\System.Spatial.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\ko\System.Spatial.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\ru\System.Spatial.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\zh-Hans\System.Spatial.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\zh-Hant\System.Spatial.resources.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Data.XmlSerializers.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\obj\Debug\ShareAPI.csproj.AssemblyReference.cache
+D:\Đồ án\PCS_WH\BE\ShareAPI\obj\Debug\ShareAPI.csproj.CoreCompileInputs.cache
+D:\Đồ án\PCS_WH\BE\ShareAPI\obj\Debug\ShareAPI.csproj.CopyComplete
+D:\Đồ án\PCS_WH\BE\ShareAPI\obj\Debug\FTS.ShareAPI.dll
+D:\Đồ án\PCS_WH\BE\ShareAPI\obj\Debug\FTS.ShareAPI.pdb
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\obj\Debug\ShareAPI.csproj.AssemblyReference.cache
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\obj\Debug\ShareAPI.csproj.CoreCompileInputs.cache
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\obj\Debug\FTS.ShareAPI.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\obj\Debug\FTS.ShareAPI.pdb
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\FTS.ShareAPI.dll.config
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\FTS.ShareAPI.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\FTS.ShareAPI.pdb
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Antlr3.Runtime.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.Data.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.XtraPrinting.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.XtraReports.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\EntityFramework.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\EPPlus.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\FTS.Base.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\FTS.ShareBusiness.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\FTS.Tools.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Data.Edm.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Data.OData.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Owin.Cors.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Owin.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Owin.Security.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Global.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Practices.ObjectBuilder.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Newtonsoft.Json.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Owin.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Net.Http.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Net.Http.Formatting.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Net.Http.WebRequest.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Spatial.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Cors.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Helpers.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Http.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Http.OData.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Http.Tracing.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Http.WebHost.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Mvc.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Optimization.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Providers.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Razor.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.WebPages.Deployment.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.WebPages.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.WebPages.Razor.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\WebGrease.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.XtraBars.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.Utils.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.XtraTreeList.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.XtraEditors.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.XtraRichEdit.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.RichEdit.v10.2.Core.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.XtraCharts.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.Charts.v10.2.Core.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.XtraPivotGrid.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.PivotGrid.v10.2.Core.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\DevExpress.XtraNavBar.v10.2.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\VistaDB.NET20.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\FTS.Base.pdb
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\FTS.ShareBusiness.pdb
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Data.Edm.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Data.OData.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Owin.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Owin.Cors.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Owin.Security.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Practices.ObjectBuilder.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Net.Http.Formatting.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Spatial.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Helpers.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Http.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Http.WebHost.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Mvc.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Razor.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.WebPages.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.WebPages.Deployment.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.WebPages.Razor.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\EntityFramework.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Http.Tracing.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\System.Web.Http.OData.xml
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\de\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\es\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\fr\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\it\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\ja\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\ko\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\ru\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\de\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\es\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\fr\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\it\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\ja\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\ko\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\ru\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\de\System.Spatial.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\es\System.Spatial.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\fr\System.Spatial.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\it\System.Spatial.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\ja\System.Spatial.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\ko\System.Spatial.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\ru\System.Spatial.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\zh-Hans\System.Spatial.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\zh-Hant\System.Spatial.resources.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\bin\Microsoft.Practices.EnterpriseLibrary.Data.XmlSerializers.dll
+D:\Đồ án\PXC_DOAN\PXC_BE\ShareAPI\obj\Debug\ShareAPI.csproj.CopyComplete

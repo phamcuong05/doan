@@ -1,0 +1,150 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.SecUserResource.MyResource;
+      let secUserResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="USER_ID"
+              class="control-label"
+              [text]="secUserResource.USER_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="USER_ID"
+              kendoTextBox
+              #USER_ID
+            />
+          </div>
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="secUserResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="USER_NAME"
+              class="control-label"
+              required
+              [text]="secUserResource.USER_NAME"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="USER_NAME"
+              kendoTextBox
+              #USER_NAME
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="USER_PASSWORD"
+              class="control-label"
+              required
+              [text]="secUserResource.USER_PASSWORD"
+            >
+            </kendo-label>
+            <input
+              type="password"
+              class="control-input"
+              formControlName="USER_PASSWORD"
+              kendoTextBox
+              #USER_PASSWORD
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ORGANIZATION_ID"
+              class="control-label"
+              required
+              [text]="'Đơn vị'"
+            >
+            </kendo-label>
+            <label #ORGANIZATION_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="ORGANIZATION_ID"
+                valueField="ORGANIZATION_ID"
+                [selectionChange]="OrganizationId_selectionChange.bind(this)"
+              >
+                <dm-organization-selector
+                  textLookupSelector
+                ></dm-organization-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="ORGANIZATION_NAME"
+              kendoTextBox
+              #ORGANIZATION_NAME
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="EMPLOYEE_ID"
+              class="control-label"
+              required
+              [text]="'Mã nhân viên'"
+            >
+            </kendo-label>
+            <label #EMPLOYEE_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="EMPLOYEE_ID"
+                valueField="EMPLOYEE_ID"
+                [selectionChange]="employeeId_selectionChange.bind(this)"
+              >
+                <dm-employee-selector textLookupSelector></dm-employee-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="EMPLOYEE_NAME"
+              kendoTextBox
+              #EMPLOYEE_NAME
+              readonly
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

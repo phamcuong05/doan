@@ -1,0 +1,29 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="myInject.resourceManager.SecUserResource.MyResource; let secUserResource">
+        <fts-dict-base-detail [formGroup]="formGroup" [showBtnAdd]="false" [showBtnDuplicate]="false" [showBtnDelete]="true">
+            <div formControls>
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="RES_ID" class="control-label"
+                            [text]="'RES ID'" required>
+                        </kendo-label>
+                        <input type="text" class="control-input" formControlName="RES_ID" kendoTextBox
+                            #RES_ID />
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="RES_VALUE" class="control-label" required
+                            [text]="'RES VALUE'">
+                        </kendo-label>
+                        <input type="text" class="control-input" formControlName="RES_VALUE" kendoTextBox
+                            #RES_VALUE />
+                    </div>
+                </div>            
+
+            </div>
+        </fts-dict-base-detail>
+    </ng-container>
+</ng-container>

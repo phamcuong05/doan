@@ -1,0 +1,41 @@
+<ng-container *ngIf="resourceManager.CommonResource.MyResource as resource">
+  <fts-window
+    *ngIf="show"
+    [minWidth]="550"
+    [minHeight]="700"
+    [(show)]="show"
+    [title]="resource.Preview"
+    [maximize]="true"
+    #window
+  >
+    <div class="d-flex flex-column flex-1">
+      <kendo-toolbar *ngIf="splitbuttonExport?.length">
+        <kendo-toolbar-splitbutton
+          [text]="resource.Export"
+          [data]="splitbuttonExport"
+        >
+        </kendo-toolbar-splitbutton>
+        <kendo-toolbar-separator></kendo-toolbar-separator>
+        <kendo-toolbar-button
+          (click)="close()"
+          className="btn btn-close"
+          iconClass="k-icon k-i-close"
+          [text]="resource.Close"
+        >
+        </kendo-toolbar-button>
+      </kendo-toolbar>
+      <div class="window-content flex-1">
+        <mask-load *ngIf="isLoading"></mask-load>
+        <div class="h-100 col-12">
+          <embed
+            class="col-12 h-100"
+            [src]="fileUrl || '' | safe"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+          />
+        </div>
+      </div>
+    </div>
+  </fts-window>
+</ng-container>

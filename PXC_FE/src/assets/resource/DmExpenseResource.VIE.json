@@ -1,0 +1,9 @@
+{
+    "DM_EXPENSE":"Danh mục chi phí",
+    "EXPENSE_ID":"Mã chi phí",
+    "EXPENSE_NAME":"Tên chi phí",
+    "EXPENSE_CLASS_ID":"Mã nhóm chi phí",
+    "EXPENSE_CLASS_NAME":"Tên nhóm chi phí",
+    "ACTIVE":"Sử dụng",
+    "USER_ID":"Người lập"
+}

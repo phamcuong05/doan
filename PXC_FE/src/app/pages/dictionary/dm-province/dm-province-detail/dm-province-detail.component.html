@@ -1,0 +1,38 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="myInject.resourceManager.DmProvinceResource.MyResource; let DmProvinceResource">
+        <fts-dict-base-detail [formGroup]="formGroup">
+            <div formControls>
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="PROVINCE_ID" class="control-label"
+                            [text]="DmProvinceResource.PROVINCE_ID" required>
+                        </kendo-label>
+                        <input type="text" class="control-input idField" formControlName="PROVINCE_ID" kendoTextBox
+                            #PROVINCE_ID />
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="PROVINCE_NAME" class="control-label" required
+                            [text]="DmProvinceResource.PROVINCE_NAME">
+                        </kendo-label>
+                        <input type="text" class="control-input" formControlName="PROVINCE_NAME" kendoTextBox
+                            #PROVINCE_NAME />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="ACTIVE" class="control-label" required [text]="DmProvinceResource.ACTIVE">
+                        </kendo-label>
+                        <input type="checkbox" formControlName="ACTIVE" kendoCheckBox #ACTIVE />
+                    </div>
+                </div>
+
+            </div>
+        </fts-dict-base-detail>
+    </ng-container>
+</ng-container>
+

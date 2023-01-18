@@ -1,0 +1,119 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmWarehouseResource.MyResource;
+      let dmWarehouseResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="WAREHOUSE_ID"
+              class="control-label"
+              [text]="dmWarehouseResource.WAREHOUSE_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input idField"
+              formControlName="WAREHOUSE_ID"
+              kendoTextBox
+              #WAREHOUSE_ID
+            />
+          </div>
+
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="dmWarehouseResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="WAREHOUSE_NAME"
+              class="control-label"
+              required
+              [text]="dmWarehouseResource.WAREHOUSE_NAME"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="WAREHOUSE_NAME"
+              kendoTextBox
+              #WAREHOUSE_NAME
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="DEPARTMENT_ID"
+              class="control-label"
+              required
+              [text]="dmWarehouseResource.DEPARTMENT_ID"
+            >
+            </kendo-label>
+            <label #DEPARTMENT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="DEPARTMENT_ID"
+                valueField="DEPARTMENT_ID"
+                [selectionChange]="departmentId_selectionChange.bind(this)"
+              >
+                <dm-department-selector
+                  textLookupSelector
+                ></dm-department-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="DEPARTMENT_NAME"
+              kendoTextBox
+              #DEPARTMENT_NAME
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="IS_USE_WAREHOUSE"
+              class="control-label"
+              required
+              [text]="dmWarehouseResource.IS_USE_WAREHOUSE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="IS_USE_WAREHOUSE"
+              kendoCheckBox
+              #IS_USE_WAREHOUSE
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

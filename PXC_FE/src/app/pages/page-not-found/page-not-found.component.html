@@ -1,0 +1,7 @@
+<ng-container *ngIf="resourceManager.CommonResource.MyResource; let resource">
+    <div class="page-not-found">
+        <h1>404</h1>
+        <p>{{resource.PageNotFound}}</p>
+        <a class="btn btn-primary uppercase" routerLink="/"><i class="icon-home"></i>{{resource.BackToHome}}</a>
+    </div>
+</ng-container>

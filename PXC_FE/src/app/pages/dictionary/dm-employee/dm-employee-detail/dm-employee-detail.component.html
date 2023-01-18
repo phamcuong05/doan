@@ -1,0 +1,180 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmEmployeeResource.MyResource;
+      let dmEmployeeResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="EMPLOYEE_ID"
+              class="control-label"
+              [text]="dmEmployeeResource.EMPLOYEE_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="EMPLOYEE_ID"
+              kendoTextBox
+              #EMPLOYEE_ID
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="EMPLOYEE_NAME"
+              class="control-label"
+              [text]="dmEmployeeResource.EMPLOYEE_NAME"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="EMPLOYEE_NAME"
+              kendoTextBox
+              #EMPLOYEE_NAME
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-7">
+            <kendo-label
+              [for]="DEPARTMENT_ID"
+              class="control-label"
+              required
+              [text]="dmEmployeeResource.DEPARTMENT_ID"
+            >
+            </kendo-label>
+            <label #DEPARTMENT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="DEPARTMENT_ID"
+                valueField="DEPARTMENT_ID"
+                [selectionChange]="departmentID_selectionChange.bind(this)"
+              >
+                <dm-department-selector
+                  textLookupSelector
+                ></dm-department-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-5 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="DEPARTMENT_NAME"
+              kendoTextBox
+              #DEPARTMENT_NAME
+              tabindex="-1"
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="ADDRESS"
+              class="control-label"
+              [text]="dmEmployeeResource.ADDRESS"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="ADDRESS"
+              kendoTextBox
+              #ADDRESS
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="PHONE"
+              class="control-label"
+              [text]="dmEmployeeResource.PHONE"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="PHONE"
+              kendoTextBox
+              #PHONE
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="EMAIL"
+              class="control-label"
+              [text]="dmEmployeeResource.EMAIL"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="EMAIL"
+              kendoTextBox
+              #EMAIL
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="IDENTITY_NO"
+              class="control-label"
+              [text]="dmEmployeeResource.IDENTITY_NO"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="IDENTITY_NO"
+              kendoTextBox
+              #IDENTITY_NO
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="dmEmployeeResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

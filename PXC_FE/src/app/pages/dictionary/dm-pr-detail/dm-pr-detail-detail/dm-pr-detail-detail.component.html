@@ -1,0 +1,414 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmPrDetailResource.MyResource;
+      let prDetailResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="PR_DETAIL_ID"
+              class="control-label"
+              [text]="prDetailResource.PR_DETAIL_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input idField"
+              formControlName="PR_DETAIL_ID"
+              kendoTextBox
+              #PR_DETAIL_ID
+            />
+          </div>
+
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              [text]="prDetailResource.ACTIVE"
+              required
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 form-control">
+            <kendo-label
+              [for]="PR_DETAIL_NAME"
+              class="control-label"
+              required
+              [text]="prDetailResource.PR_DETAIL_NAME"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PR_DETAIL_NAME"
+              kendoTextBox
+              #PR_DETAIL_NAME
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="PHONE"
+              class="control-label"
+              required
+              [text]="prDetailResource.PHONE"
+            >
+            </kendo-label>
+            <input
+              type="tel"
+              class="control-input"
+              formControlName="PHONE"
+              kendoTextBox
+              #PHONE
+            />
+          </div>
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="EMAIL"
+              class="control-label"
+              [text]="prDetailResource.EMAIL"
+            ></kendo-label>
+            <input
+              type="email"
+              class="control-input"
+              formControlName="EMAIL"
+              kendoTextBox
+              #EMAIL
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="IDENTITY_NO"
+              class="control-label"
+              required
+              [text]="prDetailResource.IDENTITY_NO"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="IDENTITY_NO"
+              kendoTextBox
+              #IDENTITY_NO
+            />
+          </div>
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="TAX_FILE_NUMBER"
+              class="control-label"
+              required
+              [text]="prDetailResource.TAX_FILE_NUMBER"
+            ></kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="TAX_FILE_NUMBER"
+              kendoTextBox
+              #TAX_FILE_NUMBER
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 form-control">
+            <kendo-label
+              [for]="ADDRESS"
+              class="control-label"
+              required
+              [text]="prDetailResource.ADDRESS"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="ADDRESS"
+              kendoTextBox
+              #ADDRESS
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 form-control">
+            <kendo-label
+              [for]="BANK_NAME"
+              class="control-label"
+              text="Ngân hàng"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="BANK_NAME"
+              kendoTextBox
+              #BANK_NAME
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="BANK_ACCOUNT_NAME"
+              class="control-label"
+              [text]="prDetailResource.BANK_ACCOUNT_NAME"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="BANK_ACCOUNT_NAME"
+              kendoTextBox
+              #BANK_ACCOUNT_NAME
+            />
+          </div>
+
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="BANK_ACCOUNT_NO"
+              class="control-label"
+              [text]="prDetailResource.BANK_ACCOUNT_NO"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="BANK_ACCOUNT_NO"
+              kendoTextBox
+              #BANK_ACCOUNT_NO
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="BANK_BRANCH"
+              class="control-label"
+              text="Chi nhánh"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="BANK_BRANCH"
+              kendoTextBox
+              #BANK_BRANCH
+            />
+          </div>
+
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="BANK_CODE"
+              class="control-label"
+              text="Mã ngân hàng"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="BANK_CODE"
+              kendoTextBox
+              #BANK_CODE
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PROVINCE_ID"
+              class="control-label"
+              required
+              [text]="prDetailResource.PROVINCE_ID"
+            >
+            </kendo-label>
+            <label #PROVINCE_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="PROVINCE_ID"
+                valueField="PROVINCE_ID"
+                [selectionChange]="provinceId_selectionChange.bind(this)"
+              >
+                <dm-province-selector textLookupSelector></dm-province-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PROVINCE_NAME"
+              kendoTextBox
+              #PROVINCE_NAME
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="DISTRICT_ID"
+              class="control-label"
+              required
+              [text]="prDetailResource.DISTRICT_ID"
+            >
+            </kendo-label>
+            <label #DISTRICT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="DISTRICT_ID"
+                valueField="DISTRICT_ID"
+                [selectionChange]="districtId_selectionChange.bind(this)"
+              >
+                <dm-district-selector
+                  textLookupSelector
+                  #districtSelector
+                ></dm-district-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="DISTRICT_NAME"
+              kendoTextBox
+              #DISTRICT_NAME
+              readonly
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PR_DETAIL_CLASS_ID"
+              class="control-label"
+              [text]="prDetailResource.PR_DETAIL_CLASS_ID"
+              required
+            >
+            </kendo-label>
+            <label #PR_DETAIL_CLASS_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="PR_DETAIL_CLASS_ID"
+                valueField="PR_DETAIL_CLASS_ID"
+                [selectionChange]="PrDetailClass_selectionChange.bind(this)"
+              >
+                <dm-pr-detail-class-selector
+                  textLookupSelector
+                ></dm-pr-detail-class-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PR_DETAIL_CLASS_NAME"
+              kendoTextBox
+              #PR_DETAIL_CLASS_NAME
+              readonly
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PR_DETAIL_CLASS1_ID"
+              class="control-label"
+              required
+              [text]="prDetailResource.PR_DETAIL_CLASS1_ID"
+            >
+            </kendo-label>
+            <label #PR_DETAIL_CLASS1_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="PR_DETAIL_CLASS1_ID"
+                valueField="PR_DETAIL_CLASS1_ID"
+                [selectionChange]="PrDetailClass1_selectionChange.bind(this)"
+              >
+                <dm-pr-detail-class1-selector
+                  textLookupSelector
+                ></dm-pr-detail-class1-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PR_DETAIL_CLASS1_NAME"
+              kendoTextBox
+              #PR_DETAIL_CLASS1_NAME
+              readonly
+            />
+          </div>
+        </div>
+        <!--     <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PR_ACCOUNT_ID"
+              class="control-label"
+              required
+              [text]="prDetailResource.PR_ACCOUNT_ID"
+            ></kendo-label>
+            <label #PR_ACCOUNT_ID class="d-block col-12">
+              <fts-text-lookup
+                [form]="formGroup"
+                controlName="PR_ACCOUNT_ID"
+                valueField="ACCOUNT_ID"
+                [selectionChange]="PrAccount_selectionChange.bind(this)"
+              >
+                <dm-account-selector textLookupSelector></dm-account-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PR_ACCOUNT_NAME"
+              kendoTextBox
+              #PR_ACCOUNT_NAME
+              readonly
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="PASSWORD"
+              class="control-label"
+              required
+              [text]="prDetailResource.PASSWORD"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PASSWORD"
+              kendoTextBox
+              #PASSWORD
+            />
+          </div>
+        </div> -->
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

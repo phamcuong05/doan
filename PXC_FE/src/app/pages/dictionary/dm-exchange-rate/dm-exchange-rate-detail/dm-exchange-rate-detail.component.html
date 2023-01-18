@@ -1,0 +1,87 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmExchangeRateResource.MyResource;
+      let DmExchangeRateResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="col-12 form-control">
+            <kendo-label
+              [for]="CURRENCY_ID"
+              class="control-label"
+              required
+              [text]="DmExchangeRateResource.CURRENCY_ID"
+            >
+            </kendo-label>
+            <label #CURRENCY_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="CURRENCY_ID"
+                valueField="CURRENCY_ID"
+              >
+                <dm-currency-selector textLookupSelector></dm-currency-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 form-control">
+            <kendo-label
+              [for]="TO_CURRENCY_ID"
+              class="control-label"
+              required
+              [text]="DmExchangeRateResource.TO_CURRENCY_ID"
+            >
+            </kendo-label>
+            <label #TO_CURRENCY_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="TO_CURRENCY_ID"
+                valueField="CURRENCY_ID"
+                title=""
+              >
+                <dm-currency-selector textLookupSelector></dm-currency-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="EXCHANGE_RATE"
+              class="control-label"
+              required
+              [text]="DmExchangeRateResource.EXCHANGE_RATE"
+            >
+            </kendo-label>
+            <fts-numerictextbox
+              formControlName="EXCHANGE_RATE"
+              [format]="myInject.FTSMain.exRateFormat"
+              #EXCHANGE_RATE
+            >
+            </fts-numerictextbox>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="VALID_DATE"
+              class="control-label"
+              [text]="DmExchangeRateResource.VALID_DATE"
+            >
+            </kendo-label>
+            <label #VALID_DATE class="d-block col-12">
+              <fts-date-picker formControlName="VALID_DATE"> </fts-date-picker>
+            </label>
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

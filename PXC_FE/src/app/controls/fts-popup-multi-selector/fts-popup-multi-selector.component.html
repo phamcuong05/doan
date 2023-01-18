@@ -1,0 +1,101 @@
+<ng-container *ngIf="resourceManager.CommonResource.MyResource as resource">
+  <fts-window
+    *ngIf="show"
+    [(show)]="show"
+    [title]="formTitle ? resource.Select + ' - ' + formTitle : resource.Select"
+    [width]="popupWidth"
+    [height]="popupHeight"
+  >
+    <mask-load *ngIf="isShowMask"></mask-load>
+    <div class="d-flex flex-column h-100">
+      <div class="d-flex flex-1 hide-overflow">
+        <div class="flex-1 grid-select-wap hide-overflow">
+          <fts-grid
+            [showToolBar]="false"
+            [loading]="false"
+            [showIndexColumn]="false"
+            [gridData]="fromDataSource"
+            [isServerPaging]="true"
+            [showToolbarRefresh]="true"
+            [showPagerPageSizes]="false"
+            (dataState_Change)="onDataStateChange()"
+            (toolbarActionEvent)="toolbarActionHandler($event)"
+            (dblClickRow)="onSelectItem()"
+            [(filter)]="filter"
+            [(sort)]="sort"
+            #grdFrom
+          >
+            <fts-grid-column
+              [(filter)]="grdFrom.filter"
+              [fieldId]="colId || 'ID'"
+              [title]="titleColId || 'Mã'"
+            >
+            </fts-grid-column>
+
+            <fts-grid-column
+              [(filter)]="grdFrom.filter"
+              [fieldId]="colName || 'NAME'"
+              [title]="titleColName || 'Tên'"
+            >
+            </fts-grid-column>
+          </fts-grid>
+        </div>
+
+        <div class="select-buttons">
+          <button class="btn" type="button" (click)="onSelectItem($event)">
+            <i class="icon fas fa-angle-right"></i>
+          </button>
+          <!-- <button class="btn" type="button" (click)="onSelectAll($event)">
+            <i class="icon fas fa-angle-double-right"></i>
+          </button> -->
+          <button class="btn" type="button" (click)="onUnSelectItem($event)">
+            <i class="icon fas fa-angle-left"></i>
+          </button>
+          <button class="btn" type="button" (click)="onUnSelectAll($event)">
+            <i class="icon fas fa-angle-double-left"></i>
+          </button>
+        </div>
+        <div class="flex-1 grid-select-wap hide-overflow">
+          <fts-grid
+            [showToolBar]="false"
+            [loading]="false"
+            [showIndexColumn]="false"
+            [dataBinding]="toDataSource"
+            [showToolbarRefresh]="false"
+            [showPagerPageSizes]="false"
+            (dblClickRow)="onUnSelectItem()"
+            #grdTo
+          >
+            <fts-grid-column
+              [(filter)]="grdFrom.filter"
+              [fieldId]="colId || 'ID'"
+              [title]="titleColId || 'Mã'"
+            >
+            </fts-grid-column>
+
+            <fts-grid-column
+              [(filter)]="grdFrom.filter"
+              [fieldId]="colName || 'NAME'"
+              [title]="titleColName || 'Tên'"
+            >
+            </fts-grid-column>
+          </fts-grid>
+        </div>
+      </div>
+      <div class="task-bar">
+        <button
+          class="btn btn-primary"
+          type="button"
+          (click)="btnOk_Click($event)"
+        >
+          <i class="icon k-icon k-i-check"></i>
+          Đồng ý
+        </button>
+        <button class="btn btn-close" type="button" (click)="show = false">
+          <i class="icon k-icon k-i-close"></i>
+          Hủy bỏ
+        </button>
+      </div>
+    </div>
+  </fts-window>
+</ng-container>

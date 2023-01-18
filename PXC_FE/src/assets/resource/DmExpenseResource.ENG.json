@@ -1,0 +1,8 @@
+{
+    "EXPENSE_ID":"Expense ID",
+    "EXPENSE_NAME":"Expense Name",
+    "EXPENSE_CLASS_ID":"Expense Class ID",
+    "EXPENSE_CLASS_NAME":"Expense Class Name",
+    "ACTIVE":"Active",
+    "USER_ID":"Người lập"
+}

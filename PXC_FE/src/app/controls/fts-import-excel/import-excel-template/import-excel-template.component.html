@@ -1,0 +1,133 @@
+<ng-container
+  *ngIf="resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <fts-window
+    *ngIf="isShow"
+    [(show)]="isShow"
+    [title]="'Mẫu import excel'"
+    [width]="825"
+    [height]="450"
+  >
+    <mask-load *ngIf="showMask"></mask-load>
+    <div
+      class="h-100 d-flex flex-column hide-overflow"
+      style="color: var(--color-text)"
+      kendoTooltip
+      position="top"
+      showOn="none"
+      filter="[data-tooltip]"
+      [tooltipTemplate]="tooltipTemplate"
+    >
+      <ng-template #tooltipTemplate let-anchor>
+        {{ anchor.nativeElement.getAttribute("data-tooltip") }}
+      </ng-template>
+      <div class="tool-bar-editor">
+        <kendo-toolbar [overflow]="true" class="toolbar">
+          <!-- ADD -->
+          <kendo-toolbar-button
+            *ngIf="formMode == 'VIEW'"
+            className="btn"
+            [text]="commonResource.Add"
+            iconClass="icon k-icon k-i-file-add"
+            (click)="onAddTemplate()"
+          ></kendo-toolbar-button>
+          <!-- EDIT -->
+          <kendo-toolbar-button
+            *ngIf="formMode == 'VIEW' && template.PR_KEY"
+            className="btn"
+            [text]="commonResource.Edit"
+            iconClass="icon k-icon k-i-edit"
+            (click)="formMode = 'EDIT'"
+          >
+          </kendo-toolbar-button>
+          <!-- DELETE -->
+          <kendo-toolbar-button
+            *ngIf="formMode == 'VIEW' && template.PR_KEY"
+            className="btn btn-danger-light"
+            [text]="commonResource.Delete"
+            iconClass="icon k-icon k-i-delete"
+            (click)="onDeleteTemplate()"
+          >
+          </kendo-toolbar-button>
+          <!-- COPY -->
+          <kendo-toolbar-button
+            *ngIf="formMode == 'VIEW' && template.PR_KEY"
+            [text]="commonResource.Copy"
+            iconClass="icon k-icon k-i-copy"
+            (click)="onDuplicateTemplate()"
+          ></kendo-toolbar-button>
+          <!-- SAVE -->
+          <kendo-toolbar-button
+            *ngIf="formMode != 'VIEW'"
+            className="btn"
+            [text]="commonResource.Save"
+            iconClass="icon k-icon k-i-save"
+            (click)="submitChange($event)"
+          >
+          </kendo-toolbar-button>
+          <!-- CLOSE -->
+          <kendo-toolbar-button
+            className="btn btn-close"
+            [text]="commonResource.Close"
+            iconClass="icon k-icon k-i-close"
+            (click)="close()"
+          >
+          </kendo-toolbar-button>
+        </kendo-toolbar>
+      </div>
+      <div class="form-editor">
+        <form
+          class="form-editor form-container"
+          [formGroup]="formGroup"
+          #dialogContent
+        >
+          <div class="row">
+            <div class="form-control col-12">
+              <kendo-label
+                class="control-label"
+                [for]="TEMPLATE_NAME"
+                [text]="'Tên mẫu khai báo'"
+              ></kendo-label>
+              <input
+                #TEMPLATE_NAME
+                type="text"
+                formControlName="TEMPLATE_NAME"
+                kendoTextBox
+                [(ngModel)]="template.TEMPLATE_NAME"
+                [readonly]="formMode == 'VIEW'"
+                class="control-input"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div
+        class="flex-1 hide-overflow"
+        style="border-top: thin solid var(--color-border)"
+      >
+        <fts-grid
+          [dataBinding]="templateDetails"
+          [disabledToolBar]="formMode == 'VIEW'"
+          [showButtonConfigColumn]="false"
+          [showToolbarAddRow]="true"
+          [showToolbarRemoveRow]="true"
+          [pageSize]="10000"
+          [pageable]="false"
+          [loading]="false"
+          [filterable]="false"
+          [sortable]="false"
+          [resizable]="false"
+          [isRowEditor]="true"
+          [getNewRecord]="getNewRecord.bind(this)"
+          [formGroup]="formGroupDetail"
+          #grdDetail
+        >
+          <ng-container *ngFor="let column of detailColumns">
+            <fts-grid-column [colConfig]="column"> </fts-grid-column>
+          </ng-container>
+        </fts-grid>
+      </div>
+    </div>
+  </fts-window>
+</ng-container>

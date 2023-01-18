@@ -1,0 +1,177 @@
+<ng-container *ngIf="resourceManager.CommonResource.MyResource; let resource">
+  <ng-template #groupDownTemplate let-menu="menu">
+    <a
+      class="btn btn-router-link"
+      [class.active]="menu.Actived"
+      [class.menu-expand]="menu.Expand"
+      [attr.data-tooltip]="(miniMenu ? resource?.[menu.Id] || menu.Name : undefined)"
+      (click)="menuGroup_click(menu)"
+    >
+      <i [class]="menu.IconCls"></i>
+      <span class="link-title">{{resource?.[menu.Id] || menu.Name}}</span>
+      <i
+        class="expand-icon icon fas"
+        [class.fa-chevron-right]="menu.ExpandType == 'popup'"
+        [class.fa-chevron-down]="menu.ExpandType != 'popup'"
+        [class.expand]="menu.Expand"
+      ></i>
+    </a>
+    <div
+      *ngIf="menu.Expand && menu.ExpandType == 'down'"
+      class="menu-group-wap-dropdown"
+    >
+      <ng-container *ngFor="let menuC of menu.Items">
+        <ng-container
+          *ngIf="!menuC.IsGroup"
+          [ngTemplateOutlet]="itemLinkTemplate"
+          [ngTemplateOutletContext]="{
+            menu: menuC,
+            showTitle: menu.ExpandType == 'down'
+          }"
+        >
+        </ng-container>
+      </ng-container>
+    </div>
+  </ng-template>
+  <ng-template #groupTemplate let-menu="menu">
+    <a
+      class="menu-group btn-router-link"
+      [class.active]="menu.Actived"
+      [class.expand]="menu.Expand"
+      (click)="menu.Expand = !menu.Expand"
+    >
+      <i [class]="menu.IconCls"></i>
+      <span class="link-title">{{resource?.[menu.Id] || menu.Name}}</span>
+      <i
+        class="expand-icon icon fas fa-chevron-down"
+        [class.expand]="menu.Expand"
+      ></i>
+    </a>
+    <div *ngIf="menu.Expand" class="menu-group-wap">
+      <ng-container *ngFor="let menuC of menu.Items">
+        <ng-container
+          *ngIf="!menuC.IsGroup"
+          [ngTemplateOutlet]="itemLinkTemplate"
+          [ngTemplateOutletContext]="{ menu: menuC }"
+        >
+        </ng-container>
+      </ng-container>
+    </div>
+  </ng-template>
+  <ng-template #itemLinkTemplate let-menu="menu" let-showTitle="showTitle">
+    <a
+      *ngIf="menu.IsShow"
+      [routerLink]="menu.Href"
+      [queryParams]="menu.QueryParams"
+      [state]="menu.QueryParams"
+      class="btn btn-router-link tooltip"
+      [class.active]="menu.Actived"
+      [attr.data-tooltip]="( miniMenu && showTitle  ? resource?.[menu.Id] || menu.Name : undefined)"
+      (click)="menu_Click(menu)"
+    >
+      <i [class]="menu.IconCls"></i>
+      <span class="link-title">{{resource?.[menu.Id] || menu.Name}}</span>
+    </a>
+  </ng-template>
+
+  <div class="flex-1 custom-scroll">
+    <div
+      kendoTooltip
+      filter="[data-tooltip]"
+      [tooltipTemplate]="tooltipTemplate"
+      [position]="'right'"
+    >
+      <ng-template #tooltipTemplate let-anchor>
+        {{ anchor.nativeElement.getAttribute("data-tooltip") }}
+      </ng-template>
+      <ng-container *ngFor="let menu of menus">
+        <ng-container
+          [ngTemplateOutlet]="
+            menu.IsGroup ? groupDownTemplate : itemLinkTemplate
+          "
+          [ngTemplateOutletContext]="{ menu: menu, showTitle: !menu.IsGroup }"
+        >
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="box-view-setting">
+    <button
+      class="btn"
+      [title]="resource.ViewSettings"
+      (click)="viewSeting.isShow = !viewSeting.isShow"
+    >
+      <i class="fas fa-desktop"></i>
+    </button>
+    <div class="popup-view-settings" [hidden]="!viewSeting.isShow">
+      <div class="row">
+        <div class="form-control col-12">
+          <label class="control-label flex-1" style="min-width: 0">{{
+            resource.FontSize
+          }}</label>
+          <fts-numerictextbox
+            style="width: 5em"
+            class="control-input"
+            (ngModelChange)="fontSizeChange($event)"
+            [(ngModel)]="viewSeting.fontSize"
+            [min]="9"
+            [max]="16"
+            format="n0"
+            [creaseButton]="true"
+          >
+          </fts-numerictextbox>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-control col-12">
+          <label class="control-label flex-1" style="min-width: 0">{{
+            resource.DarkMode
+          }}</label>
+          <kendo-switch
+            [(ngModel)]="viewSeting.darkMode"
+            (valueChange)="darkModeChange($event)"
+          >
+          </kendo-switch>
+        </div>
+      </div>
+      <div class="row font-size-small text-center">
+        <div class="form-control col-12">
+          <div>{{ resource.ViewSettingsNote }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-container *ngFor="let menu of menus">
+    <div
+      *ngIf="menu.IsGroup && menu.ExpandType == 'popup'"
+      [hidden]="!menu.Expand"
+      class="menu-popup"
+    >
+      <div class="search-menu">
+        <input
+          id="txtSearchGroup_{{ menu.Id }}"
+          type="text"
+          class="control-input k-input"
+          placeholder="{{ resource.PlaceholderSearchMenu }}"
+          (keyup)="txtSearchMenu_Keyup($event, menu.Items)"
+          autocomplete="off"
+        />
+      </div>
+      <div class="menu-poup-wap custom-scroll">
+        <ng-container *ngFor="let item of menu.Items">
+          <div *ngIf="item.IsShow" class="menu-popup-item">
+            <ng-container
+              [ngTemplateOutlet]="
+                item.IsGroup ? groupTemplate : itemLinkTemplate
+              "
+              [ngTemplateOutletContext]="{ menu: item }"
+            >
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>

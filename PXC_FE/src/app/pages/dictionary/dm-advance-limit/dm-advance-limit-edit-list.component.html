@@ -1,0 +1,26 @@
+<fts-edit-list-base
+  [formGroupEditRow]="formGroupEditRow"
+  [pageResource]="myInject.resourceManager.DmAdvanceLimitResource.MyResource"
+>
+  <ng-container *ngFor="let column of columns">
+    <ng-container [ngSwitch]="column.FieldId">
+      <!-- #region ORGANIZATION_ID -->
+      <fts-text-lookup-edit-column
+        *ngSwitchCase="'ORGANIZATION_ID'"
+        [ftsColumn]="column"
+      >
+        <dm-organization-selector textLookupSelector></dm-organization-selector>
+      </fts-text-lookup-edit-column>
+      <!-- #endregion -->
+
+      <!-- #region ACCOUNT_ID -->
+      <fts-text-lookup-edit-column
+        *ngSwitchCase="'ACCOUNT_ID'"
+        [ftsColumn]="column"
+      >
+        <dm-account-selector textLookupSelector></dm-account-selector>
+      </fts-text-lookup-edit-column>
+      <!-- #endregion -->
+    </ng-container>
+  </ng-container>
+</fts-edit-list-base>

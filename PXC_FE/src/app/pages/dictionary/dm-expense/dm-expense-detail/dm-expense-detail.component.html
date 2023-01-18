@@ -1,0 +1,104 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmExpenseResource.MyResource;
+      let DmExpenseResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="EXPENSE_ID"
+              class="control-label"
+              [text]="DmExpenseResource.EXPENSE_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="EXPENSE_ID"
+              kendoTextBox
+              #EXPENSE_ID
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="EXPENSE_NAME"
+              class="control-label"
+              [text]="DmExpenseResource.EXPENSE_NAME"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="EXPENSE_NAME"
+              kendoTextBox
+              #EXPENSE_NAME
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-7">
+            <kendo-label
+              [for]="EXPENSE_CLASS_ID"
+              class="control-label"
+              required
+              [text]="DmExpenseResource.EXPENSE_CLASS_ID"
+            >
+            </kendo-label>
+            <label #EXPENSE_CLASS_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="EXPENSE_CLASS_ID"
+                valueField="EXPENSE_CLASS_ID"
+                [selectionChange]="expenseClassId_selectionChange.bind(this)"
+              >
+                <dm-expense-class-selector
+                  textLookupSelector
+                ></dm-expense-class-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-5 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="EXPENSE_CLASS_NAME"
+              kendoTextBox
+              #EXPENSE_CLASS_NAME
+              readonly
+              tabindex="-1"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="DmExpenseResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

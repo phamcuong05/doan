@@ -1,0 +1,15 @@
+{
+    "LIST_MAWB": "Thông tin chuyến bay",
+    "MAWB_ID": "MAWB",
+    "MAWB_NAME": "Tên chuyến bay",
+    "DEPARTURE": "Điểm đi",
+    "DESTINATION": "Điểm đến",
+    "CONTAINER_ID": "Mã thùng hàng",
+    "CONTAINER_NAME": "Tên thùng hàng",
+    "WARE_HOUSE_ID": "Mã kho",
+    "WARE_HOUSE_NAME": "Tên kho",
+    "TOTAL_ORDER": "Tổng số đơn",
+    "WEIGHT": "Cân nặng(kg)",
+    "CREATE_DATE": "Ngày tạo",
+    "USER_ID": "Người dùng"
+}

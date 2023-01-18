@@ -1,0 +1,89 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="
+        myInject.resourceManager.ListPackageResource.MyResource;
+        let listPackageResource
+      ">
+      <fts-dict-base-detail [formGroup]="formGroup">
+        <div formControls>
+        <div class="row">
+              <!-- PACKAGE_CODE: Ma goi hang -->
+            <div class="form-control col-6">
+              <kendo-label [for]="PACKAGE_CODE" class="control-label" [text]="listPackageResource.PACKAGE_CODE" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input idField" formControlName="PACKAGE_CODE" kendoTextBox
+                #PACKAGE_CODE/>
+            </div>
+             <!-- PACKAGE_NAME: Ten goi hang -->
+            <div class="form-control col-6">
+                <kendo-label [for]="PACKAGE_NAME" class="control-label" [text]="listPackageResource.PACKAGE_NAME" required>
+                </kendo-label>
+                <input type="text" class="control-input k-input" formControlName="PACKAGE_NAME" kendoTextBox
+                  #PACKAGE_NAME/>
+              </div>
+          </div>
+
+          <div class="row">
+              <!-- ITEM: Loai hang -->
+            <div class="form-control col-6">
+                <kendo-label [for]="ITEM" class="control-label" [text]="listPackageResource.ITEM" required>
+                </kendo-label>
+                <input type="text" class="control-input k-input" formControlName="ITEM" kendoTextBox
+                  #ITEM/>
+              </div>
+              <!-- TRACKING_CODE: Ma tracking -->
+            <div class="form-control col-6">
+              <kendo-label [for]="TRACKING_CODE" class="control-label" [text]="listPackageResource.TRACKING_CODE" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input idField" formControlName="TRACKING_CODE" kendoTextBox
+                #TRACKING_CODE/>
+            </div>
+          </div>
+
+          <div class="row">          
+              <!-- WEIGHT: can nang -->
+            <div class="form-control col-6">
+                <kendo-label [for]="WEIGHT" class="control-label" [text]="listPackageResource.WEIGHT" required>
+                </kendo-label>
+                <fts-numerictextbox formControlName="WEIGHT" format="n2" #WEIGHT>
+                </fts-numerictextbox>
+            </div>
+            <!-- SERVICE_CHARGE_CODE: Ma phi dv -->
+          <div class="form-control col-6">
+            <kendo-label [for]="SERVICE_CHARGE_CODE" class="control-label" [text]="listPackageResource.SERVICE_CHARGE_CODE" required>
+            </kendo-label>
+            <input type="text" class="control-input k-input idField" formControlName="SERVICE_CHARGE_CODE" kendoTextBox
+              #SERVICE_CHARGE_CODE/>
+          </div>
+          </div>
+
+        <div class="row">
+            <!-- CONTAINER_ID: Ma container -->
+          <div class="form-control col-6">
+            <kendo-label [for]="CONTAINER_ID" class="control-label" [text]="listPackageResource.CONTAINER_ID" required>
+            </kendo-label>
+            <input type="text" class="control-input k-input idField" formControlName="CONTAINER_ID" kendoTextBox
+              #CONTAINER_ID/>
+          </div>
+           <!-- WARE_HOUSE_ID: Ma kho -->
+          <div class="form-control col-6">
+              <kendo-label [for]="WARE_HOUSE_ID" class="control-label" [text]="listPackageResource.WARE_HOUSE_ID" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input idField" formControlName="WARE_HOUSE_ID" kendoTextBox
+                #WARE_HOUSE_ID/>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- MAWB_ID: Mawb -->
+          <div class="form-control col-6">
+            <kendo-label [for]="MAWB_ID" class="control-label" [text]="listPackageResource.MAWB_ID" required>
+            </kendo-label>
+            <input type="text" class="control-input k-input idField" formControlName="MAWB_ID" kendoTextBox
+              #MAWB_ID/>
+          </div>
+        </div>
+         
+      </div>
+      </fts-dict-base-detail>
+    </ng-container>
+  </ng-container>

@@ -1,0 +1,162 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmItemResource.MyResource;
+      let DmItemResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="ITEM_ID"
+              class="control-label"
+              [text]="DmItemResource.ITEM_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input idField"
+              formControlName="ITEM_ID"
+              kendoTextBox
+              #ITEM_ID
+            />
+          </div>
+
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              [text]="DmItemResource.ACTIVE"
+              required
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 form-control">
+            <kendo-label
+              [for]="ITEM_NAME"
+              class="control-label"
+              required
+              [text]="DmItemResource.ITEM_NAME"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="ITEM_NAME"
+              kendoTextBox
+              #ITEM_NAME
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="UNIT_ID"
+              class="control-label"
+              required
+              [text]="DmItemResource.UNIT_ID"
+            >
+            </kendo-label>
+            <label #UNIT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="UNIT_ID"
+                valueField="UNIT_ID"
+                [selectionChange]="unitId_selectionChange.bind(this)"
+              >
+                <dm-unit-selector textLookupSelector></dm-unit-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="UNIT_NAME"
+              kendoTextBox
+              #UNIT_NAME
+              readonly
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ITEM_CLASS_ID"
+              class="control-label"
+              required
+              [text]="DmItemResource.ITEM_CLASS_ID"
+            >
+            </kendo-label>
+            <label #ITEM_CLASS_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="ITEM_CLASS_ID"
+                valueField="ITEM_CLASS_ID"
+                [selectionChange]="itemClassId_selectionChange.bind(this)"
+              >
+                <dm-item-class-selector
+                  textLookupSelector
+                ></dm-item-class-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="ITEM_CLASS_NAME"
+              kendoTextBox
+              #ITEM_CLASS_NAME
+              readonly
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ITEM_CLASS1_ID"
+              class="control-label"
+              required
+              [text]="DmItemResource.ITEM_CLASS1_ID"
+            >
+            </kendo-label>
+            <label #ITEM_CLASS1_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="ITEM_CLASS1_ID"
+                valueField="ITEM_CLASS1_ID"
+                [selectionChange]="ItemClass1_selectionChange.bind(this)"
+              >
+                <dm-item-class1-selector
+                  textLookupSelector
+                ></dm-item-class1-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="ITEM_CLASS1_NAME"
+              kendoTextBox
+              #ITEM_CLASS1_NAME
+              readonly
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

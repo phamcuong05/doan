@@ -1,0 +1,39 @@
+<div
+  class="k-numeric-wrap"
+  [class.k-state-focused]="focused"
+  (mousedown)="onMouseDown($event)"
+>
+  <input
+    class="k-input text-right"
+    type="text"
+    (keypress)="onKeyPress($event)"
+    (keydown)="onKeyDown($event)"
+    (focus)="onFocus($event)"
+    (blur)="onBlur($event)"
+    [(ngModel)]="valuePreview"
+    [disabled]="disabled"
+    [readonly]="readonly"
+    [placeholder]="placeholder"
+    [id]="id"
+    #inputEl
+  />
+  <span
+    *ngIf="creaseButton"
+    class="k-select"
+    [class.k-state-disabled]="disabled"
+    ><span
+      role="button"
+      class="k-link k-link-increase"
+      title="Increase value"
+      aria-label="Increase value"
+      (click)="increase($event)"
+      ><span class="k-icon k-i-arrow-n"></span></span
+    ><span
+      role="button"
+      class="k-link k-link-decrease"
+      title="Decrease value"
+      aria-label="Decrease value"
+      (click)="decrease($event)"
+      ><span class="k-icon k-i-arrow-s"></span></span
+  ></span>
+</div>

@@ -1,0 +1,15 @@
+<div class="cboLanguage" >
+    <div class="language-selected" title="Chọn ngôn ngữ" (click)="languageClick($event)">
+        <span class="text-language">
+            {{langSelected.ID}}
+        </span>
+        <img src="./../../../assets/images/icon/{{langSelected?.Img}}" alt="{{langSelected?.ID}}">
+    </div>
+    <ul [hidden]="!state.showSelectLanguage" class="lst-language">
+        <li *ngFor="let lang of languages" (mouseenter)="lang.IsHover=true" (mouseleave)="lang.IsHover=false"
+            class="btn item-language {{lang.IsHover? 'hover': ''}}" (click)="itemLanguage_Selected(lang,$event)">
+            <img src="./../../../assets/images/icon/{{lang.Img}}" alt="{{lang.ID}}">
+            <span>{{lang.Name}}</span>
+        </li>
+    </ul>
+</div>

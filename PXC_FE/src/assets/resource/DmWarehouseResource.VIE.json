@@ -1,0 +1,10 @@
+{
+  "DM_WAREHOUSE": "Danh mục kho",
+  "WAREHOUSE_ID": "Mã kho",
+  "WAREHOUSE_NAME": "Tên kho",
+  "DEPARTMENT_ID": "Phòng ban",
+  "DEPARTMENT_NAME": "Phòng ban",
+  "IS_USE_WAREHOUSE": "Kho sử dụng",
+  "USER_ID": "Người lập",
+  "ACTIVE": "Sử dụng"
+}

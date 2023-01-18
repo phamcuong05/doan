@@ -1,0 +1,12 @@
+{
+  "DM_CONTRACT_LIMIT": "Hạn mức đầu tư theo ngân hàng",
+  "ORGANIZATION_ID": "Mã đơn vị",
+  "PR_DETAIL_ID": "Đối tượng",
+  "PR_DETAIL_NAME": "Tên đối tượng",
+  "VALID_DATE": "Ngày hiệu lực",
+  "AMOUNT": "Số tiền",
+  "NOTES": "Ghi chú",
+  "USER_ID": "Người lập",
+  "CREATE_DATE": "Ngày tạo",
+  "MODIFY_DATE": "Ngày sửa"
+}

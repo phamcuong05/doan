@@ -1,0 +1,22 @@
+{
+    "DM_SECURITY":"Danh mục chứng khoán",
+    "SECURITY_ID":"Mã chứng khoán",
+    "SECURITY_NAME":"Tên chứng khoán",
+    "SECURITY_CLASS_ID":"Loại chứng khoán",
+    "BOOK_UNIT_PRICE_ORIG":"Mệnh giá",
+    "CURRENCY_ID":"Tiền tệ",
+    "PR_DETAIL_ID":"Đối tượng",
+    "PERIOD_ID":"Kỳ hạn",
+    "ISSUE_DATE":"Ngày phát hành",
+    "MATURITY_DATE":"Ngày đáo hạn",
+    "SHORT_TERM_COST_ACCOUNT_ID":"TK giá vốn ngắn hạn",
+    "SHORT_TERM_PROFIT_ACCOUNT_ID":"TK lãi ngắn hạn",
+    "SHORT_TERM_LOSS_ACCOUNT_ID":"TK lỗ ngắn hạn",
+    "SHORT_TERM_RESERVE_ACCOUNT_ID": "TK dự phòng ngắn hạn",
+    "LONG_TERM_COST_ACCOUNT_ID":"TK giá vốn dài hạn",
+    "LONG_TERM_PROFIT_ACCOUNT_ID":"TK lãi dài hạn",
+    "LONG_TERM_LOSS_ACCOUNT_ID":"TK lỗ dài hạn",
+    "LONG_TERM_RESERVE_ACCOUNT_ID": "TK dự phòng dài hạn",
+    "ACTIVE":"Sử dụng",
+    "USER_ID":"Người lập"
+}

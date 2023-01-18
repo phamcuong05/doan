@@ -1,0 +1,10 @@
+{
+    "Login": "Login",
+    "UserId": "User ID",
+    "Password": "Password",
+    "ForgetPassword":"Forget pass?",
+    "Start":"Get Start",
+    "UserNameOrPasswordIncorrect": "User Id or Password incorrect",
+    "UserNameRequired": "User Id is required",
+    "PasswordRequired": "Password is required"
+}

@@ -1,0 +1,8 @@
+{
+  "DM_ITEM_CLASS": "Danh mục nhóm hàng hóa",
+  "ITEM_CLASS_ID": "Mã nhóm",
+  "ITEM_CLASS_NAME": "Tên nhóm",
+  "USER_ID": "User ID",
+  "ACTIVE": "Sử dụng",
+  "INV_ACCOUNT_ID":"Tài khoản kho"
+}

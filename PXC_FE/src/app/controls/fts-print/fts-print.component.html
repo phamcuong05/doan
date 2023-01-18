@@ -1,0 +1,53 @@
+<ng-container *ngIf="resourceManager.CommonResource.MyResource as resource">
+  <fts-window
+    *ngIf="$vm.isShow"
+    [(show)]="$vm.isShow"
+    [title]="resource.Print"
+    [height]="200"
+  >
+    <!-- #region content -->
+    <div class="print-content-wap d-flex h-100">
+      <mask-load *ngIf="$vm.isLoading"></mask-load>
+      <div class="print-templates-container flex-1">
+        <div class="print-templates h-100 custom-scroll">
+          <ng-container *ngFor="let item of printTemplates">
+            <div
+              class="btn item-print-template {{
+                templateSelected == item ? 'btn-primary' : ''
+              }}"
+              (click)="template_Click(item)"
+            >
+              {{ item.OUTPUT_NAME }}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <div class="print-toolbar">
+        <!-- #region Preview -->
+        <button class="btn btn-primary" (click)="toolbarActionHandler('VIEW')">
+          <i class="icon k-icon k-i-preview"></i>
+          <span>{{ resource.Preview }}</span>
+        </button>
+        <!-- #endregion -->
+
+        <!-- #region Print -->
+        <button class="btn" (click)="toolbarActionHandler('PRINT')">
+          <i class="icon k-icon k-i-print"></i>
+          <span>{{ resource.Print }}</span>
+        </button>
+        <!-- #endregion -->
+
+        <!-- #region Close -->
+        <button class="btn btn-close" (click)="toolbarActionHandler('CLOSE')">
+          <i class="icon k-icon k-i-close"></i>
+          <span>{{ resource.Close }}</span>
+        </button>
+        <!-- #endregion -->
+      </div>
+    </div>
+    <!-- #endregion -->
+  </fts-window>
+  <div>
+    <fts-preview></fts-preview>
+  </div>
+</ng-container>

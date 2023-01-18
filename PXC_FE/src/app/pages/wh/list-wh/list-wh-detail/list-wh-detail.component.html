@@ -1,0 +1,118 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="
+        myInject.resourceManager.ListWHResource.MyResource;
+        let listWHResource
+      ">
+      <fts-dict-base-detail [formGroup]="formGroup">
+        <div formControls>           
+
+          <div class="row">
+            <!-- WARE_HOUSE_ID: Ma kho -->
+          <div class="form-control col-6">
+            <kendo-label [for]="WARE_HOUSE_ID" class="control-label" [text]="listWHResource.WARE_HOUSE_ID" required>
+            </kendo-label>
+            <input type="text" class="control-input k-input idField" formControlName="WARE_HOUSE_ID" kendoTextBox
+              #WARE_HOUSE_ID/>
+          </div>
+           <!-- WARE_HOUSE_NAME: Ten kho -->
+          <div class="form-control col-6">
+              <kendo-label [for]="WARE_HOUSE_NAME" class="control-label" [text]="listWHResource.WARE_HOUSE_NAME" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input idField" formControlName="WARE_HOUSE_NAME" kendoTextBox
+              #WARE_HOUSE_NAME/>
+            </div>
+        </div>
+
+          <div class="row">
+            <!-- CONTAINER_ID: Ma container -->
+          <div class="form-control col-6">
+            <kendo-label [for]="CONTAINER_ID" class="control-label" [text]="listWHResource.CONTAINER_ID" required>
+            </kendo-label>
+            <input type="text" class="control-input k-input idField" formControlName="CONTAINER_ID" kendoTextBox
+              #CONTAINER_ID/>
+          </div>
+           <!-- CONTAINER_NAME: Ten container -->
+          <div class="form-control col-6">
+              <kendo-label [for]="CONTAINER_NAME" class="control-label" [text]="listWHResource.CONTAINER_NAME" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input idField" formControlName="CONTAINER_NAME" kendoTextBox
+              #CONTAINER_NAME/>
+            </div>
+        </div>
+
+          <div class="row">
+            <!-- MAWB_ID: Mawb -->
+          <div class="form-control col-6">
+            <kendo-label [for]="MAWB_ID" class="control-label" [text]="listWHResource.MAWB_ID" required>
+            </kendo-label>
+            <input type="text" class="control-input k-input idField" formControlName="MAWB_ID" kendoTextBox
+              #MAWB_ID/>
+          </div>
+           <!-- MAWB_NAME: Ten mawb -->
+          <div class="form-control col-6">
+              <kendo-label [for]="MAWB_NAME" class="control-label" [text]="listWHResource.MAWB_NAME" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input idField" formControlName="MAWB_NAME" kendoTextBox
+              #MAWB_NAME/>
+            </div>
+        </div>       
+
+          <div class="row">
+            <!-- TOTAL_ORDER: Tong so don -->
+            <div class="form-control col-6">
+                <kendo-label [for]="TOTAL_ORDER" class="control-label" [text]="listWHResource.TOTAL_ORDER" required>
+                </kendo-label>
+                <input type="text" class="control-input k-input" formControlName="TOTAL_ORDER" kendoTextBox
+                #TOTAL_ORDER/>
+            </div>
+            <!-- WEIGHT: Can nang -->
+            <div class="form-control col-6">
+                <kendo-label [for]="WEIGHT" class="control-label" [text]="listWHResource.WEIGHT" required>
+                </kendo-label>
+                <fts-numerictextbox formControlName="WEIGHT" [format]="this.myInject.FTSMain.amountFormat" #WEIGHT>
+                </fts-numerictextbox>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- ORGANIZATION_ID: Ma dvvc-->
+            <div class="form-control col-6">
+              <kendo-label [for]="ORGANIZATION_ID" class="control-label" [text]="listWHResource.ORGANIZATION_ID" required>
+              </kendo-label>
+              <label #ORGANIZATION_ID class="d-block col-12">
+                <fts-text-lookup formControlName="ORGANIZATION_ID" valueField="ORGANIZATION_ID"
+                  [selectionChange]="organizationId_selectionChange.bind(this)">
+                  <dm-organization-selector textLookupSelector></dm-organization-selector>
+                </fts-text-lookup>
+              </label>
+            </div>
+            <!-- ORGANIZATION_NAME: Ten dvvc -->
+          <div class="form-control col-6">
+            <input type="text" class="control-input k-input" formControlName="ORGANIZATION_NAME" kendoTextBox
+              #ORGANIZATION_NAME readonly/>
+          </div>
+        </div>
+
+        <div class="row">         
+           <!-- TO_DATE: Ngay nhap -->
+           <div class="form-control col-6">
+            <kendo-label [for]="TO_DATE" class="control-label" [text]="listWHResource.TO_DATE" required>
+            </kendo-label>
+            <label #TO_DATE class="d-block col-12">
+                <fts-date-picker formControlName="TO_DATE"></fts-date-picker>
+              </label>
+          </div> 
+            <!-- NOTE: Ghi chu -->
+          <div class="form-control col-6">
+            <kendo-label [for]="NOTE" class="control-label" [text]="listWHResource.NOTE" required>
+            </kendo-label>
+            <input type="text" class="control-input k-input" formControlName="NOTE" kendoTextBox
+              #NOTE/>
+          </div>
+        </div>
+           
+      </div>
+      </fts-dict-base-detail>
+    </ng-container>
+  </ng-container>
+

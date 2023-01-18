@@ -1,0 +1,10 @@
+{
+  "DM_ITEM_OP": "Phương thức nhập xuất",
+  "ITEM_OP_ID": "Mã ptnx",
+  "ITEM_OP_NAME": "Tên ptnx",
+  "ISSUE_RECEIPT": "N/X",  
+  "TRANSFER_ITEM_OP_ID": "Mã pt nck", 
+  "TRANSFER_ITEM_OP_NAME": "Tên pt nck",  
+  "USER_ID": "Người lập",
+  "ACTIVE": "Sử dụng"
+}

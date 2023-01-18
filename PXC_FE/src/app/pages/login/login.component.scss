@@ -1,0 +1,162 @@
+@import "./../../../mixins.scss";
+
+.frm-login {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url('/assets/images/logo/shipquocte.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.frm-login:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: 0;
+    background: #ffffff;
+}
+
+.frm-login-main {
+    border-radius: 6px;
+    background: var(--color-background);
+    @include crossBrowser(box-shadow, 0 0 6px 0 var(--color-border));
+    z-index: 1;
+    width: 100%;
+    margin: 16px;
+    max-width: 345px;
+}
+
+.frm-login-main form {
+    margin: 16px;
+}
+
+.form-control {
+    position: relative;
+    margin: 16px 0;
+    padding: 0;
+}
+
+.k-numeric-wrap input,
+.form-control input[type="text"],
+.form-control input[type="password"] {
+    border: thin solid var(--color-border);
+}
+
+.k-numeric-wrap input,
+.form-control input[type="text"],
+.form-control input[type="password"] {
+    padding: 5px 10px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.form-control label {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    z-index: 0;
+    color: #9e9e9e;
+    padding: 0 6px;
+    z-index: 0;
+    margin: 0;
+    min-width: 0;
+}
+
+.form-control input[type="text"]:not(:placeholder-shown) ~ label,
+.form-control input[type="password"]:not(:placeholder-shown) ~ label {
+    color: var(--color-text);
+    top: 0;
+    font-size: 11px;
+    z-index: 1;
+    display: block;
+    background: var(--color-background);
+    box-shadow: 0 0 8px 3px var(--color-background);
+}
+
+.form-control input[type="text"]:focus ~ label,
+.form-control input[type="password"]:focus ~ label {
+    color: var(--color-primary);
+    top: 0;
+    font-size: 11px;
+    z-index: 1;
+    display: block;
+}
+
+.form-control input::placeholder {
+    opacity: 0;
+    content: " ";
+}
+
+label::before {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    background: var(--color-background);
+    top: 50%;
+    left: 0;
+}
+
+.forget-password {
+    margin: -8px 0;
+    text-align: right;
+}
+
+.btn-primary {
+    display: block;
+    width: 100%;
+}
+
+.box-change-language {
+    position: absolute;
+    z-index: 10;
+    top: 16px;
+    right: 16px;
+}
+
+.form-control.invalid,
+.form-control.invalid input,
+.form-control.invalid label,
+.form-control.invalid label::after,
+.form-control.invalid label::before,
+.form-control.invalid input:focus,
+.form-control.invalid input:focus ~ label {
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+.form-control input:focus ~ label {
+    background: var(--color-background);
+    box-shadow: 0 0 8px 3px var(--color-background);
+}
+.form-control.invalid input:focus ~ label {
+    background: var(--color-background);
+    box-shadow: 0 0 8px 3px var(--color-background);
+}
+
+.form-control input[type="text"]:focus,
+.form-control input[type="password"]:focus {
+    border: 1px solid var(--color-primary);
+    box-shadow: 0 0 8px -1px var(--color-primary);
+    outline: none;
+}
+
+button.btn.btn-primary {
+    padding: 8px 16px;
+}

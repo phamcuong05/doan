@@ -1,0 +1,38 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="myInject.resourceManager.DmEstimateTypeResource.MyResource; let DmEstimateTypeResource">
+        <fts-dict-base-detail [formGroup]="formGroup">
+            <div formControls>
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="ESTIMATE_TYPE_ID" class="control-label"
+                            [text]="DmEstimateTypeResource.ESTIMATE_TYPE_ID" required>
+                        </kendo-label>
+                        <input type="text" class="control-input idField" formControlName="ESTIMATE_TYPE_ID" kendoTextBox
+                            #ESTIMATE_TYPE_ID />
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="ESTIMATE_TYPE_NAME" class="control-label" required
+                            [text]="DmEstimateTypeResource.ESTIMATE_TYPE_NAME">
+                        </kendo-label>
+                        <input type="text" class="control-input" formControlName="ESTIMATE_TYPE_NAME" kendoTextBox
+                            #ESTIMATE_TYPE_NAME />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="ACTIVE" class="control-label" required [text]="DmEstimateTypeResource.ACTIVE">
+                        </kendo-label>
+                        <input type="checkbox" formControlName="ACTIVE" kendoCheckBox #ACTIVE />
+                    </div>
+                </div>
+
+            </div>
+        </fts-dict-base-detail>
+    </ng-container>
+</ng-container>
+

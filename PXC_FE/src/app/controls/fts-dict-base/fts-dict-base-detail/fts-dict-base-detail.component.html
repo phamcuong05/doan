@@ -1,0 +1,105 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container *ngIf="vm$ | async as vm">
+    <fts-window
+      *ngIf="vm.isShow"
+      [maxHeight]="vm.maxHeight"
+      [maxWidth]="vm.maxWidth"
+      [minWidth]="vm.minWidth"
+      [minHeight]="vm.minHeight"
+      [width]="vm.width"
+      [height]="vm.height"
+      [minHeight]="vm.minHeight"
+      [(show)]="vm.isShow"
+      [title]="vm.title"
+      (showChange)="myInject.detailStore.setIsShow($event)"
+      [close]="closeWindow.bind(this)"
+    >
+      <mask-load *ngIf="vm.isLoading"></mask-load>
+      <div class="tool-bar-editor">
+        <kendo-toolbar [overflow]="true" class="toolbar">
+          <!-- ADD -->
+          <kendo-toolbar-button
+            *ngIf="vm.isShowBtnEdit && showBtnAdd"
+            className="btn"
+            [text]="commonResource.Add"
+            iconClass="icon k-icon k-i-file-add"
+            (click)="btnAdd_Click($event)"
+          >
+          </kendo-toolbar-button>
+          <!-- EDIT -->
+          <kendo-toolbar-button
+            *ngIf="vm.isShowBtnEdit && showBtnEdit"
+            className="btn"
+            [text]="commonResource.Edit"
+            iconClass="icon k-icon k-i-edit"
+            (click)="btnEdit_Click($event)"
+          >
+          </kendo-toolbar-button>
+          <!-- DELETE -->
+          <kendo-toolbar-button
+            *ngIf="vm.isShowBtnDelete && showBtnDelete"
+            className="btn btn-danger-light"
+            [text]="commonResource.Delete"
+            iconClass="icon k-icon k-i-delete"
+            (click)="btnDelete_Click($event)"
+          >
+          </kendo-toolbar-button>
+          <!-- COPY -->
+          <kendo-toolbar-button
+            *ngIf="vm.isShowBtnDelete && showBtnDuplicate"
+            [text]="commonResource.Copy"
+            iconClass="icon k-icon k-i-copy"
+            (click)="btnCopy_Click($event)"
+          >
+          </kendo-toolbar-button>
+          <!-- DOCUMENT -->
+          <kendo-toolbar-button
+            *ngIf="showBtnDocument"
+            className="btn k-button k-button-icontext"
+            [text]="commonResource.Document"
+            iconClass="icon k-icon k-i-document-manager"
+            (click)="btnDocument_Click($event)"
+          >
+          </kendo-toolbar-button>
+          <!-- SAVE -->
+          <kendo-toolbar-button
+            *ngIf="vm.isShowBtnSave"
+            className="btn"
+            [text]="commonResource.Save"
+            iconClass="icon k-icon k-i-save"
+            (click)="onSubmit()"
+          >
+          </kendo-toolbar-button>
+          <!-- CLOSE -->
+          <kendo-toolbar-button
+            className="btn btn-close"
+            [text]="commonResource.Close"
+            iconClass="icon k-icon k-i-close"
+            (click)="btnClose_Click($event)"
+          >
+          </kendo-toolbar-button>
+        </kendo-toolbar>
+      </div>
+      <form
+        class="form-editor form-container"
+        [formGroup]="formGroup"
+        (ngSubmit)="onSubmit()"
+        #dialogContent
+        kendoTooltip
+        position="top"
+        showOn="none"
+        filter="[data-tooltip]"
+        [tooltipTemplate]="tooltipTemplate"
+      >
+        <ng-template #tooltipTemplate let-anchor>
+          {{ anchor.nativeElement.getAttribute("data-tooltip") }}
+        </ng-template>
+        <!-- phần các control nhập liệu -->
+        <ng-content select="[formControls]"></ng-content>
+      </form>
+      <div id="form-bottom" class="form-bottom"></div>
+    </fts-window>
+  </ng-container>
+</ng-container>

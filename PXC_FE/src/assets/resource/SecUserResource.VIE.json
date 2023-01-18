@@ -1,0 +1,10 @@
+{
+    "SecUser":"Danh mục người dùng",
+    "USER_ID":"Mã đăng nhập",
+    "USER_NAME":"Tên đăng nhập",
+    "USER_GROUP_ID":"Nhóm quyền",
+    "EMPLOYEE_ID":"Nhân viên",
+    "ORGANIZATION_ID":"Đơn vị",
+    "USER_PASSWORD":"Mật khẩu",
+    "ACTIVE":"Sử dụng"
+}

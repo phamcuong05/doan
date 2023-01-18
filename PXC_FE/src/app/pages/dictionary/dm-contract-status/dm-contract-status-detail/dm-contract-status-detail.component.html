@@ -1,0 +1,37 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="myInject.resourceManager.DmContractStatusResource.MyResource; let DmContractStatusResource">
+        <fts-dict-base-detail [formGroup]="formGroup">
+            <div formControls>
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="CONTRACT_STATUS_ID" class="control-label"
+                            [text]="DmContractStatusResource.CONTRACT_STATUS_ID" required>
+                        </kendo-label>
+                        <input type="text" class="control-input" formControlName="CONTRACT_STATUS_ID" kendoTextBox
+                            #CONTRACT_STATUS_ID />
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="CONTRACT_STATUS_NAME" class="control-label" required
+                            [text]="DmContractStatusResource.CONTRACT_STATUS_NAME">
+                        </kendo-label>
+                        <input type="text" class="control-input" formControlName="CONTRACT_STATUS_NAME" kendoTextBox
+                            #CONTRACT_STATUS_NAME />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-control col-12">
+                        <kendo-label [for]="ACTIVE" class="control-label" required [text]="DmContractStatusResource.ACTIVE">
+                        </kendo-label>
+                        <input type="checkbox" formControlName="ACTIVE" kendoCheckBox #ACTIVE />
+                    </div>
+                </div>
+
+            </div>
+        </fts-dict-base-detail>
+    </ng-container>
+</ng-container>

@@ -1,0 +1,16 @@
+<ng-container [formGroup]="form" *ngIf="resourceManager?.CommonResource?.MyResource as commonResource">
+    <div class="fts-combobox-wap {{ !formControl?.valid && formControl?.touched ? 'ng-invalid' : ''}}">
+        <kendo-multicolumncombobox #kendocombo [readonly]="readonly" [formControlName]="controlName"
+            [classList]="classList" [allowCustom]="allowCustom" [data]="data" [textField]="textField"
+            [valueField]="valueField" [valuePrimitive]="valuePrimitive"
+            (selectionChange)="selectionChange_Handler($event)" [suggest]="suggest" [virtual]="virtual">
+            <kendo-combobox-column *ngFor="let col of columns" [field]="col.field" [title]="col.title"
+                [width]="col.width">
+            </kendo-combobox-column>
+        </kendo-multicolumncombobox>
+        <button disabled="{{kendocombo.disabled || readonly ? 'disabled': ''}}" *ngIf="quickAdd" class="btn-quick-add"
+            (click)="openEditor()" title="{{commonResource.Add}}">
+            <i class="icon k-icon k-i-add"></i>
+        </button>
+    </div>
+</ng-container>

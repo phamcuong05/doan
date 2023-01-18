@@ -1,0 +1,33 @@
+.task-bar {
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 8px;
+    border-width: 0;
+}
+
+.select-buttons {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.select-buttons .btn {
+    margin: 4px auto;
+    white-space: nowrap;
+    width: 50px;
+    font-size: 16px;
+    padding: 4px;
+    vertical-align: middle;
+    line-height: 16px;
+}
+
+.select-buttons .btn .icon{
+    margin: 0;
+}
+
+.grid-select-wap {
+    margin: 8px;
+    border: 1px solid var(--color-border);
+}

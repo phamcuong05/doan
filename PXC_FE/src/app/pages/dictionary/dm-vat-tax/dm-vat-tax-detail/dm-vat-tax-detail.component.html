@@ -1,0 +1,87 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmVatTaxResource.MyResource;
+      let dmVatTaxResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="VAT_TAX_ID"
+              class="control-label"
+              [text]="dmVatTaxResource.VAT_TAX_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input k-input idField"
+              formControlName="VAT_TAX_ID"
+              kendoTextBox
+              #VAT_TAX_ID
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="VAT_TAX_NAME"
+              class="control-label"
+              required
+              [text]="dmVatTaxResource.VAT_TAX_NAME"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input k-input"
+              formControlName="VAT_TAX_NAME"
+              kendoTextBox
+              #VAT_TAX_NAME
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="VAT_TAX_RATE"
+              class="control-label"
+              required
+              [text]="dmVatTaxResource.VAT_TAX_RATE"
+            >
+            </kendo-label>
+            <fts-numerictextbox
+              formControlName="VAT_TAX_RATE"
+              #VAT_TAX_RATE
+            ></fts-numerictextbox>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="dmVatTaxResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              class="k-checkbox"
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

@@ -1,0 +1,13 @@
+{
+  "DM_EMPLOYEE": "Danh mục nhân viên",
+  "EMPLOYEE_ID": "Mã nhân viên",
+  "EMPLOYEE_NAME": "Tên nhân viên",
+  "DEPARTMENT_ID": "Mã phòng ban",
+  "DEPARTMENT_NAME": "Tên phòng ban",
+  "ADDRESS": "Địa chỉ",
+  "PHONE": "Số điện thoại",
+  "EMAIL": "Email",
+  "IDENTITY_NO": "CCCD/Hộ chiếu",
+  "USER_ID": "Người lập",
+  "ACTIVE": "Sử dụng"
+}

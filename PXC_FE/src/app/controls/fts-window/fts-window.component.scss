@@ -1,0 +1,22 @@
+:host ::ng-deep .k-resize-e,
+:host ::ng-deep .k-resize-w {
+    width: 3px;
+    background-color: transparent;
+}
+
+:host ::ng-deep .k-resize-s,
+:host ::ng-deep .k-resize-n {
+    height: 3px;
+    background-color: transparent;
+}
+
+:host ::ng-deep .k-resize-sw,
+:host ::ng-deep .k-resize-se,
+:host ::ng-deep .k-resize-nw,
+:host ::ng-deep .k-resize-ne {
+    background-color: transparent;
+}
+
+:host ::ng-deep .k-window-titlebar .k-button .k-icon {
+    margin: 0;
+}

@@ -1,0 +1,9 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let resource"
+>
+  <fts-dict-base-list
+    [pageResource]="myInject.resourceManager.DmExchangeRateResource.MyResource"
+  >
+    <dm-exchange-rate-detail dictBaseDetail></dm-exchange-rate-detail>
+  </fts-dict-base-list>
+</ng-container>

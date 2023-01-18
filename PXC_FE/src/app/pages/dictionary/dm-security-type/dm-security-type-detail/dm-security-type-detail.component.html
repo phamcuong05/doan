@@ -1,0 +1,70 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmSecurityTypeResource.MyResource;
+      let dmSecurityTypeResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="SECURITY_TYPE_ID"
+              class="control-label"
+              [text]="dmSecurityTypeResource.SECURITY_TYPE_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input idField"
+              formControlName="SECURITY_TYPE_ID"
+              kendoTextBox
+              #SECURITY_TYPE_ID
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="SECURITY_TYPE_NAME"
+              class="control-label"
+              required
+              [text]="dmSecurityTypeResource.SECURITY_TYPE_NAME"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="SECURITY_TYPE_NAME"
+              kendoTextBox
+              #SECURITY_TYPE_NAME
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="dmSecurityTypeResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

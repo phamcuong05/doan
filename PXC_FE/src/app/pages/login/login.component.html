@@ -1,0 +1,78 @@
+<div
+  class="frm-login"
+  *ngIf="resourceManager.LoginResource.MyResource; let resource"
+>
+  <div class="box-change-language">
+    <app-national-language></app-national-language>
+  </div>
+  <div class="frm-login-main">
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="login()"
+      kendoTooltip
+      filter="[title]"
+      showOn="none"
+      kendoTooltip
+      filter="[data-tooltip]"
+      position="right"
+      [tooltipTemplate]="tooltipTemplate"
+    >
+      <ng-template #tooltipTemplate let-anchor>
+        {{ anchor.nativeElement.getAttribute("data-tooltip") }}
+      </ng-template>
+
+      <div class="text-center">
+        <h1>{{ resource.Login }}</h1>
+      </div>
+      <div class="text-center text-danger" *ngIf="errorCode">
+        <div *ngIf="errorCode == LOGIN_ERROR_CODE.UserNameOrPassWordIncorrect">
+          {{ resource.UserNameOrPasswordIncorrect }}
+        </div>
+      </div>
+      
+      <div class="form-control">
+        <input
+          type="text"
+          id="userName"
+          placeholder="{{ resource.UserId }}"
+          formControlName="userName"
+          (keyup)="validateControl('userName')"
+          [attr.data-tooltip]="
+            errorCode == this.LOGIN_ERROR_CODE.UserNameRequired
+              ? resource.UserNameRequired
+              : ''
+          "
+          #userName
+        />
+        <label for="userName">{{ resource.UserId }}</label>
+      </div>
+      <div class="form-control">
+        <input
+          type="password"
+          id="password"
+          autocomplete=""
+          placeholder="{{ resource.Password }}"
+          formControlName="password"
+          (keyup)="validateControl('password')"
+          [attr.data-tooltip]="
+            errorCode == this.LOGIN_ERROR_CODE.PasswordRequired
+              ? resource.PasswordRequired
+              : ''
+          "
+          #password
+        />
+        <label for="password">{{ resource.Password }}</label>
+      </div>
+      <!--   <div class="forget-password">
+        <a class="" routerLink="/forget-password">{{
+          resource.ForgetPassword
+        }}</a>
+      </div> -->
+      <div class="form-control">
+        <button type="submit" class="btn btn-primary">
+          {{ resource.Start }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

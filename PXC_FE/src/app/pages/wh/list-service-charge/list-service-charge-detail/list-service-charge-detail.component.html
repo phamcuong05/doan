@@ -1,0 +1,56 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="
+        myInject.resourceManager.ListServiceChargeResource.MyResource;
+        let listServiceChargeResource
+      ">
+      <fts-dict-base-detail [formGroup]="formGroup">
+        <div formControls>
+            <div class="row">
+              <!-- SERVICE_CHARGE_ID: Ma phi dv -->
+            <div class="form-control col-6">
+              <kendo-label [for]="SERVICE_CHARGE_ID" class="control-label" [text]="listServiceChargeResource.SERVICE_CHARGE_ID" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input idField" formControlName="SERVICE_CHARGE_ID" kendoTextBox
+                #SERVICE_CHARGE_ID/>
+            </div>
+             <!-- SERVICE_CHARGE_NAME: Ten phi dv -->
+            <div class="form-control col-6">
+                <kendo-label [for]="SERVICE_CHARGE_NAME" class="control-label" [text]="listServiceChargeResource.SERVICE_CHARGE_NAME" required>
+                </kendo-label>
+                <input type="text" class="control-input k-input" formControlName="SERVICE_CHARGE_NAME" kendoTextBox
+                  #SERVICE_CHARGE_NAME/>
+              </div>
+          </div>
+
+          <div class="row">
+            <!-- SHIP_FEE: Gia -->
+          <div class="form-control col-6">
+              <kendo-label [for]="SHIP_FEE" class="control-label" [text]="listServiceChargeResource.SHIP_FEE">
+              </kendo-label>
+              <fts-numerictextbox formControlName="SHIP_FEE" [format]="myInject.FTSMain.amountFormat" #SHIP_FEE>
+              </fts-numerictextbox>
+            </div>    
+            <!-- REGION: Khu vuc -->
+            <div class="form-control col-6">
+              <kendo-label [for]="REGION" class="control-label" [text]="listServiceChargeResource.REGION" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input" formControlName="REGION" kendoTextBox
+                #REGION/>
+            </div>       
+        </div>
+            
+        <!-- DESCRIPTION: Mo ta -->
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label [for]="DESCRIPTION" class="control-label" [text]="listServiceChargeResource.DESCRIPTION" required>
+            </kendo-label>
+            <input type="text" class="control-input k-input" formControlName="DESCRIPTION" kendoTextBox
+              #DESCRIPTION/>
+          </div>
+        </div>
+      </div>
+
+          
+      </fts-dict-base-detail>
+    </ng-container>
+  </ng-container>

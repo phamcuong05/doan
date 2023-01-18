@@ -1,0 +1,36 @@
+<ng-container
+  *ngIf="resourceManager?.CommonResource?.MyResource as commonResource"
+>
+  <div class="fts-text-lookup-wap control-input">
+    <input
+      class="k-input"
+      type="text"
+      [(ngModel)]="value"
+      readonly="{{ !freeText || readonly || disabled ? 'readonly' : '' }}"
+    />
+    <button
+      type="button"
+      class="btn btn-show-popup"
+      tabindex="-1"
+      (click)="show = true"
+      [disabled]="readonly || disabled"
+    >
+      <i class="k-icon k-i-more-horizontal"></i>
+    </button>
+  </div>
+  <div>
+    <fts-popup-multi-selector
+      [service]="service"
+      [formTitle]="formTitle"
+      [popupWidth]="popupWidth"
+      [popupHeight]="popupHeight"
+      [(show)]="show"
+      [colId]="colId"
+      [titleColId]="titleColId"
+      [colName]="colName"
+      [titleColName]="titleColName"
+      [(ngModel)]="value"
+      (ngModelChange)="onModelChange($event)"
+    ></fts-popup-multi-selector>
+  </div>
+</ng-container>

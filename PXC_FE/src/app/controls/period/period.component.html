@@ -1,0 +1,66 @@
+<!-- Kỳ số liệu -->
+<div class="period-control form-control period-data" *ngIf="showDropdownPeriod">
+  <label [for]="cboDataPeriod">{{
+    resourceManager.CommonResource.MyResource.DataPeriod
+  }}</label>
+  <kendo-dropdownlist
+    class="control-input"
+    [data]="periods"
+    valueField="Id"
+    textField="Text"
+    [(value)]="period"
+    [contentEditable]="false"
+    [accessKey]="false"
+    #cboDataPeriod
+  ></kendo-dropdownlist>
+</div>
+<!-- Từ ngày -->
+<div class="period-control form-control period-date" [hidden]="hideDatePicker">
+  <label [for]="fromDate">{{
+    resourceManager.CommonResource.MyResource.FromDate
+  }}</label>
+  <kendo-datepicker
+    class="control-input"
+    #fromDate
+    [formatPlaceholder]="{
+      year: 'yyyy',
+      month: 'MM',
+      day: 'dd',
+      hour: 'hh',
+      minute: 'mm',
+      second: 'ss'
+    }"
+    [readonly]="readonlyDatepiker"
+    [(value)]="period.FromDate"
+    format="dd/MM/yyyy"
+  >
+    <kendo-calendar-messages
+      [today]="resourceManager.CommonResource.MyResource.ToDay"
+    ></kendo-calendar-messages>
+  </kendo-datepicker>
+</div>
+<!-- Tới ngày -->
+<div class="period-control form-control period-date" [hidden]="hideDatePicker">
+  <label [for]="toDate">{{
+    resourceManager.CommonResource.MyResource.ToDate
+  }}</label>
+  <kendo-datepicker
+    class="control-input"
+    #toDate
+    [formatPlaceholder]="{
+      year: 'yyyy',
+      month: 'MM',
+      day: 'dd',
+      hour: 'hh',
+      minute: 'mm',
+      second: 'ss'
+    }"
+    [readonly]="readonlyDatepiker"
+    format="dd/MM/yyyy"
+    [(value)]="period.ToDate"
+  >
+    <kendo-calendar-messages
+      [today]="resourceManager.CommonResource.MyResource.ToDay"
+    ></kendo-calendar-messages>
+  </kendo-datepicker>
+</div>

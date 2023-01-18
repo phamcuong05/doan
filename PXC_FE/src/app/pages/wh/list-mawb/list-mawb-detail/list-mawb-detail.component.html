@@ -1,0 +1,65 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="
+        myInject.resourceManager.ListMawbResource.MyResource;
+        let listMawbResource
+      ">
+      <fts-dict-base-detail [formGroup]="formGroup">
+        <div formControls>
+        <div class="row">
+              <!-- MAWB_ID: Mawb -->
+            <div class="form-control col-6">
+              <kendo-label [for]="MAWB_ID" class="control-label" [text]="listMawbResource.MAWB_ID" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input idField" formControlName="MAWB_ID" kendoTextBox
+                #MAWB_ID/>
+            </div>
+             <!-- MAWB_NAME: Ten chuyen bay -->
+            <div class="form-control col-6">
+                <kendo-label [for]="MAWB_NAME" class="control-label" [text]="listMawbResource.MAWB_NAME" required>
+                </kendo-label>
+                <input type="text" class="control-input k-input idField" formControlName="MAWB_NAME" kendoTextBox
+                #MAWB_NAME/>
+              </div>
+          </div>
+
+          <div class="row">
+              <!-- DEPARTURE: Diem di -->
+            <div class="form-control col-6">
+                <kendo-label [for]="DEPARTURE" class="control-label" [text]="listMawbResource.DEPARTURE" required>
+                </kendo-label>
+                <input type="text" class="control-input k-input" formControlName="DEPARTURE" kendoTextBox
+                  #DEPARTURE/>
+              </div>
+              <!-- DESTINATION: Diem den -->
+            <div class="form-control col-6">
+              <kendo-label [for]="DESTINATION" class="control-label" [text]="listMawbResource.DESTINATION" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input" formControlName="DESTINATION" kendoTextBox
+                #DESTINATION/>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- TOTAL_ORDER: Tong so don -->
+            <div class="form-control col-6">
+                <kendo-label [for]="TOTAL_ORDER" class="control-label" [text]="listMawbResource.TOTAL_ORDER" required>
+                </kendo-label>
+                <!-- <fts-numerictextbox formControlName="TOTAL_ORDER" [format]="this.myInject.FTSMain.amountFormat" #TOTAL_ORDER>
+                </fts-numerictextbox> -->
+                <input type="text" class="control-input k-input" formControlName="TOTAL_ORDER" kendoTextBox
+                #TOTAL_ORDER/>
+            </div>
+            <!-- WEIGHT: Can nang -->
+            <div class="form-control col-6">
+                <kendo-label [for]="WEIGHT" class="control-label" [text]="listMawbResource.WEIGHT" required>
+                </kendo-label>
+                <fts-numerictextbox formControlName="WEIGHT"  #WEIGHT>
+                </fts-numerictextbox>
+            </div>
+        </div>
+           
+      </div>
+      </fts-dict-base-detail>
+    </ng-container>
+  </ng-container>
+

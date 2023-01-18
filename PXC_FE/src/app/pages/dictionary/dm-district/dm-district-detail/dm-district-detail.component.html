@@ -1,0 +1,100 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmDistrictResource.MyResource;
+      let DmDistrictResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="DISTRICT_ID"
+              class="control-label"
+              [text]="DmDistrictResource.DISTRICT_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="DISTRICT_ID"
+              ftsIdField
+              kendoTextBox
+              #DISTRICT_ID
+            />
+          </div>
+
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="DmDistrictResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PROVINCE_ID"
+              class="control-label"
+              required
+              [text]="DmDistrictResource.PROVINCE_ID"
+            >
+            </kendo-label>
+            <label #PROVINCE_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="PROVINCE_ID"
+                valueField="PROVINCE_ID"
+                [selectionChange]="provinceId_selectionChange.bind(this)"
+              >
+                <dm-province-selector textLookupSelector></dm-province-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PROVINCE_NAME"
+              kendoTextBox
+              #PROVINCE_NAME
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="DISTRICT_NAME"
+              class="control-label"
+              required
+              [text]="DmDistrictResource.DISTRICT_NAME"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="DISTRICT_NAME"
+              kendoTextBox
+              #DISTRICT_NAME
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

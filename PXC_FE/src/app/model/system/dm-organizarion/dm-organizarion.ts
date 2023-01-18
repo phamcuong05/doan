@@ -1,0 +1,23 @@
+export interface DmOrganizarion {
+    ORGANIZATION_ID: string, 
+    ORGANIZATION_NAME: string, 
+    ORGANIZATION_NAME_DISPLAY: string, 
+    PARENT_ORGANIZATION_ID: string, 
+    ORGANIZATION_TYPE: string, 
+    ADDRESS: string, 
+    CITY: string, 
+    DISTRICT: string, 
+    PHONE: string, 
+    FAX: string, 
+    EMAIL: string, 
+    TAX_FILE_NUMBER: string, 
+    ACTIVE: Boolean, 
+    ORGANIZATION_NAME_SHORT: string, 
+    DIRECTOR: string, 
+    ACCOUNTANT: string, 
+    CHIEF_ACCOUNTANT: string, 
+    BANK_NAME: string, 
+    BANK_ACCOUNT: string, 
+    BANK_BRANCH: string, 
+    CASHIER: string
+}

@@ -1,0 +1,48 @@
+@import './../../../mixins.scss';
+.page-not-found {
+    background-color: var(--navigation-backgroud);
+    color: var(--navigation-color);
+    font-size: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 15em;
+    font-weight: 400;
+    @include textShadown(29,79,94,21,101,124,100);
+}
+
+:host-context(.dark-mode) h1 {
+    text-align: center;
+    font-size: 15em;
+    font-weight: 400;
+    @include textShadown(29,79,94,51,51,51,100);
+}
+.btn-primary {
+    border: 1px solid var(--button-active-color);
+    background: var(--button-active-backgroud);
+    color: var(--button-active-color);
+    padding: 8px 16px;
+}
+
+p {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 100;
+}
+
+
+@include for-mobile{
+    h1 {
+        font-size: 10em;
+    }
+}

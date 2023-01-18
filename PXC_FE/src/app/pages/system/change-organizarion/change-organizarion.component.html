@@ -1,0 +1,47 @@
+<div class="h-100 custom-scroll">
+  <form [formGroup]="frmChangeOrganization">
+    <div>
+      <div class="row">
+        <div class="form-control col-3">
+          <kendo-label class="control-label">Mã đơn vị</kendo-label>
+          <br />
+          <label #PR_DETAIL_ID class="d-block col-12">
+            <fts-text-lookup
+              formControlName="ORGANIZATION_ID"
+              valueField="ORGANIZATION_ID"
+              [selectionChange]="changeOrganization.bind(this)"
+            >
+              <dm-organization-selector
+                textLookupSelector
+              ></dm-organization-selector>
+            </fts-text-lookup>
+          </label>
+        </div>
+
+        <div class="form-control col-6" style="padding: 2px">
+          <kendo-label class="control-label"></kendo-label>
+          <br />
+          <input
+            formControlName="ORGANIZATION_NAME"
+            id="ORGANIZATION_NAME"
+            class="control-input"
+            kendoTextBox
+            readonly
+          />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-control">
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="btnChangeOrganization_Click()"
+          >
+            Đổi đơn vị làm việc
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

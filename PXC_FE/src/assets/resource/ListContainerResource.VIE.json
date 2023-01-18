@@ -1,0 +1,15 @@
+{
+    "CONTAINER_ID": "Mã container",
+    "CONTAINER_NAME": "Tên container",
+    "CUSTOMER_ID": "Mã khách hàng",
+    "CUSTOMER_NAME": "Tên khách hàng",
+    "CONTAINER_WEIGHT": "Cân nặng",
+    "WARE_HOUSE_ID": "Mã kho",
+    "WARE_HOUSE_NAME": "Tên kho",
+    "FLIGHT_ID": "Mã chuyến bay",
+    "FLIGHT_NAME": "Hãng bay",
+    "CREATE_DATE": "Ngày tạo",
+    "MODIFIED_DATE": "Ngày sửa",
+    "USER_ID": "Người dùng",
+    "REGION": "Khu vực"
+}

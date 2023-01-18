@@ -1,0 +1,8 @@
+{
+    "DM_PR_DETAIL_CLASS":"Nhóm khách hàng",
+    "PR_DETAIL_CLASS_ID":"Mã nhóm",
+    "PR_DETAIL_CLASS_NAME":"Tên nhóm",
+	"PR_DETAIL_TYPE_ID":"Mã kiểu",
+	"USER_ID":"Người lập",
+    "ACTIVE":"Sử dụng"
+}

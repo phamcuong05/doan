@@ -1,0 +1,45 @@
+<ng-container
+  *ngIf="resourceManager.CommonResource.MyResource as commonResource"
+>
+  <ng-container
+    *ngIf="resourceManager.DmPeriodResource.MyResource as DmPeriodResource"
+  >
+    <div class="d-flex flex-column h-100">
+      <div class="filter-bar d-flex">
+        <input
+          name="txtKeySearch"
+          class="control-input k-textbox"
+          style="margin: 4px 0 4px 8px"
+          (keypress)="txtKeySearch_KeyPress($event)"
+          (keydown)="txtKeySearch_KeyDown($event)"
+          #txtSearch
+        />
+        <div class="search-control form-control">
+          <button class="btn btn-primary" type="button" (click)="loadData()">
+            <i class="icon fas fa-search"></i
+            ><span>{{ commonResource.Search }}</span>
+          </button>
+        </div>
+      </div>
+      <div class="flex-1 hide-overflow">
+        <fts-grid
+          class="flex-1 h-100"
+          [gridData]="gridData"
+          [showToolBar]="false"
+          [loading]="false"
+          (selectionChange)="onSelectionChange($event)"
+          (dblClickRow)="dblClickRow()"
+          [resourceCol]="DmPeriodResource"
+          [isServerPaging]="true"
+          [filterable]="false"
+          #grid
+        >
+          <ng-container *ngFor="let item of columns">
+            <fts-grid-column [colConfig]="item" [(filter)]="grid.filter">
+            </fts-grid-column>
+          </ng-container>
+        </fts-grid>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>

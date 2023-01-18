@@ -1,0 +1,11 @@
+{
+    "LIST_SERVICE_CHARGE": "Thông tin phí dịch vụ",
+    "SERVICE_CHARGE_ID": "Mã phí dịch vụ",
+    "SERVICE_CHARGE_NAME": "Tên phí dịch vụ",
+    "DESCRIPTION": "Mô tả",
+    "SHIP_FEE": "Giá (VND)",
+    "CREATE_DATE": "Ngày tạo",
+    "MODIFIED_DATE": "Ngày sửa",
+    "USER_ID": "Tạo bởi",
+    "REGION": "Khu vực"
+}

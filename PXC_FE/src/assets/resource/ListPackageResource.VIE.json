@@ -1,0 +1,15 @@
+{
+    "LIST_PACKAGE": "Thông tin gói hàng",
+    "PACKAGE_CODE": "Mã gói hàng",
+    "TRACKING_CODE": "Mã Tracking",
+    "PACKAGE_NAME": "Tên gói hàng",
+    "ITEM": "Loại hàng",
+    "WEIGHT": "Cân nặng(kg)",
+    "CREATE_DATE": "Ngày tạo",
+    "MODIFIED_DATE": "Ngày sửa",
+    "SERVICE_CHARGE_CODE": "Mã phí dịch vụ",
+    "CONTAINER_ID": "Mã thùng hàng",
+    "WARE_HOUSE_ID": "Mã kho",
+    "MAWB_ID": "Mã chuyến bay",
+    "USER_ID": "Người dùng"
+}

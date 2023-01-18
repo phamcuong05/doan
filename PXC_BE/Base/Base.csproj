@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F480828-A957-4D4A-B939-2090926DA095}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FTS.Base</RootNamespace>
+    <AssemblyName>FTS.Base</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ftsdev.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v10.2">
+      <HintPath>..\DLL\DevExpress.Data.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=763a7cc8ed76ade7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.Utils.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=763a7cc8ed76ade7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\DevExpress.XtraReports.v10.2.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\DLL\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="FTS.Tools">
+      <HintPath>..\DLL\FTS.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\DLL\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Global">
+      <HintPath>..\DLL\Microsoft.Practices.EnterpriseLibrary.Global.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder">
+      <HintPath>..\DLL\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\ApiBaseController.cs" />
+    <Compile Include="API\ApiObjectBaseController.cs" />
+    <Compile Include="API\ApiManagerBaseController.cs" />
+    <Compile Include="Business\FTSCollection.cs" />
+    <Compile Include="Business\ManagerBase.cs" />
+    <Compile Include="Business\ManagerObjectInfoBase.cs" />
+    <Compile Include="Business\ObjectBase.cs" />
+    <Compile Include="Business\ObjectInfoBase.cs" />
+    <Compile Include="Model\DataPeriodObject.cs" />
+    <Compile Include="Model\Dm_TemplateManagerObject.cs" />
+    <Compile Include="Model\Dm_TemplateObject.cs" />
+    <Compile Include="Model\Dm_Template_DetailObject.cs" />
+    <Compile Include="Model\ImportStatusObject.cs" />
+    <Compile Include="Model\ProjectObject.cs" />
+    <Compile Include="Model\Paging\PagingDataResult.cs" />
+    <Compile Include="Model\Paging\SummaryDataObject.cs" />
+    <Compile Include="Model\ImportDataObject.cs" />
+    <Compile Include="Model\MenuObject.cs" />
+    <Compile Include="Model\Sys_TableObject.cs" />
+    <Compile Include="Model\Sys_ResourceObject.cs" />
+    <Compile Include="Model\OrganizarionTypeObject.cs" />
+    <Compile Include="Model\ChangePasswordObject.cs" />
+    <Compile Include="Model\Dm_OrganizarionObject.cs" />
+    <Compile Include="Model\LoggingSystemObject.cs" />
+    <Compile Include="Model\Paging\Filter.cs" />
+    <Compile Include="Model\Paging\Sort.cs" />
+    <Compile Include="Model\Sec_UserObject.cs" />
+    <Compile Include="Model\Sys_MenuObject.cs" />
+    <Compile Include="Model\Sys_SystemvarObject.cs" />
+    <Compile Include="Model\UserInfoObject.cs" />
+    <Compile Include="Model\ModuleObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\CustomField.cs" />
+    <Compile Include="Report\CustomFieldCollection.cs" />
+    <Compile Include="Report\Dm_ReportField.cs" />
+    <Compile Include="Report\Dm_Report_Config.cs" />
+    <Compile Include="Report\FieldSelectionObject.cs" />
+    <Compile Include="Report\FilterDataResult.cs" />
+    <Compile Include="Report\FilterDmObject.cs" />
+    <Compile Include="Report\FTSReport.cs" />
+    <Compile Include="Report\FTSReportViewer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportFieldInfo.cs" />
+    <Compile Include="Report\ReportManager.cs" />
+    <Compile Include="Report\Sys_Report_Formula.cs" />
+    <Compile Include="Report\Sys_Report_FormulaManager.cs" />
+    <Compile Include="Report\Sys_Report_Formula_Detail.cs" />
+    <Compile Include="Report\TransactionOutput.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Security\ActionType.cs" />
+    <Compile Include="Security\DataAction.cs" />
+    <Compile Include="Security\FTSFunction.cs" />
+    <Compile Include="Security\FTSFunctionCollection.cs" />
+    <Compile Include="Security\ModuleList.cs" />
+    <Compile Include="Security\ProjectList.cs" />
+    <Compile Include="Security\Sec_User.cs" />
+    <Compile Include="Systems\Dm_Organization.cs" />
+    <Compile Include="Systems\Dm_Template.cs" />
+    <Compile Include="Systems\Dm_TemplateManager.cs" />
+    <Compile Include="Systems\Dm_Template_Detail.cs" />
+    <Compile Include="Systems\ExceptionManager.cs" />
+    <Compile Include="Systems\FTSMain.cs" />
+    <Compile Include="Systems\ImportStatus.cs" />
+    <Compile Include="Systems\ReportPeriod.cs" />
+    <Compile Include="Systems\Sys_Menu.cs" />
+    <Compile Include="Systems\Sys_SystemVar.cs" />
+    <Compile Include="Systems\Sys_Table.cs" />
+    <Compile Include="Systems\Sys_Resource.cs" />
+    <Compile Include="Systems\OrganizationType.cs" />
+    <Compile Include="Systems\SecurityManager.cs" />
+    <Compile Include="Systems\Sec_User.cs" />
+    <Compile Include="Systems\StaticMain.cs" />
+    <Compile Include="Utilities\CompressionHelper.cs" />
+    <Compile Include="Utilities\Crc32Accumulator.cs" />
+    <Compile Include="Utilities\FTSReadNumberEn.cs" />
+    <Compile Include="Utilities\FTSReadNumberVN.cs" />
+    <Compile Include="Utilities\FTSZip.cs" />
+    <Compile Include="Utilities\Functions.cs" />
+    <Compile Include="Utilities\ZipBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ftsdev.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report\TransactionOutput.resx">
+      <DependentUpon>TransactionOutput.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

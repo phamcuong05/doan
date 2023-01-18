@@ -1,0 +1,38 @@
+@mixin crossBrowser($property, $css) {
+    -webkit-#{$property}: $css;
+    -moz-#{$property}: $css;
+    -o-#{$property}: $css;
+    #{$property}: $css;
+}
+
+@mixin for-tablet {
+    @media (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin for-mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@function genColorTextShadown($r, $g, $b, $rTo, $gTo, $bTo, $loop) {
+    $rt: $rTo/$loop - $r/$loop;
+    $gt: $gTo/$loop - $g/$loop;
+    $bt: $bTo/$loop - $b/$loop;
+
+    $result: rgb($r, $g, $b) 1px 1px;
+
+    @for $_ from 0 through $loop {
+        $r: $r + $rt;
+        $b: $b + $bt;
+        $g: $g + $gt;
+        $result: $result, rgb($r, $g, $b) #{$_ + 1}px #{$_ + 1}px;
+    }
+    @return $result;
+}
+
+@mixin textShadown($r, $g, $b, $rTo, $gTo, $bTo, $loop) {
+    text-shadow: genColorTextShadown($r, $g, $b, $rTo, $gTo, $bTo, $loop);
+}

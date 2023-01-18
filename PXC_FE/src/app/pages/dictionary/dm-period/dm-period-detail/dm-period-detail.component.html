@@ -1,0 +1,107 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmPeriodResource.MyResource;
+      let dmItemOpResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PERIOD_ID"
+              class="control-label"
+              [text]="dmItemOpResource.PERIOD_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input idField"
+              formControlName="PERIOD_ID"
+              kendoTextBox
+              #PERIOD_ID
+            />
+          </div>
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="dmItemOpResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="PERIOD_NAME"
+              class="control-label"
+              required
+              [text]="dmItemOpResource.PERIOD_NAME"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PERIOD_NAME"
+              kendoTextBox
+              #PERIOD_NAME
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PERIOD_NUMBER"
+              class="control-label"
+              required
+              [text]="dmItemOpResource.PERIOD_NUMBER"
+            >
+            </kendo-label>
+            <fts-numerictextbox
+              formControlName="PERIOD_NUMBER"
+              format="n2"
+              #PERIOD_NUMBER
+            >
+            </fts-numerictextbox>
+          </div>
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PERIOD_TYPE"
+              class="control-label"
+              required
+              [text]="dmItemOpResource.PERIOD_TYPE"
+            >
+            </kendo-label>
+            <kendo-dropdownlist
+              formControlName="PERIOD_TYPE"
+              [data]="state$.PeriodTypeDatas"
+              [defaultItem]="{
+                PERIOD_TYPE_NAME: 'Chọn...',
+                PERIOD_TYPE_ID: ''
+              }"
+              [textField]="'PERIOD_TYPE_NAME'"
+              [valueField]="'PERIOD_TYPE_ID'"
+              [valuePrimitive]="true"
+              #PERIOD_TYPE
+            >
+            </kendo-dropdownlist>
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

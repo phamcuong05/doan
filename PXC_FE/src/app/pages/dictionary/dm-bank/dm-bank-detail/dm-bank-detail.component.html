@@ -1,0 +1,31 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+  <ng-container *ngIf=" myInject.resourceManager.DmBankResource.MyResource; let DmBankResource    ">
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label [for]="BANK_ID" class="control-label" [text]="DmBankResource.BANK_ID" required>
+            </kendo-label>
+            <input type="text" class="control-input idField" formControlName="BANK_ID" kendoTextBox #BANK_ID />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label [for]="BANK_NAME" class="control-label" required [text]="DmBankResource.BANK_NAME">
+            </kendo-label>
+            <input type="text" class="control-input" formControlName="BANK_NAME" kendoTextBox #BANK_NAME />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label [for]="ACTIVE" class="control-label" required [text]="DmBankResource.ACTIVE">
+            </kendo-label>
+            <input type="checkbox" formControlName="ACTIVE" kendoCheckBox #ACTIVE />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

@@ -1,0 +1,29 @@
+export interface DmPrDetail {
+  PR_DETAIL_ID: string;
+  PR_DETAIL_NAME: string;
+  PR_DETAIL_CLASS_ID: string;
+  PR_DETAIL_CLASS_NAME: string;
+  PR_DETAIL_CLASS1_ID: string;
+  PR_DETAIL_CLASS1_NAME: string;
+  PR_DETAIL_TYPE_ID: string;
+  PR_ACCOUNT_ID: string;
+  PR_ACCOUNT_NAME: string;
+  PHONE: string;
+  EMAIL: string;
+  TAX_FILE_NUMBER: string;
+  IDENTIFY_NO: string;
+  BANK_CODE: string;
+  BANK_BRANCH: string;
+  BANK_ACCOUNT_NAME: string;
+  BANK_ACCOUNT_NO: string;
+  BANK_NAME: string;
+  ADDRESS: string;
+  DISTRICT_ID: string;
+  DISTRICT_NAME: string;
+  PROVINCE_ID: string;
+  PROVINCE_NAME: string;
+  PASSWORD: string;
+  USER_ID: string;
+  ACTIVE: number;
+  CREATE_DATE: Date;
+}

@@ -1,0 +1,37 @@
+.print-content-wap {
+    padding: 4px;
+}
+
+.print-templates-container {
+    padding: 4px;
+}
+
+.print-toolbar {
+    padding: 0 4px;
+}
+
+.print-templates-container {
+    min-width: 200px;
+}
+
+.print-templates {
+    border: thin solid var(--color-border);
+    border-radius: 4px;
+}
+
+.print-toolbar .btn {
+    margin: 4px 0;
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.print-toolbar .btn .icon {
+    margin-right: 4px;
+}
+
+.item-print-template {
+    border: none;
+    border-radius: 0;
+    padding: 2px 8px;
+}

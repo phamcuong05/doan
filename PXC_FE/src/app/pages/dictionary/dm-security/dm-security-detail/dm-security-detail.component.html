@@ -1,0 +1,373 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmSecurityResource.MyResource;
+      let dmSecurityResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="SECURITY_ID"
+              class="control-label"
+              [text]="dmSecurityResource.SECURITY_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input idField"
+              formControlName="SECURITY_ID"
+              kendoTextBox
+              #SECURITY_ID
+            />
+          </div>
+
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="SECURITY_NAME"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.SECURITY_NAME"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="SECURITY_NAME"
+              kendoTextBox
+              #SECURITY_NAME
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="SECURITY_CLASS_ID"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.SECURITY_CLASS_ID"
+            >
+            </kendo-label>
+            <label #SECURITY_CLASS_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="SECURITY_CLASS_ID"
+                valueField="SECURITY_CLASS_ID"
+                [selectionChange]="securityClass_onSelectionChange.bind(this)"
+              >
+                <dm-security-class-selector
+                  textLookupSelector
+                ></dm-security-class-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="SECURITY_CLASS_NAME"
+              kendoTextBox
+              #SECURITY_CLASS_NAME
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="BOOK_UNIT_PRICE_ORIG"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.BOOK_UNIT_PRICE_ORIG"
+            >
+            </kendo-label>
+            <fts-numerictextbox
+              formControlName="BOOK_UNIT_PRICE_ORIG"
+              [format]="myInject.FTSMain.amountOrigFormat"
+              #BOOK_UNIT_PRICE_ORIG
+            >
+            </fts-numerictextbox>
+          </div>
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="CURRENCY_ID"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.CURRENCY_ID"
+            >
+            </kendo-label>
+            <label #CURRENCY_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="CURRENCY_ID"
+                valueField="CURRENCY_ID"
+              >
+                <dm-currency-selector textLookupSelector></dm-currency-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PR_DETAIL_ID"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.PR_DETAIL_ID"
+            >
+            </kendo-label>
+            <label #PR_DETAIL_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="PR_DETAIL_ID"
+                valueField="PR_DETAIL_ID"
+                [selectionChange]="prDetail_onSelectionChange.bind(this)"
+              >
+                <dm-pr-detail-selector
+                  textLookupSelector
+                ></dm-pr-detail-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PR_DETAIL_NAME"
+              kendoTextBox
+              #PR_DETAIL_NAME
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PERIOD_ID"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.PERIOD_ID"
+            >
+            </kendo-label>
+            <label #PERIOD_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="PERIOD_ID"
+                valueField="PERIOD_ID"
+                [selectionChange]="period_onSelectionChange.bind(this)"
+              >
+                <dm-period-selector textLookupSelector></dm-period-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PERIOD_NAME"
+              kendoTextBox
+              #PERIOD_NAME
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="ISSUE_DATE"
+              class="control-label"
+              [text]="dmSecurityResource.ISSUE_DATE"
+            >
+            </kendo-label>
+            <label #ISSUE_DATE class="d-block col-12">
+              <fts-date-picker formControlName="ISSUE_DATE"> </fts-date-picker>
+            </label>
+          </div>
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="MATURITY_DATE"
+              class="control-label"
+              [text]="dmSecurityResource.MATURITY_DATE"
+            >
+            </kendo-label>
+            <label #MATURITY_DATE class="d-block col-12">
+              <fts-date-picker formControlName="MATURITY_DATE">
+              </fts-date-picker>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="SHORT_TERM_COST_ACCOUNT_ID"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.SHORT_TERM_COST_ACCOUNT_ID"
+            >
+            </kendo-label>
+            <label #SHORT_TERM_COST_ACCOUNT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="SHORT_TERM_COST_ACCOUNT_ID"
+                valueField="ACCOUNT_ID"
+              >
+                <dm-account-selector textLookupSelector></dm-account-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="SHORT_TERM_PROFIT_ACCOUNT_ID"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.SHORT_TERM_PROFIT_ACCOUNT_ID"
+            >
+            </kendo-label>
+            <label #SHORT_TERM_PROFIT_ACCOUNT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="SHORT_TERM_PROFIT_ACCOUNT_ID"
+                valueField="ACCOUNT_ID"
+              >
+                <dm-account-selector textLookupSelector></dm-account-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="SHORT_TERM_LOSS_ACCOUNT_ID"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.SHORT_TERM_LOSS_ACCOUNT_ID"
+            >
+            </kendo-label>
+            <label #SHORT_TERM_LOSS_ACCOUNT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="SHORT_TERM_LOSS_ACCOUNT_ID"
+                valueField="ACCOUNT_ID"
+              >
+                <dm-account-selector textLookupSelector></dm-account-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="SHORT_TERM_RESERVE_ACCOUNT_ID"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.SHORT_TERM_RESERVE_ACCOUNT_ID"
+            >
+            </kendo-label>
+            <label #SHORT_TERM_RESERVE_ACCOUNT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="SHORT_TERM_RESERVE_ACCOUNT_ID"
+                valueField="ACCOUNT_ID"
+              >
+                <dm-account-selector textLookupSelector></dm-account-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="LONG_TERM_COST_ACCOUNT_ID"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.LONG_TERM_COST_ACCOUNT_ID"
+            >
+            </kendo-label>
+            <label #LONG_TERM_COST_ACCOUNT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="LONG_TERM_COST_ACCOUNT_ID"
+                valueField="ACCOUNT_ID"
+              >
+                <dm-account-selector textLookupSelector></dm-account-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="LONG_TERM_PROFIT_ACCOUNT_ID"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.LONG_TERM_PROFIT_ACCOUNT_ID"
+            >
+            </kendo-label>
+            <label #LONG_TERM_PROFIT_ACCOUNT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="LONG_TERM_PROFIT_ACCOUNT_ID"
+                valueField="ACCOUNT_ID"
+              >
+                <dm-account-selector textLookupSelector></dm-account-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="LONG_TERM_LOSS_ACCOUNT_ID"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.LONG_TERM_LOSS_ACCOUNT_ID"
+            >
+            </kendo-label>
+            <label #LONG_TERM_LOSS_ACCOUNT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="LONG_TERM_LOSS_ACCOUNT_ID"
+                valueField="ACCOUNT_ID"
+              >
+                <dm-account-selector textLookupSelector></dm-account-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="LONG_TERM_RESERVE_ACCOUNT_ID"
+              class="control-label"
+              required
+              [text]="dmSecurityResource.LONG_TERM_RESERVE_ACCOUNT_ID"
+            >
+            </kendo-label>
+            <label #LONG_TERM_RESERVE_ACCOUNT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="LONG_TERM_RESERVE_ACCOUNT_ID"
+                valueField="ACCOUNT_ID"
+              >
+                <dm-account-selector textLookupSelector></dm-account-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

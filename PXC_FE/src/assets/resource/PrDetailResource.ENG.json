@@ -1,0 +1,17 @@
+{
+    "PrDetail":"Customer",
+    "PR_DETAIL_ID":"Customer id",
+    "PR_DETAIL_NAME":"Customer name",
+    "EMAIL":"Email",
+    "PHONE":"Phone number",
+    "ADDRESS":"Address",
+    "BANK_ACCOUNT":"Bank account",
+    "BANK_NAME":"Bank name",
+    "BANK_BRANCH":"Bank branch",
+    "TAX_FILE_NUMBER":"Tax code",
+    "CREATE_DATE":"Created date",
+    "ACTIVE":"Active",
+    "PR_DETAIL_CLASS_ID":"Customer group",
+    "PR_DETAIL_CLASS1_ID":"Customer group 1",
+    "PR_ACCOUNT_ID":"Account"
+}

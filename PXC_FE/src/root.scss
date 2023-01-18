@@ -1,0 +1,124 @@
+/*font-size*/
+:root {
+    --font-size-small: 9px;
+    --font-size-nomal: 12px;
+    --font-size-large: 16px;
+    --font-size-extralarge: 20px;
+}
+
+/*color*/
+:root {
+    --color-text: #000000;
+    --color-text-active: #15657c;
+    --color-danger: #dc3545;
+    --color-danger-hover: #b02a37;
+    --color-primary: #15657c;
+    --color-background: #fff;
+    --color-border: #00000014;
+    --color-shadown: #cccccc;
+    --color-grid-header-background: #fafafa;
+}
+.dark-mode {
+    --color-text: #cccccc;
+    --color-text-active: #fff;
+    --color-danger: #dc3545;
+    --color-danger-hover: #b02a37;
+    --color-primary: #2551dc;
+    --color-background: #252526;
+    --color-border: #444444;
+    --color-shadown: #444444;
+    --color-grid-header-background: #333333;
+}
+
+/*color navigation*/
+:root {
+    --navigation-backgroud: #15657c;
+    --navigation-color: #cccccc;
+    --navigation-backgroud-active: #1d4f5e;
+    --navigation-backgroud-expand: #225d6e;
+    --navigation-active: #ffffff;
+    --navigation-popup-backgroud: #ffffff;
+    --navigation-popup-color: #212529;
+    --navigation-popup-active: #15657c;
+    --navigation-border: #8f8f8f;
+    --navigation-hover-backgroud: #1c5666;
+    --navigation-hover-color: #ffffff;
+}
+
+.dark-mode {
+    --navigation-backgroud: #333333;
+    --navigation-color: #cccccc;
+    --navigation-backgroud-active: #252526;
+    --navigation-backgroud-expand: #282828;
+    --navigation-active: #ffffff;
+    --navigation-popup-backgroud: #252526;
+    --navigation-popup-color: #cccccc;
+    --navigation-popup-active: #ffffff;
+    --navigation-border: #444444;
+    --navigation-hover-backgroud: #202020;
+    --navigation-hover-color: #ffffff;
+}
+
+/*color scroll*/
+:root {
+    --custom-scroll-backgroud: #e7e7e7;
+    --custom-scroll-color: #a1a1a1;
+}
+
+.dark-mode {
+    --custom-scroll-backgroud: #3b3b3b;
+    --custom-scroll-color: rgb(112, 112, 112);
+}
+
+/*color button*/
+:root {
+    --button-hover-backgroud: #cdcdcd;
+    --button-hover-color: #212529;
+    --button-active-backgroud: #1884a3;
+    --button-active-color: #fff;
+    --button-primary-backgroud: #15657c;
+    --button-primary-color: #fff;
+}
+
+.dark-mode {
+    --button-hover-backgroud: #505050;
+    --button-hover-color: #fff;
+    --button-active-backgroud: #6e6e6e;
+    --button-active-color: #fff;
+    --button-primary-backgroud: #2551dc;
+    --button-primary-color: #fff;
+}
+
+/*color input*/
+:root {
+    --input-button-background: #e9e9e9;
+    --input-date-highlight-shadown: #cecece;
+    --input-color-background: #ffffff;
+    --input-readonly-background: #f5f5f5;
+}
+
+.dark-mode {
+    --input-button-background: #333333;
+    --input-date-highlight-shadown: #000;
+    --input-color-background: #252526;
+    --input-readonly-background: #444444;
+}
+
+/*color tabtrips*/
+:root {
+    --tabtrip-background: transparent;
+    --tabtrip-color: #212529;
+    --tabtrip-border: #00000014;
+    --tabtrip-active-background: transparent;
+    --tabtrip-active-color: #15657c;
+    --tabtrip-active-border: #15657c;
+}
+
+.dark-mode {
+    --tabtrip-background: transparent;
+    --tabtrip-color: #cccccc;
+    --tabtrip-border: #444444;
+    --tabtrip-active-background: transparent;
+    --tabtrip-active-color: #ffffff;
+    --tabtrip-active-border: #ffffff;
+}

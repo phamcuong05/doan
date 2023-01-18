@@ -1,0 +1,99 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmContractLimitResource.MyResource;
+      let DmContractLimitResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PR_DETAIL_ID"
+              class="control-label"
+              [text]="DmContractLimitResource.PR_DETAIL_ID"
+              required
+            >
+            </kendo-label>
+            <label #PR_DETAIL_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="PR_DETAIL_ID"
+                valueField="PR_DETAIL_ID"
+                [selectionChange]="prDetailId_SelectionChange.bind(this)"
+              >
+                <dm-pr-detail-selector
+                  textLookupSelector
+                ></dm-pr-detail-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PR_DETAIL_NAME"
+              kendoTextBox
+              #PR_DETAIL_NAME
+              readonly
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="VALID_DATE"
+              class="control-label"
+              [text]="DmContractLimitResource.VALID_DATE"
+              required
+            >
+            </kendo-label>
+            <label #VALID_DATE class="d-block col-12">
+              <fts-date-picker formControlName="VALID_DATE"> </fts-date-picker>
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 form-control">
+            <kendo-label
+              [for]="AMOUNT"
+              class="control-label"
+              [text]="DmContractLimitResource.AMOUNT"
+              required
+            >
+            </kendo-label>
+            <fts-numerictextbox
+              formControlName="AMOUNT"
+              [format]="myInject.FTSMain.amountFormat"
+              #AMOUNT
+            >
+            </fts-numerictextbox>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="NOTES"
+              class="control-label"
+              required
+              [text]="DmContractLimitResource.NOTES"
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input"
+              formControlName="NOTES"
+              kendoTextBox
+              #NOTES
+            />
+          </div>
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

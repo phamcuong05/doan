@@ -1,0 +1,6 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource ; let resource">
+    <fts-dict-base-list [pageResource]="myInject.resourceManager.SecUserResource.MyResource" [showToolbarImport]="false"
+        [showToolbarExcel]="true" [showToolbarAdd]="false" [showToolbarDelete]="false">
+        <sys-systemvar-detail dictBaseDetail></sys-systemvar-detail>
+    </fts-dict-base-list>
+</ng-container>

@@ -1,0 +1,42 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+  <ng-container *ngIf="
+      myInject.resourceManager.DmOrganizarionResource.MyResource;
+      let dmOrganizarionResource
+    ">
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label [for]="ORGANIZATION_ID" class="control-label" [text]="'Mã đơn vị'" required>
+            </kendo-label>
+            <input type="text" class="control-input" formControlName="ORGANIZATION_ID" kendoTextBox #ORGANIZATION_ID />
+          </div>
+
+          <div class="form-control col-6">
+            <kendo-label [for]="ACTIVE" class="control-label" required [text]="dmOrganizarionResource.ACTIVE">
+            </kendo-label>
+            <input type="checkbox" formControlName="ACTIVE" kendoCheckBox #ACTIVE />
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-control col-12">
+            <kendo-label [for]="ORGANIZATION_NAME" class="control-label" required [text]="'Tên đơn vị'">
+            </kendo-label>
+            <input type="text" class="control-input" formControlName="ORGANIZATION_NAME" kendoTextBox
+              #ORGANIZATION_NAME />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-control col-6">
+            <kendo-label [for]="ORGANIZATION_NAME_SHORT" class="control-label" required [text]="'Tên viết tắt'">
+            </kendo-label>
+            <input type="text" class="control-input" formControlName="ORGANIZATION_NAME_SHORT" kendoTextBox
+              #ORGANIZATION_NAME_SHORT />
+          </div>
+        </div>
+
+        </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

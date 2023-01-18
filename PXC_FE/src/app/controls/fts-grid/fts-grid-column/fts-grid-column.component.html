@@ -1,0 +1,484 @@
+<ng-container *ngIf="resourceManager.CommonResource.MyResource as resource">
+  <kendo-grid-messages
+    [filterIsTrue]="resource?.FilterIsTrue"
+    [filterIsFalse]="resource?.FilterIsFalse"
+    [filterBooleanAll]="resource?.All"
+    [filterEqOperator]="resource?.Equal"
+    [filterNotEqOperator]="resource?.NotEqual"
+    [filterContainsOperator]="resource?.Contains"
+    [filterNotContainsOperator]="resource?.NotContains"
+    [filterStartsWithOperator]="resource?.StartsWith"
+    [filterEndsWithOperator]="resource?.EndWith"
+    [filterIsNullOperator]="resource?.IsNull"
+    [filterIsNotNullOperator]="resource?.IsNotNull"
+    [filterGteOperator]="resource?.GreaterOrEqual"
+    [filterGtOperator]="resource?.Greater"
+    [filterLteOperator]="resource?.LessOrEqual"
+    [filterLtOperator]="resource?.LessOrEqual"
+    [filterIsEmptyOperator]="resource?.IsEmpty"
+    [filterIsNotEmptyOperator]="resource?.IsNotEmpty"
+    [filterAfterOperator]="resource?.After"
+    [filterAfterOrEqualOperator]="resource?.AfterOrEqual"
+    [filterBeforeOperator]="resource?.Before"
+    [filterBeforeOrEqualOperator]="resource?.BeforeOrEqual"
+    [filterDateToday]="resource?.ToDay"
+  >
+  </kendo-grid-messages>
+
+  <!-- #region Cột boolean -->
+  <ng-container *ngIf="type == 'boolean'">
+    <!-- #region filter -->
+    <ng-template
+      kendoGridFilterCellTemplate
+      let-filter="filter"
+      let-column="column"
+    >
+      <kendo-grid-boolean-filter-cell [column]="column" [filter]="filter">
+      </kendo-grid-boolean-filter-cell>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region cell template -->
+    <ng-template kendoGridCellTemplate let-dataItem="dataItem">
+      <input
+        class="k-checkbox"
+        type="checkbox"
+        disabled
+        [checked]="dataItem?.[fieldId]"
+      />
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region editor -->
+    <ng-template
+      kendoGridEditTemplate
+      let-dataItem="dataItem"
+      let-column="column"
+      let-eventEditCellKeydown="eventEditCellKeydown"
+      let-formGroup="formGroup"
+    >
+      <div
+        ftsGridEditTemplate
+        [fieldId]="fieldId"
+        [eventEditCellKeydown]="eventEditCellKeydown"
+        style="
+          width: calc(100% + 24px);
+          margin: -2px -12px;
+          height: 24px;
+          padding-top: 2px;
+          background: var(--color-background);
+        "
+      >
+        <input
+          class="k-checkbox"
+          [disabled]="formGroup.get(fieldId)"
+          type="checkbox"
+          [formControl]="formGroup.get(fieldId)"
+          [attr.ControlName]="fieldId"
+          [(ngModel)]="dataItem[fieldId]"
+          [readonly]="readOnly"
+        />
+      </div>
+    </ng-template>
+    <!-- #endregion -->
+  </ng-container>
+  <!-- #endregion -->
+
+  <!-- #region Cột numeric -->
+  <ng-container *ngIf="type == 'numeric'">
+    <!-- #region filter -->
+    <ng-template
+      kendoGridFilterCellTemplate
+      let-filter="filter"
+      let-column="column"
+    >
+      <kendo-grid-numeric-filter-cell
+        [format]="format || 'n2'"
+        [column]="column"
+        [filter]="filter"
+      >
+      </kendo-grid-numeric-filter-cell>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region editor -->
+    <ng-template
+      kendoGridEditTemplate
+      let-dataItem="dataItem"
+      let-column="column"
+      let-eventEditCellKeydown="eventEditCellKeydown"
+      let-formGroup="formGroup"
+    >
+      <div
+        *ngIf="formGroup.get(fieldId)"
+        ftsGridEditTemplate
+        [fieldId]="fieldId"
+        [eventEditCellKeydown]="eventEditCellKeydown"
+      >
+        <fts-numerictextbox
+          [format]="format || 'n2'"
+          [formControl]="formGroup.get(fieldId)"
+          [attr.ControlName]="fieldId"
+          [(ngModel)]="dataItem[fieldId]"
+          [readonly]="readOnly"
+        ></fts-numerictextbox>
+      </div>
+      <div *ngIf="!formGroup.get(fieldId)">
+        {{intl.formatNumber(dataItem?.[fieldId],format || 'n2')}}
+      </div>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region cell template -->
+    <ng-template kendoGridCellTemplate let-dataItem="dataItem">
+      <span>
+        {{ intl.formatNumber((dataItem?.[fieldId] ),format || 'n2')}}
+      </span>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region footer -->
+    <ng-template
+      *ngIf="aggregate"
+      kendoGridFooterTemplate
+      let-column="column"
+      let-myAggregate="myAggregate"
+      let-summaryData="summaryData"
+      let-isServerPaging="isServerPaging"
+    >
+      <div class="text-right">
+        {{ intl.formatNumber((( isServerPaging ? summaryData?.[fieldId] : myAggregate?.[fieldId]?.[aggregate] ) || 0),format || 'n2')}}
+      </div>
+    </ng-template>
+    <!-- #endregion -->
+  </ng-container>
+  <!-- #endregion -->
+
+  <!-- #region Cột Date -->
+  <ng-container *ngIf="type == 'date'">
+    <!-- #region filter -->
+    <ng-template
+      kendoGridFilterCellTemplate
+      let-filter="filter"
+      let-column="column"
+    >
+      <kendo-grid-date-filter-cell
+        [column]="column"
+        [filter]="filter"
+        format="dd/MM/yyyy"
+        [formatPlaceholder]="{
+          year: 'yyyy',
+          month: 'MM',
+          day: 'dd',
+          hour: 'hh',
+          minute: 'mm',
+          second: 'ss'
+        }"
+        [weekNumber]="true"
+      >
+      </kendo-grid-date-filter-cell>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region editor -->
+    <ng-template
+      kendoGridEditTemplate
+      let-dataItem="dataItem"
+      let-column="column"
+      let-eventEditCellKeydown="eventEditCellKeydown"
+      let-formGroup="formGroup"
+    >
+      <div
+        *ngIf="formGroup.get(fieldId)"
+        ftsGridEditTemplate
+        [fieldId]="fieldId"
+        [eventEditCellKeydown]="eventEditCellKeydown"
+      >
+        <kendo-datepicker
+          [format]="format || 'dd/MM/yyyy'"
+          [formControl]="formGroup.get(fieldId)"
+          [attr.ControlName]="fieldId"
+          [(ngModel)]="dataItem[fieldId]"
+          [weekNumber]="true"
+          [formatPlaceholder]="{
+            year: 'yyyy',
+            month: 'MM',
+            day: 'dd',
+            hour: 'hh',
+            minute: 'mm',
+            second: 'ss'
+          }"
+          [readonly]="readOnly"
+        ></kendo-datepicker>
+      </div>
+      <div *ngIf="!formGroup.get(fieldId)">
+        {{intl.formatDate(dataItem?.[fieldId],format|| 'dd/MM/yyyy')}}
+      </div>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region cell template -->
+    <ng-template kendoGridCellTemplate let-dataItem="dataItem">
+      {{intl.formatDate(dataItem?.[fieldId],format || 'dd/MM/yyyy')}}
+    </ng-template>
+    <!-- #endregion -->
+  </ng-container>
+  <!-- #endregion -->
+
+  <!-- #region Cột multicolumncombobox -->
+  <ng-container *ngIf="type == 'multicolumncombobox'">
+    <!-- #region filter -->
+    <ng-template
+      kendoGridFilterCellTemplate
+      let-filter="filter"
+      let-column="column"
+    >
+      <fts-grid-combo-filter-cell
+        [valueField]="valueField"
+        [FieldId]="fieldId"
+        [textField]="textField"
+        [filter]="filter"
+        [data]="dataSource"
+      >
+      </fts-grid-combo-filter-cell>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region cell template -->
+    <ng-template kendoGridCellTemplate let-dataItem="dataItem">
+      {{ (showText ?
+            findList(dataSource,dataItem[fieldId],valueField)?.[textField] ||
+            dataItem[fieldId]: dataItem[fieldId])}}
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region editor -->
+    <ng-template
+      kendoGridEditTemplate
+      let-dataItem="dataItem"
+      let-column="column"
+      let-formGroup="formGroup"
+      let-eventEditCellKeydown="eventEditCellKeydown"
+    >
+      <div
+        *ngIf="formGroup.get(fieldId)"
+        ftsGridEditTemplate
+        [fieldId]="fieldId"
+        [eventEditCellKeydown]="eventEditCellKeydown"
+        [formGroup]="formGroup"
+      >
+        <kendo-multicolumncombobox
+          [valuePrimitive]="true"
+          [allowCustom]="false"
+          [data]="dataSource"
+          [textField]="valueField"
+          [valueField]="valueField"
+          [valuePrimitive]="true"
+          [formControl]="formGroup.get(fieldId)"
+          [attr.ControlName]="fieldId"
+          [(ngModel)]="dataItem[fieldId]"
+          [suggest]="true"
+          [virtual]="virtual"
+          [readonly]="readOnly"
+        >
+          <kendo-combobox-column [field]="valueField" [width]="120">
+          </kendo-combobox-column>
+          <kendo-combobox-column [field]="textField" [width]="250">
+          </kendo-combobox-column>
+        </kendo-multicolumncombobox>
+      </div>
+      <div *ngIf="!formGroup.get(fieldId)">
+        {{dataItem?.[fieldId]||''}}
+      </div>
+    </ng-template>
+    <!-- #endregion -->
+  </ng-container>
+  <!-- #endregion -->
+
+  <!-- #region Cột combo -->
+  <ng-container *ngIf="type == 'combo'">
+    <!-- #region filter -->
+    <ng-template
+      kendoGridFilterCellTemplate
+      let-filter="filter"
+      let-column="column"
+    >
+      <fts-grid-combo-filter-cell
+        [valueField]="valueField"
+        [FieldId]="fieldId"
+        [textField]="textField"
+        [filter]="filter"
+        [data]="dataSource"
+      >
+      </fts-grid-combo-filter-cell>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region cell template -->
+    <ng-template kendoGridCellTemplate let-dataItem="dataItem">
+      {{ (showText ?
+            findList(dataSource,dataItem[fieldId],valueField)?.[textField] ||
+            dataItem[fieldId]: dataItem[fieldId])}}
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region editor -->
+    <ng-template
+      kendoGridEditTemplate
+      let-dataItem="dataItem"
+      let-column="column"
+      let-formGroup="formGroup"
+      let-eventEditCellKeydown="eventEditCellKeydown"
+    >
+      <div
+        *ngIf="formGroup.get(fieldId)"
+        ftsGridEditTemplate
+        [fieldId]="fieldId"
+        [eventEditCellKeydown]="eventEditCellKeydown"
+        [formGroup]="formGroup"
+      >
+        <kendo-combobox
+          [valuePrimitive]="true"
+          [allowCustom]="false"
+          [data]="dataSource"
+          [textField]="textField"
+          [valueField]="valueField"
+          [valuePrimitive]="true"
+          [formControl]="formGroup.get(fieldId)"
+          [attr.ControlName]="fieldId"
+          [(ngModel)]="dataItem[fieldId]"
+          [suggest]="true"
+          [virtual]="virtual"
+          [readonly]="readOnly"
+        >
+        </kendo-combobox>
+      </div>
+      <div *ngIf="!formGroup.get(fieldId)">
+        {{dataItem?.[fieldId]||''}}
+      </div>
+    </ng-template>
+    <!-- #endregion -->
+  </ng-container>
+  <!-- #endregion -->
+
+  <!-- #region Cột text-lookup -->
+  <ng-container *ngIf="type == 'textlookup'">
+    <!-- #region filter -->
+    <ng-template
+      kendoGridFilterCellTemplate
+      let-filter="filter"
+      let-column="column"
+    >
+      <kendo-grid-string-filter-cell
+        [column]="column"
+        [filter]="filter"
+      ></kendo-grid-string-filter-cell>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region editor -->
+    <ng-template
+      kendoGridEditTemplate
+      let-dataItem="dataItem"
+      let-column="column"
+      let-eventEditCellKeydown="eventEditCellKeydown"
+      let-formGroup="formGroup"
+    >
+      <div
+        *ngIf="formGroup.get(fieldId)"
+        ftsGridEditTemplate
+        [fieldId]="fieldId"
+        [eventEditCellKeydown]="eventEditCellKeydown"
+        [formGroup]="formGroup"
+      >
+        <ng-container
+          [ngTemplateOutlet]="editTemplateRef"
+          [ngTemplateOutletContext]="{
+            formGroup: formGroup,
+            column: column,
+            colConfig: colConfig,
+            dataItem: dataItem
+          }"
+        >
+        </ng-container>
+      </div>
+      <div *ngIf="!formGroup.get(fieldId)">
+        {{dataItem?.[fieldId]||''}}
+      </div>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region cell template -->
+    <ng-template kendoGridCellTemplate let-dataItem="dataItem">
+      <span>
+        {{ textField ? dataItem[textField] : dataItem[fieldId] }}
+      </span>
+    </ng-template>
+    <!-- #endregion -->
+  </ng-container>
+  <!-- #endregion -->
+
+  <!-- #region Cột mặc định -->
+  <ng-container *ngIf="type == 'default'">
+    <!-- #region filter -->
+    <ng-template
+      kendoGridFilterCellTemplate
+      let-filter="filter"
+      let-column="column"
+    >
+      <kendo-grid-string-filter-cell
+        [column]="column"
+        [filter]="filter"
+      ></kendo-grid-string-filter-cell>
+    </ng-template>
+    <!-- #endregion -->
+
+    <!-- #region editor -->
+    <ng-template
+      kendoGridEditTemplate
+      let-dataItem="dataItem"
+      let-column="column"
+      let-eventEditCellKeydown="eventEditCellKeydown"
+      let-formGroup="formGroup"
+    >
+      <ng-container *ngIf="editTemplateRef">
+        <div
+          *ngIf="formGroup.get(fieldId)"
+          ftsGridEditTemplate
+          [fieldId]="fieldId"
+          [eventEditCellKeydown]="eventEditCellKeydown"
+        >
+          <ng-container
+            *ngTemplateOutlet="
+              editTemplateRef;
+              context: { formGroup: formGroup, dataItem: dataItem }
+            "
+          >
+          </ng-container>
+        </div>
+      </ng-container>
+      <ng-container *ngIf="!editTemplateRef">
+        <div
+          *ngIf="formGroup.get(fieldId)"
+          ftsGridEditTemplate
+          [fieldId]="fieldId"
+          [eventEditCellKeydown]="eventEditCellKeydown"
+        >
+          <input
+            type="text"
+            [formControl]="formGroup.get(fieldId)"
+            [attr.ControlName]="fieldId"
+            [(ngModel)]="dataItem[fieldId]"
+            class="k-textbox"
+            [readonly]="readOnly"
+          />
+        </div>
+        <div *ngIf="!formGroup.get(fieldId)">
+          {{dataItem?.[fieldId]||''}}
+        </div>
+      </ng-container>
+    </ng-template>
+    <!-- #endregion -->
+  </ng-container>
+  <!-- #endregion -->
+</ng-container>

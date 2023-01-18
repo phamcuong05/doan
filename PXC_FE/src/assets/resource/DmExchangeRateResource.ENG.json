@@ -1,0 +1,6 @@
+{
+    "CURRENCY_ID":"From Currency",
+    "TO_CURRENCY_ID":"To Currency",
+    "EXCHANGE_RATE":"Exchange Rate",
+    "VALID_DATE": "Date"
+}

@@ -1,0 +1,13 @@
+{
+  "DM_ITEM": "Danh mục hàng hóa",
+  "ITEM_CLASS1_ID": "Mã nhóm HH 1",
+  "ITEM_CLASS1_NAME": "Tên nhóm HH 1",
+  "ITEM_CLASS_ID": "Mã nhóm HH",
+  "ITEM_CLASS_NAME": "Tên nhóm HH",
+  "ITEM_ID": "Mã hàng hóa",
+  "ITEM_NAME": "Tên hàng hóa",
+  "USER_ID": "User ID",
+  "ACTIVE": "Sử dụng",
+  "UNIT_ID":"Mã đơn vị tính",
+  "UNIT_NAME":"Tên đơn vị tính"
+}

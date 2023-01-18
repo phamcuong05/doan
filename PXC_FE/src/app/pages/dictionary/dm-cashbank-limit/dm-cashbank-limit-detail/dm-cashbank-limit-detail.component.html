@@ -1,0 +1,96 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="
+        myInject.resourceManager.DmCashbankLimitResource.MyResource;
+        let cashbankLimitResource
+      ">
+      <fts-dict-base-detail [formGroup]="formGroup">
+        <div formControls>
+          <!-- ORGANIZATION_ID: Đơn vị -->
+          <!-- <div class="row">
+            <div class="form-control col-6">
+              <kendo-label [for]="ORGANIZATION_ID" class="control-label" [text]="cashbankLimitResource.ORGANIZATION_ID" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input idField" formControlName="ORGANIZATION_ID" kendoTextBox
+                #ORGANIZATION_ID readonly/>
+            </div>
+            <div class="form-control col-6 text-lookup-name">
+              <input type="text" class="control-input k-input " formControlName="ORGANIZATION_NAME" kendoTextBox
+                #ORGANIZATION_NAME readonly />
+            </div>
+          </div> -->
+
+          <!-- VALID_DATE: Ngày hiệu lực -->
+          <div class="row">
+            <div class="col-6 form-control">
+              <kendo-label [for]="VALID_DATE" class="control-label" required [text]="cashbankLimitResource.VALID_DATE">
+              </kendo-label>
+              <label #VALID_DATE class="d-block col-12">
+                <fts-date-picker formControlName="VALID_DATE"></fts-date-picker>
+              </label>
+            </div>
+          </div>
+
+          <!-- ACCOUNT_ID: Tài khoản -->
+          <div class="row">
+            <div class="form-control col-6">
+              <kendo-label [for]="ACCOUNT_ID" class="control-label" [text]="cashbankLimitResource.ACCOUNT_ID" required>
+              </kendo-label>
+              <label #ACCOUNT_ID class="d-block col-12">
+                <fts-text-lookup formControlName="ACCOUNT_ID" valueField="ACCOUNT_ID"
+                [selectionChange]="accountId_SelectionChange.bind(this)">
+                  <dm-account-selector textLookupSelector></dm-account-selector>
+                </fts-text-lookup>
+              </label>
+            </div>        
+            <!-- ACCOUNT_NAME: Tên tài khoản -->
+            <div class="form-control col-6">
+              <kendo-label [for]="ACCOUNT_NAME" class="control-label" [text]="cashbankLimitResource.ACCOUNT_NAME" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input" formControlName="ACCOUNT_NAME" kendoTextBox
+              #ACCOUNT_NAME readonly/>
+            </div>        
+          </div>
+
+          <!-- BANK_ID: Ngân hàng -->
+          <div class="row">
+            <div class="form-control col-6">
+                <kendo-label [for]="BANK_ID" class="control-label" required [text]="cashbankLimitResource.BANK_ID">
+                </kendo-label>
+                <label #BANK_ID class="d-block col-12">
+                  <fts-text-lookup formControlName="BANK_ID" valueField="BANK_ID"
+                  [selectionChange]="bankId_SelectionChange.bind(this)">
+                    <dm-bank-selector textLookupSelector></dm-bank-selector>
+                  </fts-text-lookup>
+                </label>
+            </div>
+            <!-- BANK_NAME: Tên ngân hàng -->
+            <div class="form-control col-6">
+              <kendo-label [for]="BANK_NAME" class="control-label" required [text]="cashbankLimitResource.BANK_NAME">
+              </kendo-label>
+              <input type="text" class="control-input k-input" formControlName="BANK_NAME" kendoTextBox
+              #BANK_NAME readonly/>
+            </div>
+          </div>
+           
+          <div class="row">
+            <!-- LIMIT: Hạn mức -->
+            <div class="form-control col-6">
+              <kendo-label [for]="LIMIT" class="control-label" [text]="cashbankLimitResource.LIMIT">
+              </kendo-label>
+              <fts-numerictextbox formControlName="LIMIT" format="n0" #LIMIT>
+              </fts-numerictextbox>
+            </div>
+          </div>
+
+          <!-- NOTES: Ghi chú -->
+          <div class="row">
+            <div class="col-12 form-control">
+                <kendo-label [for]="NOTES" class="control-label" required [text]="cashbankLimitResource.NOTES">
+                </kendo-label>
+                <input type="text" class="control-input" formControlName="NOTES" kendoTextBox #NOTES />
+            </div>
+          </div>
+        </div>
+      </fts-dict-base-detail>
+    </ng-container>
+  </ng-container>

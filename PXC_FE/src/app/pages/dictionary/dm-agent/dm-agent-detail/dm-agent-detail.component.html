@@ -1,0 +1,326 @@
+<ng-container
+  *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource"
+>
+  <ng-container
+    *ngIf="
+      myInject.resourceManager.DmAgentResource.MyResource;
+      let dmAgentResource
+    "
+  >
+    <fts-dict-base-detail [formGroup]="formGroup">
+      <div formControls>
+        <div class="row">
+          <!-- #region Mã đại lý -->
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="AGENT_ID"
+              class="control-label"
+              [text]="dmAgentResource.AGENT_ID"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="AGENT_ID"
+              kendoTextBox
+              #AGENT_ID
+            />
+          </div>
+          <!-- #endregion -->
+
+          <!-- #region Sử dụng -->
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="ACTIVE"
+              class="control-label"
+              required
+              [text]="dmAgentResource.ACTIVE"
+            >
+            </kendo-label>
+            <input
+              type="checkbox"
+              formControlName="ACTIVE"
+              kendoCheckBox
+              #ACTIVE
+            />
+          </div>
+          <!-- #endregion -->
+        </div>
+
+        <div class="row">
+          <!-- #region Tên đại lý -->
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="AGENT_NAME"
+              class="control-label"
+              [text]="dmAgentResource.AGENT_NAME"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="AGENT_NAME"
+              kendoTextBox
+              #AGENT_NAME
+            />
+          </div>
+          <!-- #endregion -->
+        </div>
+
+        <div class="row">
+          <!-- #region SĐT -->
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PHONE"
+              class="control-label"
+              [text]="dmAgentResource.PHONE"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="PHONE"
+              kendoTextBox
+              #PHONE
+            />
+          </div>
+          <!-- #endregion -->
+
+          <!-- #region EMAIL -->
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="EMAIL"
+              class="control-label"
+              [text]="dmAgentResource.EMAIL"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="EMAIL"
+              kendoTextBox
+              #EMAIL
+            />
+          </div>
+          <!-- #endregion -->
+        </div>
+
+        <div class="row">
+          <!-- #region Số cccd -->
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="IDENTITY_NO"
+              class="control-label"
+              [text]="dmAgentResource.IDENTITY_NO"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="IDENTITY_NO"
+              kendoTextBox
+              #IDENTITY_NO
+            />
+          </div>
+          <!-- #endregion -->
+
+          <!-- #region Mã số thuế -->
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="TAX_FILE_NUMBER"
+              class="control-label"
+              [text]="dmAgentResource.TAX_FILE_NUMBER"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="TAX_FILE_NUMBER"
+              kendoTextBox
+              #TAX_FILE_NUMBER
+            />
+          </div>
+          <!-- #endregion -->
+        </div>
+
+        <div class="row">
+          <!-- #region ADDRESS -->
+          <div class="form-control col-12">
+            <kendo-label
+              [for]="ADDRESS"
+              class="control-label"
+              [text]="dmAgentResource.ADDRESS"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="ADDRESS"
+              kendoTextBox
+              #ADDRESS
+            />
+          </div>
+          <!-- #endregion -->
+        </div>
+
+        <div class="row">
+          <!-- #region Mã ngân hàng -->
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="BANK_CODE"
+              class="control-label"
+              [text]="dmAgentResource.BANK_CODE"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="BANK_CODE"
+              kendoTextBox
+              #BANK_CODE
+            />
+          </div>
+          <!-- #endregion -->
+
+          <!-- #region Tên ngân hàng -->
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="BANK_NAME"
+              class="control-label"
+              [text]="dmAgentResource.BANK_NAME"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="BANK_NAME"
+              kendoTextBox
+              #BANK_NAME
+            />
+          </div>
+          <!-- #endregion -->
+        </div>
+
+        <div class="row">
+          <!-- #region Số tk -->
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="BANK_ACCOUNT"
+              class="control-label"
+              [text]="dmAgentResource.BANK_ACCOUNT"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="BANK_ACCOUNT"
+              kendoTextBox
+              #BANK_ACCOUNT
+            />
+          </div>
+          <!-- #endregion -->
+
+          <!-- #region Chi nhánh ngân hàng -->
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="BANK_BRANCH"
+              class="control-label"
+              [text]="dmAgentResource.BANK_BRANCH"
+              required
+            >
+            </kendo-label>
+            <input
+              type="text"
+              class="control-input flex-1"
+              formControlName="BANK_BRANCH"
+              kendoTextBox
+              #BANK_BRANCH
+            />
+          </div>
+          <!-- #endregion -->
+        </div>
+
+        <div class="row">
+          <!-- #region Tỉnh thành phố -->
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="PROVINCE_ID"
+              class="control-label"
+              required
+              [text]="dmAgentResource.PROVINCE_ID"
+            >
+            </kendo-label>
+            <label #PROVINCE_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="PROVINCE_ID"
+                valueField="PROVINCE_ID"
+                [selectionChange]="provinceId_SelectionChange.bind(this)"
+              >
+                <dm-province-selector textLookupSelector></dm-province-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="PROVINCE_NAME"
+              kendoTextBox
+              #PROVINCE_NAME
+              tabindex="-1"
+              readonly
+            />
+          </div>
+          <!-- #endregion -->
+        </div>
+
+        <div class="row">
+          <!-- #region Quận huyện -->
+          <div class="form-control col-6">
+            <kendo-label
+              [for]="DISTRICT_ID"
+              class="control-label"
+              required
+              [text]="dmAgentResource.DISTRICT_ID"
+            >
+            </kendo-label>
+            <label #DISTRICT_ID class="d-block col-12">
+              <fts-text-lookup
+                formControlName="DISTRICT_ID"
+                valueField="DISTRICT_ID"
+                [selectionChange]="districtId_SelectionChange.bind(this)"
+              >
+                <dm-district-selector
+                  textLookupSelector
+                  #districtSelector
+                ></dm-district-selector>
+              </fts-text-lookup>
+            </label>
+          </div>
+          <div class="form-control col-6 text-lookup-name">
+            <input
+              type="text"
+              class="control-input"
+              formControlName="DISTRICT_NAME"
+              kendoTextBox
+              #DISTRICT_NAME
+              tabindex="-1"
+              readonly
+            />
+          </div>
+          <!-- #endregion -->
+        </div>
+      </div>
+    </fts-dict-base-detail>
+  </ng-container>
+</ng-container>

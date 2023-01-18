@@ -1,0 +1,116 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="
+        myInject.resourceManager.ListOrderResource.MyResource;
+        let listOrderResource
+      ">
+      <fts-dict-base-detail [formGroup]="formGroup">
+        <div formControls>
+        <div class="row">
+              <!-- ORDER_ID: Ma don -->
+            <div class="form-control col-6">
+              <kendo-label [for]="ORDER_ID" class="control-label" [text]="listOrderResource.ORDER_ID" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input idField" formControlName="ORDER_ID" kendoTextBox
+                #ORDER_ID/>
+            </div>
+             <!-- ORDER_DATE: Ngay dat don -->
+            <div class="form-control col-3">
+                <kendo-label [for]="ORDER_DATE" class="control-label" [text]="listOrderResource.ORDER_DATE" required>
+                </kendo-label>
+                <label #ORDER_DATE class="d-block col-12">
+                    <fts-date-picker formControlName="ORDER_DATE"></fts-date-picker>
+                  </label>
+              </div>
+          </div>
+
+          <div class="row">
+              <!-- PACKAGE_CODE: Ma hang -->
+            <div class="form-control col-6">
+                <kendo-label [for]="PACKAGE_CODE" class="control-label" [text]="listOrderResource.PACKAGE_CODE" required>
+                </kendo-label>
+                <input type="text" class="control-input k-input idField" formControlName="PACKAGE_CODE" kendoTextBox
+                  #PACKAGE_CODE/>
+              </div>
+              <!-- PACKAGE_NAME: Ten hang -->
+            <div class="form-control col-6">
+              <kendo-label [for]="PACKAGE_NAME" class="control-label" [text]="listOrderResource.PACKAGE_NAME" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input" formControlName="PACKAGE_NAME" kendoTextBox
+                #PACKAGE_NAME/>
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- SERVICE_CHARGE_ID: Dich  vu -->
+          <div class="form-control col-6">
+              <kendo-label [for]="SERVICE_CHARGE_ID" class="control-label" [text]="listOrderResource.SERVICE_CHARGE_ID" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input idField" formControlName="SERVICE_CHARGE_ID" kendoTextBox
+                #SERVICE_CHARGE_ID/>
+            </div>
+            <!-- SERVICE_CHARGE_NAME: Ten dv -->
+          <div class="form-control col-6">
+            <kendo-label [for]="SERVICE_CHARGE_NAME" class="control-label" [text]="listOrderResource.SERVICE_CHARGE_NAME" required>
+            </kendo-label>
+            <input type="text" class="control-input k-input" formControlName="SERVICE_CHARGE_NAME" kendoTextBox
+              #SERVICE_CHARGE_NAME/>
+          </div>
+        </div>
+
+        <div class="row">
+            <!-- SHIP_FEE: Phi mua -->
+            <div class="form-control col-3">
+                <kendo-label [for]="SHIP_FEE" class="control-label" [text]="listOrderResource.SHIP_FEE" required>
+                </kendo-label>
+                <fts-numerictextbox formControlName="BUY_FEE" [format]="this.myInject.FTSMain.amountFormat" #SHIP_FEE>
+                </fts-numerictextbox>
+            </div>
+            <!-- BUY_FEE: Phi ship -->
+            <div class="form-control col-3">
+                <kendo-label [for]="BUY_FEE" class="control-label" [text]="listOrderResource.BUY_FEE" required>
+                </kendo-label>
+                <fts-numerictextbox formControlName="BUY_FEE" [format]="this.myInject.FTSMain.amountFormat" #BUY_FEE>
+                </fts-numerictextbox>
+            </div>
+            <!-- TOTAL: Tong -->
+            <div class="form-control col-3">
+                <kendo-label [for]="TOTAL" class="control-label" [text]="listOrderResource.TOTAL" required>
+                </kendo-label>
+                <fts-numerictextbox formControlName="TOTAL" [format]="this.myInject.FTSMain.amountFormat" #TOTAL>
+                </fts-numerictextbox>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- CUSTOMER_NAME: Ten KH -->
+          <div class="form-control col-6">
+              <kendo-label [for]="CUSTOMER_NAME" class="control-label" [text]="listOrderResource.CUSTOMER_NAME" required>
+              </kendo-label>
+              <input type="text" class="control-input k-input" formControlName="CUSTOMER_NAME" kendoTextBox
+                #CUSTOMER_NAME/>
+            </div>
+            <!-- PHONE: Sdt -->
+          <div class="form-control col-6">
+            <kendo-label [for]="PHONE" class="control-label" [text]="listOrderResource.PHONE" required>
+            </kendo-label>
+            <input type="text" class="control-input k-input" formControlName="PHONE" kendoTextBox
+              #PHONE/>
+          </div>
+        </div>
+
+          <div class="row">          
+            <!-- ADDRESS: Dia chi -->
+          <div class="form-control col-12">
+            <kendo-label [for]="ADDRESS" class="control-label" [text]="listOrderResource.ADDRESS" required>
+            </kendo-label>
+            <input type="text" class="control-input k-input" formControlName="ADDRESS" kendoTextBox
+              #ADDRESS/>
+          </div>
+          </div>
+   
+         
+      </div>
+      </fts-dict-base-detail>
+    </ng-container>
+  </ng-container>
+

@@ -1,0 +1,40 @@
+<ng-container *ngIf="myInject.resourceManager.CommonResource.MyResource; let commonResource">
+    <ng-container *ngIf="
+        myInject.resourceManager.DmJobResource.MyResource;
+        let dmJobResource
+      ">
+      <fts-dict-base-detail [formGroup]="formGroup">
+        <div formControls>
+
+          <!-- JOB_ID: Mã công việc -->
+          <div class="row">
+            <div class="form-control col-12">
+              <kendo-label [for]="JOB_ID" class="control-label" [text]="dmJobResource.JOB_ID" required>
+              </kendo-label>
+              <input type="text" class="control-input" formControlName="JOB_ID" kendoTextBox #JOB_ID />
+            </div>        
+          </div>
+           
+          <!-- JOB_NAME: Tên công việc -->
+          <div class="row">
+            <div class="col-12 form-control">
+              <kendo-label [for]="JOB_NAME" class="control-label" required [text]="dmJobResource.JOB_NAME">
+              </kendo-label>
+              <input type="text" class="control-input" formControlName="JOB_NAME" kendoTextBox #JOB_NAME />
+            </div>
+          </div>
+
+          <div class="row">
+            <!-- ACTIVE: Sử dụng -->
+            <div class="col-6 form-control">
+              <kendo-label [for]="ACTIVE" class="control-label" [text]="dmJobResource.ACTIVE" required>
+              </kendo-label>
+              <input type="checkbox" formControlName="ACTIVE" kendoCheckBox #ACTIVE />
+            </div>
+          </div>
+
+        </div>
+      </fts-dict-base-detail>
+    </ng-container>
+  </ng-container>
+
